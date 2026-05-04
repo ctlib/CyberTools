@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cookie Decoder - Free Client-Side Tool | CyberTools</title>
+        <meta name="description" content="Free online Cookie Decoder tool. Parse and audit Set-Cookie headers for security flags. Runs locally in your browser with no tracking, signup, or uploads." />
+        <link rel="canonical" href="https://ctlib.github.io/CyberTools/tools/cookie-decoder/" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+        />
+
+        <!-- Search metadata -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta name="keywords" content="Cookie Decoder, Cookie Decoder online, Cookie Decoder tool, Cookie Decoder CyberTools, cookie, set-cookie, httponly, secure, samesite, session, parser, cybersecurity tools, ctf tools, client-side tools" />
+        <meta property="og:site_name" content="CyberTools" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="Cookie Decoder - Free Client-Side Tool | CyberTools" />
+        <meta property="og:description" content="Free online Cookie Decoder tool. Parse and audit Set-Cookie headers for security flags. Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ctlib.github.io/CyberTools/tools/cookie-decoder/" />
+        <meta property="og:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Cookie Decoder - Free Client-Side Tool | CyberTools" />
+        <meta name="twitter:description" content="Free online Cookie Decoder tool. Parse and audit Set-Cookie headers for security flags. Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta name="twitter:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <link rel="alternate" hreflang="en" href="https://ctlib.github.io/CyberTools/tools/cookie-decoder/" />
+        <link rel="alternate" hreflang="x-default" href="https://ctlib.github.io/CyberTools/tools/cookie-decoder/" />
+        <link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "SoftwareApplication",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/cookie-decoder/#app",
+                        "name": "Cookie Decoder",
+                        "alternateName": ["cookie-decoder", "cookie", "set-cookie", "httponly", "secure", "samesite", "session", "parser"],
+                        "applicationCategory": "SecurityApplication",
+                        "applicationSubCategory": "Web Security",
+                        "operatingSystem": "Any",
+                        "url": "https://ctlib.github.io/CyberTools/tools/cookie-decoder/",
+                        "image": "https://ctlib.github.io/CyberTools/assets/logowb.png",
+                        "description": "Free online Cookie Decoder tool. Parse and audit Set-Cookie headers for security flags. Runs locally in your browser with no tracking, signup, or uploads.",
+                        "keywords": "cookie, set-cookie, httponly, secure, samesite, session, parser",
+                        "isAccessibleForFree": true,
+                        "browserRequirements": "Requires JavaScript. Runs locally in the browser without server uploads.",
+                        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                        "author": { "@type": "Organization", "name": "CTLib", "url": "https://github.com/ctlib" },
+                        "publisher": { "@id": "https://ctlib.github.io/CyberTools/#organization" },
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#app" },
+                        "license": "https://opensource.org/licenses/MIT"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/cookie-decoder/#webpage",
+                        "name": "Cookie Decoder - Free Client-Side Tool | CyberTools",
+                        "url": "https://ctlib.github.io/CyberTools/tools/cookie-decoder/",
+                        "description": "Free online Cookie Decoder tool. Parse and audit Set-Cookie headers for security flags. Runs locally in your browser with no tracking, signup, or uploads.",
+                        "inLanguage": "en",
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#website" }
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            { "@type": "ListItem", "position": 1, "name": "CyberTools", "item": "https://ctlib.github.io/CyberTools/" },
+                            { "@type": "ListItem", "position": 2, "name": "Cookie Decoder", "item": "https://ctlib.github.io/CyberTools/tools/cookie-decoder/" }
+                        ]
+                    }
+                ]
+            }
+        </script>
+        <!-- /Search metadata -->
+        <link rel="icon" href="../../assets/logowb.png" type="image/png" />
+        <link rel="preload" href="../../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="../../assets/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="stylesheet" href="../../css/design-system.css" />
+        <link rel="stylesheet" href="../../css/global.css" />
+        <link rel="stylesheet" href="../../css/tailwind.css" />
+        <link rel="stylesheet" href="../../css/tool.css" />
+        <script src="../../js/theme.js"></script>
+    </head>
+    <body data-ct-active-tool="cookie-decoder" data-ct-tool-source="tools/cookie-decoder/script.js">
+        <main id="ct-main">
+            <div class="tool-header">
+                <h1 class="tool-title">Cookie Decoder</h1>
+                <p class="tool-description">Paste Set-Cookie response headers to decode and audit security attributes.</p>
+            </div>
+
+            <div class="tool-panel">
+                <label class="tool-panel-label" for="cookieInput">Set-Cookie header(s) - one per line</label>
+                <textarea id="cookieInput" class="textarea" rows="6" placeholder="Set-Cookie: session=abc123; HttpOnly; Secure; SameSite=Strict; Path=/; Max-Age=3600" spellcheck="false"></textarea>
+                <button id="decodeBtn" class="btn-primary" style="margin-top: 12px">Decode &amp; Audit</button>
+                <div style="margin-top: 10px">
+                    <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 6px">Examples:</div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 6px">
+                        <button class="btn-ghost" style="font-size: 11px" onclick="document.getElementById('cookieInput').value = 'Set-Cookie: session=abc123; HttpOnly; Secure; SameSite=Strict; Path=/; Max-Age=3600'">Secure session cookie</button>
+                        <button class="btn-ghost" style="font-size: 11px" onclick="document.getElementById('cookieInput').value = 'Set-Cookie: tracking=xyz; Path=/; Domain=.example.com; Expires=Fri, 31 Dec 2099 23:59:59 GMT'">
+                            Tracking cookie (no security flags)
+                        </button>
+                        <button class="btn-ghost" style="font-size: 11px" onclick="document.getElementById('cookieInput').value = 'Set-Cookie: pref=dark; SameSite=Lax; Path=/\nSet-Cookie: token=secret; Secure; HttpOnly; SameSite=Strict; Path=/api'">
+                            Multiple cookies
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cookieResults" style="margin-top: 16px"></div>
+
+            <details class="tool-docs">
+                <summary>How it works</summary>
+                <div class="tool-docs-content">
+                    <p><strong>HttpOnly</strong> - prevents JavaScript from accessing the cookie, mitigating XSS-based session theft.</p>
+                    <p><strong>Secure</strong> - cookie is only sent over HTTPS connections.</p>
+                    <p>
+                        <strong>SameSite=Strict</strong> - cookie never sent in cross-site requests, strongest CSRF protection. <strong>Lax</strong> - sent on top-level navigations only. <strong>None</strong> - sent in all contexts, requires Secure.
+                    </p>
+                    <p><strong>Domain / Path</strong> - restrict the scope of the cookie to specific hosts and URL paths.</p>
+                    <p><strong>Max-Age / Expires</strong> - session cookies (no expiry) are deleted when the browser closes; persistent cookies survive.</p>
+                    <p><strong>Partitioned (CHIPS)</strong> - cookie is partitioned per top-level site, used for third-party cookies in privacy-preserving contexts.</p>
+                </div>
+            </details>
+
+            <div class="tool-panel" style="margin-top: 16px; border-left: 3px solid var(--warning); background: color-mix(in srgb, var(--warning) 6%, var(--surface))">
+                <div style="font-size: 12px; font-weight: 700; color: var(--warning); margin-bottom: 4px">Security note</div>
+                <div style="font-size: 13px; color: var(--text-muted)">
+                    Session cookies should always have <code>HttpOnly</code> + <code>Secure</code> + <code>SameSite=Lax</code> at minimum. <code>SameSite=None</code> requires <code>Secure</code>. Missing <code>HttpOnly</code> enables XSS-based
+                    session theft via <code>document.cookie</code>.
+                </div>
+            </div>
+
+            <div class="tool-meta-links">
+                <a href="https://github.com/ctlib/CyberTools/blob/main/tools/cookie-decoder/script.js" target="_blank" rel="noopener noreferrer"
+                    ><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                        />
+                    </svg>
+                    View source</a
+                >
+                <a href="https://github.com/ctlib/CyberTools/issues/new" target="_blank" rel="noopener noreferrer">Report issue</a>
+            </div>
+        </main>
+        <script src="../../js/app.js" defer></script>
+        <script src="../../js/history.js" defer></script>
+        <script src="../../js/share.js" defer></script>
+        <script src="../../js/smart-detect.js" defer></script>
+        <script src="../../js/components.js" defer></script>
+        <script src="../../js/shortcuts.js" defer></script>
+        <script src="../../js/pwa.js" defer></script>
+        <script src="script.js" defer></script>
+        <script src="../../js/page-init.js" defer></script>
+    </body>
+</html>

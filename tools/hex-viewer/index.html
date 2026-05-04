@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hex Viewer - Free Client-Side Tool | CyberTools</title>
+        <meta name="description" content="Free online Hex Viewer tool. View and edit binary files in hex and ASCII. Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta name="author" content="CTLib" />
+        <link rel="canonical" href="https://ctlib.github.io/CyberTools/tools/hex-viewer/" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+        />
+
+        <!-- Search metadata -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta name="keywords" content="Hex Viewer, Hex Viewer online, Hex Viewer tool, Hex Viewer CyberTools, hex, binary, file, viewer, editor, ascii, bytes, cybersecurity tools, ctf tools, client-side tools" />
+        <meta property="og:site_name" content="CyberTools" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="Hex Viewer - Free Client-Side Tool | CyberTools" />
+        <meta property="og:description" content="Free online Hex Viewer tool. View and edit binary files in hex and ASCII. Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ctlib.github.io/CyberTools/tools/hex-viewer/" />
+        <meta property="og:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Hex Viewer - Free Client-Side Tool | CyberTools" />
+        <meta name="twitter:description" content="Free online Hex Viewer tool. View and edit binary files in hex and ASCII. Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta name="twitter:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <link rel="alternate" hreflang="en" href="https://ctlib.github.io/CyberTools/tools/hex-viewer/" />
+        <link rel="alternate" hreflang="x-default" href="https://ctlib.github.io/CyberTools/tools/hex-viewer/" />
+        <link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "SoftwareApplication",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/hex-viewer/#app",
+                        "name": "Hex Viewer",
+                        "alternateName": ["hex-viewer", "hex", "binary", "file", "viewer", "editor", "ascii", "bytes"],
+                        "applicationCategory": "SecurityApplication",
+                        "applicationSubCategory": "Forensics",
+                        "operatingSystem": "Any",
+                        "url": "https://ctlib.github.io/CyberTools/tools/hex-viewer/",
+                        "image": "https://ctlib.github.io/CyberTools/assets/logowb.png",
+                        "description": "Free online Hex Viewer tool. View and edit binary files in hex and ASCII. Runs locally in your browser with no tracking, signup, or uploads.",
+                        "keywords": "hex, binary, file, viewer, editor, ascii, bytes",
+                        "isAccessibleForFree": true,
+                        "browserRequirements": "Requires JavaScript. Runs locally in the browser without server uploads.",
+                        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                        "author": { "@type": "Organization", "name": "CTLib", "url": "https://github.com/ctlib" },
+                        "publisher": { "@id": "https://ctlib.github.io/CyberTools/#organization" },
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#app" },
+                        "license": "https://opensource.org/licenses/MIT"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/hex-viewer/#webpage",
+                        "name": "Hex Viewer - Free Client-Side Tool | CyberTools",
+                        "url": "https://ctlib.github.io/CyberTools/tools/hex-viewer/",
+                        "description": "Free online Hex Viewer tool. View and edit binary files in hex and ASCII. Runs locally in your browser with no tracking, signup, or uploads.",
+                        "inLanguage": "en",
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#website" }
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            { "@type": "ListItem", "position": 1, "name": "CyberTools", "item": "https://ctlib.github.io/CyberTools/" },
+                            { "@type": "ListItem", "position": 2, "name": "Hex Viewer", "item": "https://ctlib.github.io/CyberTools/tools/hex-viewer/" }
+                        ]
+                    }
+                ]
+            }
+        </script>
+        <!-- /Search metadata -->
+        <link rel="icon" href="../../assets/logowb.png" type="image/png" />
+        <link rel="preload" href="../../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="../../assets/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="stylesheet" href="../../css/design-system.css" />
+        <link rel="stylesheet" href="../../css/global.css" />
+        <link rel="stylesheet" href="../../css/tailwind.css" />
+        <link rel="stylesheet" href="../../css/tool.css" />
+        <script src="../../js/theme.js"></script>
+        <style>
+            #viewerContainer {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: 10px;
+                overflow: auto;
+                height: 520px;
+                position: relative;
+            }
+            #viewerContainer table {
+                table-layout: fixed;
+                width: 100%;
+                border-collapse: collapse;
+                font-family: 'JetBrains Mono', monospace;
+                font-size: 12px;
+            }
+            #viewerContainer thead th {
+                position: sticky;
+                top: 0;
+                background: var(--surface-2);
+                border-bottom: 1px solid var(--border);
+                padding: 6px 8px;
+                text-align: left;
+                color: var(--text-muted);
+                font-weight: 600;
+                font-size: 11px;
+                letter-spacing: 0.04em;
+                z-index: 10;
+            }
+            #viewerContainer td {
+                padding: 2px 8px;
+                color: var(--text);
+                vertical-align: top;
+            }
+            #viewerContainer tr:hover td {
+                background: var(--surface-2);
+            }
+        </style>
+    </head>
+    <body data-ct-active-tool="hex-viewer" data-ct-tool-source="tools/hex-viewer/script.js">
+        <main id="ct-main">
+            <div class="tool-header">
+                <h1 class="tool-title">Hex Viewer / Editor</h1>
+                <p class="tool-description">View and edit binary files in hexadecimal and ASCII. Virtual scrolling handles large files.</p>
+            </div>
+
+            <!-- Upload + Download -->
+            <div class="tool-panel" style="margin-bottom: 16px">
+                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap">
+                    <label
+                        style="
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 8px;
+                            background: var(--surface-2);
+                            border: 1px solid var(--border);
+                            border-radius: 8px;
+                            padding: 8px 14px;
+                            cursor: pointer;
+                            font-size: 13px;
+                            color: var(--text);
+                            transition: border-color 150ms;
+                        "
+                        for="fileInput"
+                        onmouseover="this.style.borderColor = 'var(--accent)'"
+                        onmouseout="this.style.borderColor = 'var(--border)'"
+                    >
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="17 8 12 3 7 8" />
+                            <line x1="12" y1="3" x2="12" y2="15" />
+                        </svg>
+                        Open file…
+                    </label>
+                    <input type="file" id="fileInput" data-ct-run style="display: none" aria-label="Upload file to view in hex" />
+                    <span id="ct-filename" style="font-size: 13px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace"></span>
+                    <div style="flex: 1"></div>
+                    <button id="downloadBtn" class="btn-primary" disabled aria-label="Download edited file">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        Download edited file
+                    </button>
+                </div>
+            </div>
+
+            <!-- Hex viewer -->
+            <div id="viewerContainer" role="region" aria-label="Hex viewer">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 80px">Offset</th>
+                            <th>Hex (16 bytes/row)</th>
+                            <th style="width: 180px">ASCII</th>
+                        </tr>
+                    </thead>
+                    <tbody id="hexView"></tbody>
+                </table>
+                <div id="spacer"></div>
+            </div>
+
+            <!-- How it works -->
+            <details class="tool-docs" style="margin-top: 24px">
+                <summary>How it works</summary>
+                <div class="tool-docs-content">
+                    <p>
+                        The file is read entirely in your browser using the <code>FileReader</code> API into a <code>Uint8Array</code>. No data is uploaded anywhere. The viewer renders 16 bytes per row (standard hex editor convention), showing the
+                        hexadecimal byte values on the left and the printable ASCII representation on the right.
+                    </p>
+                    <p>Bytes outside the printable ASCII range (32–126) are shown as <code>.</code>. You can click any hex or ASCII cell to edit it - changes sync in both directions. Click "Download edited file" to get the modified binary.</p>
+                    <p>Virtual scrolling means only the visible rows are rendered, so even large files (hundreds of MB) stay responsive.</p>
+                </div>
+            </details>
+
+            <div class="tool-meta-links">
+                <a href="https://github.com/ctlib/CyberTools/blob/main/tools/hex-viewer/script.js" target="_blank" rel="noopener noreferrer">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                        />
+                    </svg>
+                    View source of this tool
+                </a>
+                <a href="https://github.com/ctlib/CyberTools/issues/new" target="_blank" rel="noopener noreferrer">Report issue</a>
+            </div>
+        </main>
+
+        <script src="../../js/app.js" defer></script>
+        <script src="../../js/history.js" defer></script>
+        <script src="../../js/smart-detect.js" defer></script>
+        <script src="../../js/components.js" defer></script>
+        <script src="../../js/shortcuts.js" defer></script>
+        <script src="../../js/pwa.js" defer></script>
+        <script src="script.js" defer></script>
+        <script src="../../js/page-init.js" defer></script>
+    </body>
+</html>

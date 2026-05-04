@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TOTP Generator - Free Client-Side Tool | CyberTools</title>
+        <meta name="description" content="Free online TOTP Generator tool. RFC 6238 time-based one-time password generator (2FA/MFA). Runs locally in your browser with no tracking, signup, or uploads." />
+        <link rel="canonical" href="https://ctlib.github.io/CyberTools/tools/totp/" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+        />
+
+        <!-- Search metadata -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta name="keywords" content="TOTP Generator, TOTP Generator online, TOTP Generator tool, TOTP Generator CyberTools, totp, hotp, otp, 2fa, mfa, authenticator, rfc6238, hmac, token, cybersecurity tools, ctf tools, client-side tools" />
+        <meta property="og:site_name" content="CyberTools" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="TOTP Generator - Free Client-Side Tool | CyberTools" />
+        <meta property="og:description" content="Free online TOTP Generator tool. RFC 6238 time-based one-time password generator (2FA/MFA). Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ctlib.github.io/CyberTools/tools/totp/" />
+        <meta property="og:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="TOTP Generator - Free Client-Side Tool | CyberTools" />
+        <meta name="twitter:description" content="Free online TOTP Generator tool. RFC 6238 time-based one-time password generator (2FA/MFA). Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta name="twitter:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <link rel="alternate" hreflang="en" href="https://ctlib.github.io/CyberTools/tools/totp/" />
+        <link rel="alternate" hreflang="x-default" href="https://ctlib.github.io/CyberTools/tools/totp/" />
+        <link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "SoftwareApplication",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/totp/#app",
+                        "name": "TOTP Generator",
+                        "alternateName": ["totp", "hotp", "otp", "2fa", "mfa", "authenticator", "rfc6238", "hmac", "token"],
+                        "applicationCategory": "SecurityApplication",
+                        "applicationSubCategory": "JWT and Tokens",
+                        "operatingSystem": "Any",
+                        "url": "https://ctlib.github.io/CyberTools/tools/totp/",
+                        "image": "https://ctlib.github.io/CyberTools/assets/logowb.png",
+                        "description": "Free online TOTP Generator tool. RFC 6238 time-based one-time password generator (2FA/MFA). Runs locally in your browser with no tracking, signup, or uploads.",
+                        "keywords": "totp, hotp, otp, 2fa, mfa, authenticator, rfc6238, hmac, token",
+                        "isAccessibleForFree": true,
+                        "browserRequirements": "Requires JavaScript. Runs locally in the browser without server uploads.",
+                        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                        "author": { "@type": "Organization", "name": "CTLib", "url": "https://github.com/ctlib" },
+                        "publisher": { "@id": "https://ctlib.github.io/CyberTools/#organization" },
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#app" },
+                        "license": "https://opensource.org/licenses/MIT"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/totp/#webpage",
+                        "name": "TOTP Generator - Free Client-Side Tool | CyberTools",
+                        "url": "https://ctlib.github.io/CyberTools/tools/totp/",
+                        "description": "Free online TOTP Generator tool. RFC 6238 time-based one-time password generator (2FA/MFA). Runs locally in your browser with no tracking, signup, or uploads.",
+                        "inLanguage": "en",
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#website" }
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            { "@type": "ListItem", "position": 1, "name": "CyberTools", "item": "https://ctlib.github.io/CyberTools/" },
+                            { "@type": "ListItem", "position": 2, "name": "TOTP Generator", "item": "https://ctlib.github.io/CyberTools/tools/totp/" }
+                        ]
+                    }
+                ]
+            }
+        </script>
+        <!-- /Search metadata -->
+        <link rel="icon" href="../../assets/logowb.png" type="image/png" />
+        <link rel="preload" href="../../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="../../assets/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="stylesheet" href="../../css/design-system.css" />
+        <link rel="stylesheet" href="../../css/global.css" />
+        <link rel="stylesheet" href="../../css/tailwind.css" />
+        <link rel="stylesheet" href="../../css/tool.css" />
+        <script src="../../js/theme.js"></script>
+    </head>
+    <body data-ct-active-tool="totp" data-ct-tool-source="tools/totp/script.js">
+        <main id="ct-main">
+            <div class="tool-header">
+                <h1 class="tool-title">TOTP / HOTP Generator</h1>
+                <p class="tool-description">Generate time-based (TOTP) and counter-based (HOTP) one-time passwords for testing 2FA implementations. Implements RFC 6238 and RFC 4226.</p>
+            </div>
+
+            <div class="tool-panel">
+                <div class="tool-panel-label">TOTP (Time-Based)</div>
+                <div style="display: flex; gap: 8px; align-items: flex-end; flex-wrap: wrap; margin-bottom: 12px">
+                    <div style="flex: 1; min-width: 200px">
+                        <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px">Secret key (Base32)</label>
+                        <input id="totpSecret" class="input" type="text" placeholder="JBSWY3DPEHPK3PXP" style="font-family: 'JetBrains Mono', monospace; width: 100%" spellcheck="false" />
+                    </div>
+                    <button id="genSecretBtn" class="btn-ghost">Generate</button>
+                </div>
+                <details class="examples-section" style="margin-bottom: 12px">
+                    <summary>Examples</summary>
+                    <div class="example-label" style="margin-top: 8px">Click to load a known secret</div>
+                    <div
+                        class="example-item"
+                        onclick="
+                            document.getElementById('totpSecret').value = 'JBSWY3DPEHPK3PXP';
+                            document.getElementById('totpSecret').dispatchEvent(new Event('input'));
+                        "
+                        data-v="JBSWY3DPEHPK3PXP"
+                    >
+                        Common demo secret: JBSWY3DPEHPK3PXP
+                    </div>
+                    <div
+                        class="example-item"
+                        onclick="
+                            document.getElementById('totpSecret').value = 'GEZDGNBVGY3TQOJQGEZDGNBVGY3TQOJQ';
+                            document.getElementById('totpSecret').dispatchEvent(new Event('input'));
+                        "
+                        data-v="RFC 6238 SHA-1"
+                    >
+                        RFC 6238 test secret (SHA-1, 20 bytes)
+                    </div>
+                    <div
+                        class="example-item"
+                        onclick="
+                            document.getElementById('totpSecret').value = 'HXDMVJECJJWSRB3HWIZR4IFUGFTMXBOZ';
+                            document.getElementById('totpSecret').dispatchEvent(new Event('input'));
+                        "
+                        data-v="random 32-char"
+                    >
+                        Random 32-char secret
+                    </div>
+                </details>
+                <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px">
+                    <div>
+                        <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px">Digits</label>
+                        <select id="totpDigits" class="input" style="width: auto">
+                            <option value="6" selected>6</option>
+                            <option value="8">8</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px">Period (seconds)</label>
+                        <select id="totpPeriod" class="input" style="width: auto">
+                            <option value="30" selected>30</option>
+                            <option value="60">60</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px">Algorithm</label>
+                        <select id="totpAlgo" class="input" style="width: auto">
+                            <option value="SHA-1" selected>SHA-1</option>
+                            <option value="SHA-256">SHA-256</option>
+                            <option value="SHA-512">SHA-512</option>
+                        </select>
+                    </div>
+                </div>
+                <div
+                    id="totpOutput"
+                    style="
+                        font-size: 36px;
+                        font-family: 'JetBrains Mono', monospace;
+                        font-weight: 700;
+                        letter-spacing: 6px;
+                        color: var(--accent);
+                        text-align: center;
+                        padding: 20px;
+                        background: var(--surface-2);
+                        border-radius: 8px;
+                        border: 1px solid var(--border);
+                    "
+                >
+                    ------
+                </div>
+                <div style="margin-top: 8px">
+                    <div style="background: var(--surface-2); height: 6px; border-radius: 3px; overflow: hidden">
+                        <div id="countdownBar" style="background: #4ade80; height: 100%; width: 100%; transition: width 0.9s linear; border-radius: 3px"></div>
+                    </div>
+                    <span id="countdownSec" style="font-size: 12px; color: var(--text-muted)"></span>
+                </div>
+                <div id="totpError" style="color: var(--danger); font-size: 13px; margin-top: 6px"></div>
+            </div>
+
+            <hr style="border: none; border-top: 1px solid var(--border); margin: 16px 0" />
+
+            <div class="tool-panel">
+                <div class="tool-panel-label">HOTP (Counter-Based)</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr auto; gap: 8px; align-items: flex-end; margin-bottom: 12px; flex-wrap: wrap">
+                    <div>
+                        <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px">Secret key (Base32)</label>
+                        <input id="hotpSecret" class="input" type="text" placeholder="JBSWY3DPEHPK3PXP" style="font-family: 'JetBrains Mono', monospace; width: 100%" spellcheck="false" />
+                    </div>
+                    <div>
+                        <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px">Counter</label>
+                        <input id="hotpCounter" class="input" type="number" value="0" min="0" style="width: 100%" />
+                    </div>
+                    <div>
+                        <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px">Digits</label>
+                        <select id="hotpDigits" class="input" style="width: auto">
+                            <option value="6" selected>6</option>
+                            <option value="8">8</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="hotpBtn" class="btn-ghost">Generate HOTP</button>
+                <div class="output-wrapper" style="margin-top: 12px">
+                    <input id="hotpOutput" class="input" type="text" readonly style="font-family: 'JetBrains Mono', monospace; font-size: 18px; letter-spacing: 4px; font-weight: 700" />
+                    <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('hotpOutput').value, this)">Copy</button>
+                </div>
+                <div id="hotpError" style="color: var(--danger); font-size: 13px; margin-top: 6px"></div>
+            </div>
+
+            <details class="tool-docs">
+                <summary>How it works</summary>
+                <div class="tool-docs-content">
+                    <p>
+                        TOTP (RFC 6238) uses <code>floor(currentUnixTime / period)</code> as the counter input. HOTP (RFC 4226) uses an explicit incrementing counter. Both compute <code>HMAC(secret, counter)</code> then apply dynamic truncation to
+                        extract a 6–8 digit numeric code.
+                    </p>
+                    <p>
+                        The secret is a Base32-encoded shared key established during 2FA enrollment (typically via QR code). The authenticator app and server both compute the same code independently - no network exchange needed during verification.
+                    </p>
+                </div>
+            </details>
+
+            <div class="tool-panel" style="margin-top: 16px; border-left: 3px solid var(--warning); background: color-mix(in srgb, var(--warning) 6%, var(--surface))">
+                <div style="font-size: 12px; font-weight: 700; color: var(--warning); margin-bottom: 4px">Security note</div>
+                <div style="font-size: 13px; color: var(--text-muted)">
+                    This tool is for testing and development only. Never paste production TOTP secrets into any web tool. The secret is not stored or transmitted - but treat any real secret as highly sensitive credentials.
+                </div>
+            </div>
+
+            <div class="tool-meta-links">
+                <a href="https://github.com/ctlib/CyberTools/blob/main/tools/totp/script.js" target="_blank" rel="noopener noreferrer"
+                    ><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                        />
+                    </svg>
+                    View source</a
+                >
+                <a href="https://github.com/ctlib/CyberTools/issues/new" target="_blank" rel="noopener noreferrer">Report issue</a>
+            </div>
+        </main>
+        <script src="../../js/app.js" defer></script>
+        <script src="../../js/history.js" defer></script>
+        <script src="../../js/share.js" defer></script>
+        <script src="../../js/smart-detect.js" defer></script>
+        <script src="../../js/components.js" defer></script>
+        <script src="../../js/shortcuts.js" defer></script>
+        <script src="../../js/pwa.js" defer></script>
+        <script src="script.js" defer></script>
+        <script src="../../js/page-init.js" defer></script>
+    </body>
+</html>

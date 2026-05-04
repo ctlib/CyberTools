@@ -1,0 +1,5 @@
+Contact: https://github.com/ctlib/CyberTools/security/advisories/new
+Preferred-Languages: en, ar
+Policy: https://github.com/ctlib/CyberTools/blob/main/SECURITY.md
+Canonical: https://ctlib.github.io/CyberTools/.well-known/security.txt
+Expires: 2027-05-03T00:00:00Z

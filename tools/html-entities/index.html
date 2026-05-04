@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Entities - Free Client-Side Tool | CyberTools</title>
+    <meta name="description" content="Free online HTML Entities tool. Encode/decode HTML entities — named, decimal, and hex modes. Runs locally in your browser with no tracking, signup, or…" />
+    <link rel="canonical" href="https://ctlib.github.io/CyberTools/tools/html-entities/" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
+
+        <!-- Search metadata -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta name="keywords" content="HTML Entities, HTML Entities online, HTML Entities tool, HTML Entities CyberTools, html, entities, encode, decode, escape, xss, named, decimal, hex, cybersecurity tools, ctf tools, client-side tools" />
+        <meta property="og:site_name" content="CyberTools" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="HTML Entities - Free Client-Side Tool | CyberTools" />
+        <meta property="og:description" content="Free online HTML Entities tool. Encode/decode HTML entities — named, decimal, and hex modes. Runs locally in your browser with no tracking, signup, or…" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ctlib.github.io/CyberTools/tools/html-entities/" />
+        <meta property="og:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="HTML Entities - Free Client-Side Tool | CyberTools" />
+        <meta name="twitter:description" content="Free online HTML Entities tool. Encode/decode HTML entities — named, decimal, and hex modes. Runs locally in your browser with no tracking, signup, or…" />
+        <meta name="twitter:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <link rel="alternate" hreflang="en" href="https://ctlib.github.io/CyberTools/tools/html-entities/" />
+        <link rel="alternate" hreflang="x-default" href="https://ctlib.github.io/CyberTools/tools/html-entities/" />
+        <link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+        <script type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","@id":"https://ctlib.github.io/CyberTools/tools/html-entities/#app","name":"HTML Entities","alternateName":["html-entities","html","entities","encode","decode","escape","xss","named","decimal","hex"],"applicationCategory":"SecurityApplication","applicationSubCategory":"Encoding and Decoding","operatingSystem":"Any","url":"https://ctlib.github.io/CyberTools/tools/html-entities/","image":"https://ctlib.github.io/CyberTools/assets/logowb.png","description":"Free online HTML Entities tool. Encode/decode HTML entities — named, decimal, and hex modes. Runs locally in your browser with no tracking, signup, or…","keywords":"html, entities, encode, decode, escape, xss, named, decimal, hex","isAccessibleForFree":true,"browserRequirements":"Requires JavaScript. Runs locally in the browser without server uploads.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"CTLib","url":"https://github.com/ctlib"},"publisher":{"@id":"https://ctlib.github.io/CyberTools/#organization"},"isPartOf":{"@id":"https://ctlib.github.io/CyberTools/#app"},"license":"https://opensource.org/licenses/MIT"},{"@type":"WebPage","@id":"https://ctlib.github.io/CyberTools/tools/html-entities/#webpage","name":"HTML Entities - Free Client-Side Tool | CyberTools","url":"https://ctlib.github.io/CyberTools/tools/html-entities/","description":"Free online HTML Entities tool. Encode/decode HTML entities — named, decimal, and hex modes. Runs locally in your browser with no tracking, signup, or…","inLanguage":"en","isPartOf":{"@id":"https://ctlib.github.io/CyberTools/#website"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CyberTools","item":"https://ctlib.github.io/CyberTools/"},{"@type":"ListItem","position":2,"name":"HTML Entities","item":"https://ctlib.github.io/CyberTools/tools/html-entities/"}]}]}
+        </script>
+        <!-- /Search metadata -->
+        <link rel="icon" href="../../assets/logowb.png" type="image/png" />
+    <link rel="preload" href="../../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../../assets/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../../css/design-system.css" />
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/tailwind.css" />
+    <link rel="stylesheet" href="../../css/tool.css" />
+        <script src="../../js/theme.js"></script>
+</head>
+<body data-ct-active-tool="html-entities" data-ct-tool-source="tools/html-entities/script.js">
+<main id="ct-main">
+    <div class="tool-header">
+        <h1 class="tool-title">HTML Entity Encoder/Decoder</h1>
+        <p class="tool-description">Encode special characters to HTML entities for XSS prevention, or decode entities back to plain text.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="tool-panel">
+            <div class="tool-panel-label">Encode</div>
+            <textarea id="entityInput" class="textarea" rows="6" placeholder="Paste text to encode…" spellcheck="false"></textarea>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;">
+                <label style="display:flex;align-items:center;gap:5px;font-size:13px;cursor:pointer;"><input type="radio" name="encMode" value="named" checked /> Named (&amp;amp;)</label>
+                <label style="display:flex;align-items:center;gap:5px;font-size:13px;cursor:pointer;"><input type="radio" name="encMode" value="decimal" /> Decimal (&amp;#65;)</label>
+                <label style="display:flex;align-items:center;gap:5px;font-size:13px;cursor:pointer;"><input type="radio" name="encMode" value="hex" /> Hex (&amp;#x41;)</label>
+            </div>
+            <button id="encodeBtn" class="btn-primary" style="margin-top:12px;">Encode →</button>
+            <div style="margin-top:10px;">
+                <div style="font-size:11px;color:var(--text-muted);margin-bottom:6px;">Examples:</div>
+                <div style="display:flex;flex-wrap:wrap;gap:6px;">
+                    <button class="btn-ghost" style="font-size:11px;" onclick="document.getElementById('entityInput').value='&lt;script&gt;alert(1)&lt;/script&gt;'">&lt;script&gt;alert(1)&lt;/script&gt;</button>
+                    <button class="btn-ghost" style="font-size:11px;" onclick="document.getElementById('entityInput').value='© 2024 CyberTools™'">© 2024 CyberTools™</button>
+                    <button class="btn-ghost" style="font-size:11px;" onclick="document.getElementById('entityInput').value='Héllo Wörld'">Héllo Wörld</button>
+                </div>
+            </div>
+        </div>
+        <div class="tool-panel">
+            <div class="tool-panel-label">Encoded output</div>
+            <div class="output-wrapper">
+                <textarea id="entityOutput" class="output-area" rows="6" readonly placeholder="Encoded result…"></textarea>
+                <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('entityOutput').value,this)">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
+        <div class="tool-panel">
+            <div class="tool-panel-label">Decode</div>
+            <textarea id="entityDecInput" class="textarea" rows="6" placeholder="Paste HTML entities to decode…" spellcheck="false"></textarea>
+            <button id="decodeBtn" class="btn-primary" style="margin-top:12px;">Decode →</button>
+            <div style="margin-top:10px;">
+                <div style="font-size:11px;color:var(--text-muted);margin-bottom:6px;">Examples:</div>
+                <div style="display:flex;flex-wrap:wrap;gap:6px;">
+                    <button class="btn-ghost" style="font-size:11px;" onclick="document.getElementById('entityDecInput').value='&amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt;'">&amp;lt;script&amp;gt;…</button>
+                    <button class="btn-ghost" style="font-size:11px;" onclick="document.getElementById('entityDecInput').value='&amp;#72;&amp;#101;&amp;#108;&amp;#108;&amp;#111;'">&amp;#72;&amp;#101;&amp;#108;…</button>
+                </div>
+            </div>
+        </div>
+        <div class="tool-panel">
+            <div class="tool-panel-label">Decoded output</div>
+            <div class="output-wrapper">
+                <textarea id="entityDecOutput" class="output-area" rows="6" readonly placeholder="Decoded result…"></textarea>
+                <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('entityDecOutput').value,this)">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <details class="tool-docs">
+        <summary>How it works</summary>
+        <div class="tool-docs-content">
+            <p>HTML entities prevent browsers from interpreting characters as markup. They are essential for safely rendering user-supplied content inside HTML. Named entities (<code>&amp;lt;</code>, <code>&amp;amp;</code>) are human-readable; decimal (<code>&amp;#60;</code>) and hex (<code>&amp;#x3C;</code>) forms cover the full Unicode range and are useful when named forms don't exist.</p>
+        </div>
+    </details>
+
+    <div class="tool-panel" style="margin-top:16px;border-left:3px solid var(--warning);background:color-mix(in srgb,var(--warning) 6%,var(--surface));">
+        <div style="font-size:12px;font-weight:700;color:var(--warning);margin-bottom:4px;">Security note</div>
+        <div style="font-size:13px;color:var(--text-muted);">Always encode user input before inserting into HTML. The six critical characters for XSS prevention are: <code>&amp;</code> <code>&lt;</code> <code>&gt;</code> <code>"</code> <code>'</code> <code>/</code></div>
+    </div>
+
+    <div class="tool-meta-links">
+        <a href="https://github.com/ctlib/CyberTools/blob/main/tools/html-entities/script.js" target="_blank" rel="noopener noreferrer"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg> View source</a>
+        <a href="https://github.com/ctlib/CyberTools/issues/new" target="_blank" rel="noopener noreferrer">Report issue</a>
+    </div>
+</main>
+<script src="../../js/app.js" defer></script><script src="../../js/history.js" defer></script><script src="../../js/share.js" defer></script><script src="../../js/smart-detect.js" defer></script><script src="../../js/components.js" defer></script><script src="../../js/shortcuts.js" defer></script><script src="../../js/pwa.js" defer></script><script src="script.js" defer></script>
+        <script src="../../js/page-init.js" defer></script>
+</body></html>

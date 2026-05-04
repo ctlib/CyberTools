@@ -1,0 +1,24 @@
+{
+    "name": "cybertools",
+    "version": "3.0.0",
+    "description": "The cybersecurity toolkit you actually trust. Everything runs in your browser.",
+    "packageManager": "pnpm@10.33.0",
+    "scripts": {
+        "build": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --minify",
+        "watch": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --watch",
+        "seo": "node scripts/generate-seo.mjs",
+        "audit": "node scripts/audit.mjs",
+        "audit:drift": "node scripts/audit.mjs"
+    },
+    "devDependencies": {
+        "@fontsource/inter": "^5.0.0",
+        "@fontsource/jetbrains-mono": "^5.0.0",
+        "tailwindcss": "^3.4.0"
+    },
+    "author": "CTLib",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ctlib/CyberTools.git"
+    }
+}

@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JSON Formatter - Free Client-Side Tool | CyberTools</title>
+        <meta name="description" content="Free online JSON Formatter tool. Format, validate, minify, and sort JSON. Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta name="author" content="CTLib" />
+        <link rel="canonical" href="https://ctlib.github.io/CyberTools/tools/json-formatter/" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+        />
+
+        <!-- Search metadata -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta name="keywords" content="JSON Formatter, JSON Formatter online, JSON Formatter tool, JSON Formatter CyberTools, json, format, validate, minify, pretty, lint, cybersecurity tools, ctf tools, client-side tools" />
+        <meta property="og:site_name" content="CyberTools" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="JSON Formatter - Free Client-Side Tool | CyberTools" />
+        <meta property="og:description" content="Free online JSON Formatter tool. Format, validate, minify, and sort JSON. Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ctlib.github.io/CyberTools/tools/json-formatter/" />
+        <meta property="og:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="JSON Formatter - Free Client-Side Tool | CyberTools" />
+        <meta name="twitter:description" content="Free online JSON Formatter tool. Format, validate, minify, and sort JSON. Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta name="twitter:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <link rel="alternate" hreflang="en" href="https://ctlib.github.io/CyberTools/tools/json-formatter/" />
+        <link rel="alternate" hreflang="x-default" href="https://ctlib.github.io/CyberTools/tools/json-formatter/" />
+        <link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "SoftwareApplication",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/json-formatter/#app",
+                        "name": "JSON Formatter",
+                        "alternateName": ["json-formatter", "json", "format", "validate", "minify", "pretty", "lint"],
+                        "applicationCategory": "SecurityApplication",
+                        "applicationSubCategory": "Utilities",
+                        "operatingSystem": "Any",
+                        "url": "https://ctlib.github.io/CyberTools/tools/json-formatter/",
+                        "image": "https://ctlib.github.io/CyberTools/assets/logowb.png",
+                        "description": "Free online JSON Formatter tool. Format, validate, minify, and sort JSON. Runs locally in your browser with no tracking, signup, or uploads.",
+                        "keywords": "json, format, validate, minify, pretty, lint",
+                        "isAccessibleForFree": true,
+                        "browserRequirements": "Requires JavaScript. Runs locally in the browser without server uploads.",
+                        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                        "author": { "@type": "Organization", "name": "CTLib", "url": "https://github.com/ctlib" },
+                        "publisher": { "@id": "https://ctlib.github.io/CyberTools/#organization" },
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#app" },
+                        "license": "https://opensource.org/licenses/MIT"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/json-formatter/#webpage",
+                        "name": "JSON Formatter - Free Client-Side Tool | CyberTools",
+                        "url": "https://ctlib.github.io/CyberTools/tools/json-formatter/",
+                        "description": "Free online JSON Formatter tool. Format, validate, minify, and sort JSON. Runs locally in your browser with no tracking, signup, or uploads.",
+                        "inLanguage": "en",
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#website" }
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            { "@type": "ListItem", "position": 1, "name": "CyberTools", "item": "https://ctlib.github.io/CyberTools/" },
+                            { "@type": "ListItem", "position": 2, "name": "JSON Formatter", "item": "https://ctlib.github.io/CyberTools/tools/json-formatter/" }
+                        ]
+                    }
+                ]
+            }
+        </script>
+        <!-- /Search metadata -->
+        <link rel="icon" href="../../assets/logowb.png" type="image/png" />
+        <link rel="preload" href="../../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="../../assets/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="stylesheet" href="../../css/design-system.css" />
+        <link rel="stylesheet" href="../../css/global.css" />
+        <link rel="stylesheet" href="../../css/tailwind.css" />
+        <link rel="stylesheet" href="../../css/tool.css" />
+        <style>
+            .radio-group {
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+            }
+            .radio-label {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                cursor: pointer;
+                font-size: 13px;
+                color: var(--text-muted);
+            }
+            .radio-label input {
+                accent-color: var(--accent);
+                cursor: pointer;
+            }
+            .radio-label:has(input:checked) {
+                color: var(--text);
+            }
+        </style>
+        <script src="../../js/theme.js"></script>
+    </head>
+    <body data-ct-active-tool="json-formatter" data-ct-tool-source="tools/json-formatter/script.js">
+        <main id="ct-main">
+            <div class="tool-header">
+                <h1 class="tool-title">JSON Formatter / Validator</h1>
+                <p class="tool-description">Format, validate, minify, and sort JSON - instant feedback, no server required.</p>
+            </div>
+
+            <!-- Options bar -->
+            <div class="tool-panel" style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap; margin-bottom: 16px">
+                <div>
+                    <span style="font-size: 12px; color: var(--text-muted); margin-right: 8px">Indent</span>
+                    <span class="radio-group">
+                        <label class="radio-label"><input type="radio" name="indent" value="2" checked /> 2 spaces</label>
+                        <label class="radio-label"><input type="radio" name="indent" value="4" /> 4 spaces</label>
+                        <label class="radio-label"><input type="radio" name="indent" value="tab" /> Tab</label>
+                    </span>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+                <!-- Input -->
+                <div class="tool-panel">
+                    <label class="tool-panel-label" for="jsonInput">Input JSON</label>
+                    <textarea id="jsonInput" class="textarea" rows="18" placeholder='{"key":"value","array":[1,2,3]}' style="font-family: 'JetBrains Mono', monospace; font-size: 12px" aria-label="JSON input" spellcheck="false"></textarea>
+                    <div id="jsonStatus" style="font-size: 12px; margin-top: 6px; min-height: 18px"></div>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px">
+                        <button id="formatBtn" data-ct-run class="btn-primary">Format</button>
+                        <button id="minifyBtn" class="btn-ghost">Minify</button>
+                        <button id="sortBtn" class="btn-ghost">Sort keys</button>
+                        <button id="clearBtn" class="btn-ghost">Clear</button>
+                    </div>
+                    <details class="examples-section" style="margin-top: 12px">
+                        <summary>Examples</summary>
+                        <div
+                            class="example-item"
+                            onclick="
+                                document.getElementById('jsonInput').value = this.dataset.v;
+                                document.getElementById('formatBtn').click();
+                            "
+                            data-v='{"user":{"id":1,"name":"Alice","roles":["admin","viewer"]},"active":true}'
+                        >
+                            Nested object
+                        </div>
+                        <div
+                            class="example-item"
+                            onclick="
+                                document.getElementById('jsonInput').value = this.dataset.v;
+                                document.getElementById('formatBtn').click();
+                            "
+                            data-v='[{"id":1,"email":"a@b.com"},{"id":2,"email":"c@d.com"}]'
+                        >
+                            Array of objects
+                        </div>
+                        <div
+                            class="example-item"
+                            onclick="
+                                document.getElementById('jsonInput').value = this.dataset.v;
+                                document.getElementById('formatBtn').click();
+                            "
+                            data-v='{"invalid":json,here}'
+                        >
+                            Invalid JSON (validation demo)
+                        </div>
+                    </details>
+                </div>
+
+                <!-- Output -->
+                <div class="tool-panel">
+                    <label class="tool-panel-label">Formatted output</label>
+                    <div class="output-wrapper">
+                        <textarea
+                            id="jsonOutput"
+                            class="output-area"
+                            rows="18"
+                            readonly
+                            style="font-family: 'JetBrains Mono', monospace; font-size: 12px"
+                            data-ct-output
+                            aria-label="Formatted JSON output"
+                            aria-live="polite"
+                            spellcheck="false"
+                        ></textarea>
+                        <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('jsonOutput').value, this)">Copy</button>
+                    </div>
+                    <div style="display: flex; gap: 8px; margin-top: 8px">
+                        <button id="useOutputBtn" class="btn-ghost" style="font-size: 12px">← Use as input</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How it works -->
+            <details class="tool-docs">
+                <summary>How it works</summary>
+                <div class="tool-docs-content">
+                    <p><strong>Format</strong> - Parses via <code>JSON.parse()</code> then serializes with <code>JSON.stringify(obj, null, indent)</code>. Any syntax error is caught and shown immediately.</p>
+                    <p><strong>Minify</strong> - Serializes with <code>JSON.stringify(obj)</code> (no indent) for the smallest possible output.</p>
+                    <p><strong>Sort keys</strong> - Recursively walks the object and rebuilds it with keys in alphabetical order. Arrays are preserved as-is.</p>
+                    <p><strong>Validation</strong> - JSON.parse() follows the ECMA-404 JSON standard. Common mistakes caught: trailing commas, unquoted keys, single quotes, comments, undefined.</p>
+                </div>
+            </details>
+
+            <div class="tool-meta-links">
+                <a href="https://github.com/ctlib/CyberTools/blob/main/tools/json-formatter/script.js" target="_blank" rel="noopener noreferrer">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                        />
+                    </svg>
+                    View source of this tool
+                </a>
+                <a href="https://github.com/ctlib/CyberTools/issues/new" target="_blank" rel="noopener noreferrer">Report issue</a>
+            </div>
+        </main>
+
+        <script src="../../js/app.js" defer></script>
+        <script src="../../js/history.js" defer></script>
+        <script src="../../js/share.js" defer></script>
+        <script src="../../js/smart-detect.js" defer></script>
+        <script src="../../js/components.js" defer></script>
+        <script src="../../js/shortcuts.js" defer></script>
+        <script src="../../js/pwa.js" defer></script>
+        <script src="script.js" defer></script>
+        <script src="../../js/page-init.js" defer></script>
+    </body>
+</html>

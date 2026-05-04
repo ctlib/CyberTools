@@ -1,0 +1,15 @@
+/* TEAM */
+Creator: CTLib
+GitHub: https://github.com/ctlib
+
+/* SITE */
+Last update: 2026-04-29
+Language: English
+Doctype: HTML5
+IDE: VS Code
+
+/* TECHNOLOGY */
+HTML / Vanilla JavaScript / TailwindCSS
+WebCrypto API / Service Workers / PWA
+GitHub Pages (hosting)
+Inter & JetBrains Mono (fonts, self-hosted)

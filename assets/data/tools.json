@@ -1,0 +1,353 @@
+[
+  {
+    "slug": "base64",
+    "name": "Base64",
+    "category": "encoding",
+    "description": "Encode and decode Base64 (standard, URL-safe, MIME)",
+    "tags": ["encode", "decode", "base64", "atob", "btoa"],
+    "path": "tools/base64/",
+    "tier": "S"
+  },
+  {
+    "slug": "rot",
+    "name": "ROT Cipher",
+    "category": "encoding",
+    "description": "ROT1/5/13/18/47/48 encode and decode with auto-detect",
+    "tags": ["rot13", "caesar", "cipher", "encode", "decode"],
+    "path": "tools/rot/",
+    "tier": "S"
+  },
+  {
+    "slug": "url-encoder",
+    "name": "URL Encoder",
+    "category": "encoding",
+    "description": "URL encode/decode — full, partial, double, form encoding",
+    "tags": ["url", "encode", "decode", "percent", "urlencode", "query", "string"],
+    "path": "tools/url-encoder/",
+    "tier": "S"
+  },
+  {
+    "slug": "html-entities",
+    "name": "HTML Entities",
+    "category": "encoding",
+    "description": "Encode/decode HTML entities — named, decimal, and hex modes",
+    "tags": ["html", "entities", "encode", "decode", "escape", "xss", "named", "decimal", "hex"],
+    "path": "tools/html-entities/",
+    "tier": "S"
+  },
+  {
+    "slug": "hash",
+    "name": "Hash Calculator",
+    "category": "hashing",
+    "description": "MD5, SHA-1, SHA-256, SHA-384, SHA-512, HMAC, file hash",
+    "tags": ["md5", "sha256", "sha512", "sha1", "hash", "hmac", "digest", "checksum"],
+    "path": "tools/hash/",
+    "tier": "S"
+  },
+  {
+    "slug": "hash-identifier",
+    "name": "Hash Identifier",
+    "category": "hashing",
+    "description": "Identify hash type by length, charset, and prefix (MD5, SHA, NTLM, bcrypt, Argon2, …)",
+    "tags": ["hash", "identifier", "detect", "md5", "sha1", "sha256", "ntlm", "bcrypt", "argon2", "hashcat", "ctf"],
+    "path": "tools/hash-identifier/",
+    "tier": "S"
+  },
+  {
+    "slug": "jwt",
+    "name": "JWT Decoder",
+    "category": "jwt",
+    "description": "Decode, inspect, and encode JSON Web Tokens",
+    "tags": ["jwt", "token", "json web token", "decode", "encode", "bearer"],
+    "path": "tools/jwt-decoder/",
+    "tier": "S"
+  },
+  {
+    "slug": "totp",
+    "name": "TOTP Generator",
+    "category": "jwt",
+    "description": "RFC 6238 time-based one-time password generator (2FA/MFA)",
+    "tags": ["totp", "hotp", "otp", "2fa", "mfa", "authenticator", "rfc6238", "hmac", "token"],
+    "path": "tools/totp/",
+    "tier": "S"
+  },
+  {
+    "slug": "aes",
+    "name": "AES Encryption",
+    "category": "crypto",
+    "description": "AES-GCM / CBC / CTR with 128/192/256-bit keys (WebCrypto)",
+    "tags": ["aes", "aes-gcm", "aes-cbc", "encrypt", "decrypt", "symmetric", "webcrypto", "pbkdf2"],
+    "path": "tools/aes/",
+    "tier": "S"
+  },
+  {
+    "slug": "rsa",
+    "name": "RSA Encryption",
+    "category": "crypto",
+    "description": "RSA-OAEP encrypt/decrypt and RSA-PSS sign/verify with PEM export",
+    "tags": ["rsa", "rsa-oaep", "rsa-pss", "asymmetric", "public key", "private key", "encrypt", "decrypt", "sign", "verify", "pem"],
+    "path": "tools/rsa/",
+    "tier": "S"
+  },
+  {
+    "slug": "xor",
+    "name": "XOR Cipher",
+    "category": "crypto",
+    "description": "XOR encrypt/decrypt with repeating key, hex/base64 I/O, entropy analysis",
+    "tags": ["xor", "cipher", "encrypt", "decrypt", "key", "entropy", "ctf"],
+    "path": "tools/xor/",
+    "tier": "S"
+  },
+  {
+    "slug": "rc4",
+    "name": "RC4",
+    "category": "crypto",
+    "description": "RC4 stream cipher — legacy/educational only",
+    "tags": ["rc4", "cipher", "legacy", "stream", "encrypt", "decrypt"],
+    "path": "tools/rc4/",
+    "tier": "S"
+  },
+  {
+    "slug": "cookie-decoder",
+    "name": "Cookie Decoder",
+    "category": "web-security",
+    "description": "Parse and audit Set-Cookie headers for security flags",
+    "tags": ["cookie", "set-cookie", "httponly", "secure", "samesite", "session", "parser"],
+    "path": "tools/cookie-decoder/",
+    "tier": "S"
+  },
+  {
+    "slug": "http-headers",
+    "name": "HTTP Headers Analyzer",
+    "category": "web-security",
+    "description": "Analyze security headers: CSP, HSTS, X-Frame-Options, and more",
+    "tags": ["http", "headers", "security", "csp", "hsts", "x-frame-options", "cors", "referrer"],
+    "path": "tools/http-headers/",
+    "tier": "S"
+  },
+  {
+    "slug": "csp-analyzer",
+    "name": "CSP Analyzer",
+    "category": "web-security",
+    "description": "Parse and audit Content-Security-Policy headers — detects unsafe-inline, wildcards, missing directives",
+    "tags": ["csp", "content security policy", "unsafe-inline", "unsafe-eval", "xss", "clickjacking", "web security"],
+    "path": "tools/csp-analyzer/",
+    "tier": "S"
+  },
+  {
+    "slug": "sri-generator",
+    "name": "SRI Hash Generator",
+    "category": "web-security",
+    "description": "Generate Subresource Integrity hashes for <script> and <link> tags",
+    "tags": ["sri", "subresource integrity", "sha256", "sha384", "sha512", "script", "link", "cdn"],
+    "path": "tools/sri-generator/",
+    "tier": "S"
+  },
+  {
+    "slug": "regex",
+    "name": "Regex Tester",
+    "category": "web-security",
+    "description": "Live regex tester with match highlighting, groups, replace, and flags",
+    "tags": ["regex", "regexp", "regular expression", "match", "capture", "replace", "test", "pattern"],
+    "path": "tools/regex/",
+    "tier": "S"
+  },
+  {
+    "slug": "cidr",
+    "name": "IP / CIDR Calculator",
+    "category": "network",
+    "description": "Network address, broadcast, usable hosts, subnet splitting for IPv4/IPv6",
+    "tags": ["cidr", "ip", "subnet", "network", "broadcast", "ipv4", "ipv6", "mask", "split"],
+    "path": "tools/cidr/",
+    "tier": "S"
+  },
+  {
+    "slug": "ports",
+    "name": "Common Ports Reference",
+    "category": "network",
+    "description": "70+ common TCP/UDP ports with protocols and security risk labels",
+    "tags": ["ports", "tcp", "udp", "protocol", "network", "ssh", "http", "dns", "ftp", "smb"],
+    "path": "tools/ports/",
+    "tier": "S"
+  },
+  {
+    "slug": "user-agent",
+    "name": "User-Agent Parser",
+    "category": "network",
+    "description": "Parse browser, OS, device type, and rendering engine from UA strings",
+    "tags": ["user-agent", "browser", "os", "device", "parser", "chrome", "firefox", "safari", "bot"],
+    "path": "tools/user-agent/",
+    "tier": "S"
+  },
+  {
+    "slug": "password-generator",
+    "name": "Password Generator",
+    "category": "utilities",
+    "description": "Cryptographically random passwords and passphrases with entropy meter",
+    "tags": ["password", "generator", "random", "entropy", "passphrase", "diceware", "secure"],
+    "path": "tools/password-generator/",
+    "tier": "S"
+  },
+  {
+    "slug": "json-formatter",
+    "name": "JSON Formatter",
+    "category": "utilities",
+    "description": "Format, validate, minify, and sort JSON",
+    "tags": ["json", "format", "validate", "minify", "pretty", "lint"],
+    "path": "tools/json-formatter/",
+    "tier": "S"
+  },
+  {
+    "slug": "timestamp",
+    "name": "Timestamp Converter",
+    "category": "utilities",
+    "description": "Unix ↔ ISO 8601 ↔ human readable, all timezones",
+    "tags": ["timestamp", "unix", "epoch", "iso8601", "date", "time", "convert", "timezone"],
+    "path": "tools/timestamp/",
+    "tier": "S"
+  },
+  {
+    "slug": "uuid",
+    "name": "UUID Generator",
+    "category": "utilities",
+    "description": "Generate UUID v1/v4/v7, ULID, NanoID in bulk",
+    "tags": ["uuid", "guid", "ulid", "nanoid", "identifier", "random", "unique"],
+    "path": "tools/uuid/",
+    "tier": "S"
+  },
+  {
+    "slug": "hex-viewer",
+    "name": "Hex Viewer",
+    "category": "forensics",
+    "description": "View and edit binary files in hex and ASCII",
+    "tags": ["hex", "binary", "file", "viewer", "editor", "ascii", "bytes"],
+    "path": "tools/hex-viewer/",
+    "tier": "A"
+  },
+  {
+    "slug": "steganography",
+    "name": "Steganography",
+    "category": "forensics",
+    "description": "Hide and extract messages in images using LSB",
+    "tags": ["stego", "steganography", "image", "lsb", "hide", "extract", "png"],
+    "path": "tools/steganography/",
+    "tier": "A"
+  },
+  {
+    "slug": "file-entropy",
+    "name": "File Entropy Analyzer",
+    "category": "forensics",
+    "description": "Shannon entropy analysis with per-chunk chart and byte frequency histogram",
+    "tags": ["entropy", "shannon", "file", "binary", "analysis", "encrypted", "compressed", "forensics"],
+    "path": "tools/file-entropy/",
+    "tier": "A"
+  },
+  {
+    "slug": "email-header",
+    "name": "Email Header Analyzer",
+    "category": "forensics",
+    "description": "Parse email headers, trace relay hops, check SPF/DKIM/DMARC results",
+    "tags": ["email", "header", "spf", "dkim", "dmarc", "phishing", "forensics", "smtp", "received"],
+    "path": "tools/email-header/",
+    "tier": "A"
+  },
+  {
+    "slug": "magic-bytes",
+    "name": "Magic Bytes Identifier",
+    "category": "forensics",
+    "description": "Identify file types from magic bytes / file signatures (100+ signatures)",
+    "tags": ["magic bytes", "file signature", "hex", "identify", "forensics", "ctf", "pe", "elf", "png", "zip"],
+    "path": "tools/magic-bytes/",
+    "tier": "A"
+  },
+  {
+    "slug": "strings-extractor",
+    "name": "Strings Extractor",
+    "category": "forensics",
+    "description": "Extract printable ASCII and Unicode strings from binary files",
+    "tags": ["strings", "binary", "forensics", "malware", "pe", "elf", "ascii", "unicode", "ctf"],
+    "path": "tools/strings-extractor/",
+    "tier": "A"
+  },
+  {
+    "slug": "vigenere",
+    "name": "Vigenère Cipher",
+    "category": "classical",
+    "description": "Polyalphabetic substitution cipher with Kasiski key-length analysis",
+    "tags": ["vigenere", "cipher", "polyalphabetic", "kasiski", "key recovery", "ctf"],
+    "path": "tools/vigenere/",
+    "tier": "A"
+  },
+  {
+    "slug": "classical-ciphers",
+    "name": "Classical Ciphers",
+    "category": "classical",
+    "description": "Atbash, Affine, A1Z26, Polybius, Rail Fence, Beaufort in one tool",
+    "tags": ["atbash", "affine", "a1z26", "polybius", "rail fence", "beaufort", "cipher", "ctf"],
+    "path": "tools/classical-ciphers/",
+    "tier": "A"
+  },
+  {
+    "slug": "frequency-analyzer",
+    "name": "Frequency Analyzer",
+    "category": "classical",
+    "description": "Character frequency analysis with n-gram charts and Caesar brute force",
+    "tags": ["frequency", "monogram", "bigram", "trigram", "ioc", "chi-squared", "caesar", "ctf", "crypto"],
+    "path": "tools/frequency-analyzer/",
+    "tier": "A"
+  },
+  {
+    "slug": "cipher-identifier",
+    "name": "Cipher Identifier",
+    "category": "classical",
+    "description": "Paste ciphertext and get the top-3 most likely cipher type guesses",
+    "tags": ["cipher", "identifier", "detect", "ctf", "crypto analysis", "auto"],
+    "path": "tools/cipher-identifier/",
+    "tier": "A"
+  },
+  {
+    "slug": "reverse-shell",
+    "name": "Reverse Shell Generator",
+    "category": "pentest",
+    "description": "Generate reverse shell one-liners in 10+ languages with auto IP/PORT substitution",
+    "tags": ["reverse shell", "bash", "python", "php", "powershell", "netcat", "socat", "ctf", "pentest"],
+    "path": "tools/reverse-shell/",
+    "tier": "A"
+  },
+  {
+    "slug": "xss-payloads",
+    "name": "XSS Payload Library",
+    "category": "pentest",
+    "description": "XSS payloads organized by injection context — HTML, JS, URL, CSS, SVG",
+    "tags": ["xss", "cross-site scripting", "payload", "bypass", "ctf", "pentest", "web security"],
+    "path": "tools/xss-payloads/",
+    "tier": "A"
+  },
+  {
+    "slug": "sqli-payloads",
+    "name": "SQLi Payload Library",
+    "category": "pentest",
+    "description": "SQL injection payloads organized by DBMS and technique",
+    "tags": ["sql injection", "sqli", "mysql", "postgresql", "mssql", "oracle", "sqlite", "blind", "union", "ctf", "pentest"],
+    "path": "tools/sqli-payloads/",
+    "tier": "A"
+  },
+  {
+    "slug": "jwt-attacks",
+    "name": "JWT Attacks Toolkit",
+    "category": "pentest",
+    "description": "alg:none, RS256→HS256 confusion, weak secret crack, kid injection",
+    "tags": ["jwt", "attacks", "alg none", "rs256 hs256", "secret crack", "kid injection", "ctf", "pentest"],
+    "path": "tools/jwt-attacks/",
+    "tier": "A"
+  },
+  {
+    "slug": "google-dorks",
+    "name": "Google Dorks Builder",
+    "category": "osint",
+    "description": "Build Google dorking queries and browse a library of 50+ presets",
+    "tags": ["google dorks", "dorking", "osint", "recon", "search", "exposed", "admin", "ctf", "pentest"],
+    "path": "tools/google-dorks/",
+    "tier": "A"
+  }
+]

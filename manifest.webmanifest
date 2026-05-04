@@ -1,0 +1,60 @@
+{
+    "name": "CyberTools",
+    "short_name": "CyberTools",
+    "description": "The cybersecurity toolkit you actually trust. Everything runs in your browser. Nothing is ever sent to a server.",
+    "start_url": "/CyberTools/",
+    "scope": "/CyberTools/",
+    "display": "standalone",
+    "orientation": "any",
+    "theme_color": "#0d1117",
+    "background_color": "#0d1117",
+    "lang": "en",
+    "categories": ["security", "utilities", "developer"],
+    "icons": [
+        {
+            "src": "assets/icons/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "assets/icons/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [],
+    "shortcuts": [
+        {
+            "name": "Hash Calculator",
+            "url": "/CyberTools/tools/hash/",
+            "description": "MD5, SHA-256, SHA-512, HMAC, and file hash"
+        },
+        {
+            "name": "Password Generator",
+            "url": "/CyberTools/tools/password-generator/",
+            "description": "Generate secure passwords and passphrases"
+        },
+        {
+            "name": "JSON Formatter",
+            "url": "/CyberTools/tools/json-formatter/",
+            "description": "Format, validate, minify, and sort JSON"
+        },
+        {
+            "name": "Base64",
+            "url": "/CyberTools/tools/base64/",
+            "description": "Encode and decode Base64 locally"
+        },
+        {
+            "name": "AES Encryption",
+            "url": "/CyberTools/tools/aes/",
+            "description": "AES-GCM/CBC/CTR encryption and decryption"
+        },
+        {
+            "name": "Timestamp Converter",
+            "url": "/CyberTools/tools/timestamp/",
+            "description": "Convert Unix, ISO 8601, and local times"
+        }
+    ]
+}

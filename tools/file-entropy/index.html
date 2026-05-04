@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>File Entropy Analyzer - Free Client-Side Tool | CyberTools</title>
+        <meta name="description" content="Free online File Entropy Analyzer tool. Shannon entropy analysis with per-chunk chart and byte frequency histogram. Runs locally in your browser with no…" />
+        <link rel="canonical" href="https://ctlib.github.io/CyberTools/tools/file-entropy/" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+        />
+
+        <!-- Search metadata -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta
+            name="keywords"
+            content="File Entropy Analyzer, File Entropy Analyzer online, File Entropy Analyzer tool, File Entropy Analyzer CyberTools, entropy, shannon, file, binary, analysis, encrypted, compressed, forensics, cybersecurity tools, ctf tools, client-side tools"
+        />
+        <meta property="og:site_name" content="CyberTools" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="File Entropy Analyzer - Free Client-Side Tool | CyberTools" />
+        <meta property="og:description" content="Free online File Entropy Analyzer tool. Shannon entropy analysis with per-chunk chart and byte frequency histogram. Runs locally in your browser with no…" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ctlib.github.io/CyberTools/tools/file-entropy/" />
+        <meta property="og:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="File Entropy Analyzer - Free Client-Side Tool | CyberTools" />
+        <meta name="twitter:description" content="Free online File Entropy Analyzer tool. Shannon entropy analysis with per-chunk chart and byte frequency histogram. Runs locally in your browser with no…" />
+        <meta name="twitter:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <link rel="alternate" hreflang="en" href="https://ctlib.github.io/CyberTools/tools/file-entropy/" />
+        <link rel="alternate" hreflang="x-default" href="https://ctlib.github.io/CyberTools/tools/file-entropy/" />
+        <link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "SoftwareApplication",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/file-entropy/#app",
+                        "name": "File Entropy Analyzer",
+                        "alternateName": ["file-entropy", "entropy", "shannon", "file", "binary", "analysis", "encrypted", "compressed", "forensics"],
+                        "applicationCategory": "SecurityApplication",
+                        "applicationSubCategory": "Forensics",
+                        "operatingSystem": "Any",
+                        "url": "https://ctlib.github.io/CyberTools/tools/file-entropy/",
+                        "image": "https://ctlib.github.io/CyberTools/assets/logowb.png",
+                        "description": "Free online File Entropy Analyzer tool. Shannon entropy analysis with per-chunk chart and byte frequency histogram. Runs locally in your browser with no…",
+                        "keywords": "entropy, shannon, file, binary, analysis, encrypted, compressed, forensics",
+                        "isAccessibleForFree": true,
+                        "browserRequirements": "Requires JavaScript. Runs locally in the browser without server uploads.",
+                        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                        "author": { "@type": "Organization", "name": "CTLib", "url": "https://github.com/ctlib" },
+                        "publisher": { "@id": "https://ctlib.github.io/CyberTools/#organization" },
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#app" },
+                        "license": "https://opensource.org/licenses/MIT"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/file-entropy/#webpage",
+                        "name": "File Entropy Analyzer - Free Client-Side Tool | CyberTools",
+                        "url": "https://ctlib.github.io/CyberTools/tools/file-entropy/",
+                        "description": "Free online File Entropy Analyzer tool. Shannon entropy analysis with per-chunk chart and byte frequency histogram. Runs locally in your browser with no…",
+                        "inLanguage": "en",
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#website" }
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            { "@type": "ListItem", "position": 1, "name": "CyberTools", "item": "https://ctlib.github.io/CyberTools/" },
+                            { "@type": "ListItem", "position": 2, "name": "File Entropy Analyzer", "item": "https://ctlib.github.io/CyberTools/tools/file-entropy/" }
+                        ]
+                    }
+                ]
+            }
+        </script>
+        <!-- /Search metadata -->
+        <link rel="icon" href="../../assets/logowb.png" type="image/png" />
+        <link rel="preload" href="../../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="../../assets/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="stylesheet" href="../../css/design-system.css" />
+        <link rel="stylesheet" href="../../css/global.css" />
+        <link rel="stylesheet" href="../../css/tailwind.css" />
+        <link rel="stylesheet" href="../../css/tool.css" />
+        <script src="../../js/theme.js"></script>
+    </head>
+    <body data-ct-active-tool="file-entropy" data-ct-tool-source="tools/file-entropy/script.js">
+        <main id="ct-main">
+            <div class="tool-header">
+                <h1 class="tool-title">File Entropy Analyzer</h1>
+                <p class="tool-description">Analyze a file's Shannon entropy and byte-frequency distribution to detect encryption, compression, or packing.</p>
+            </div>
+
+            <div class="tool-panel">
+                <div
+                    id="dropZone"
+                    style="border: 2px dashed var(--border); border-radius: 8px; padding: 40px; text-align: center; cursor: pointer; transition: border-color 0.15s"
+                    onmouseenter="this.style.borderColor = 'var(--accent)'"
+                    onmouseleave="this.style.borderColor = 'var(--border)'"
+                    onclick="document.getElementById('fileInput').click()"
+                >
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--text-muted); margin-bottom: 10px">
+                        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                        <polyline points="17 8 12 3 7 8" />
+                        <line x1="12" y1="3" x2="12" y2="15" />
+                    </svg>
+                    <div style="font-size: 15px; font-weight: 600; color: var(--text)">Drop a file or click to select</div>
+                    <div style="font-size: 13px; color: var(--text-muted); margin-top: 6px">File never leaves your browser - all analysis runs locally</div>
+                </div>
+                <input id="fileInput" type="file" hidden />
+                <div id="fileInfo" style="font-size: 12px; color: var(--text-muted); margin-top: 8px"></div>
+            </div>
+
+            <div id="resultWrapper" style="margin-top: 16px; display: none">
+                <div class="tool-panel" style="text-align: center; padding: 24px">
+                    <div id="entropyValue" style="font-size: 56px; font-weight: 800; line-height: 1; color: var(--accent); font-family: 'JetBrains Mono', monospace">0.00</div>
+                    <div id="entropyLabel" style="font-size: 16px; font-weight: 700; margin-top: 8px">bits/byte</div>
+                    <div id="entropyDesc" style="font-size: 13px; color: var(--text-muted); margin-top: 6px"></div>
+                </div>
+
+                <div class="tool-panel" style="margin-top: 16px">
+                    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; text-align: center">
+                        <div>
+                            <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 4px">File size</div>
+                            <div id="fileSizeVal" style="font-size: 15px; font-weight: 600">-</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 4px">Unique bytes</div>
+                            <div id="uniqueBytes" style="font-size: 15px; font-weight: 600">-</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 4px">Null bytes</div>
+                            <div id="nullBytes" style="font-size: 15px; font-weight: 600">-</div>
+                        </div>
+                        <div>
+                            <div style="font-size: 11px; color: var(--text-muted); margin-bottom: 4px">Printable ASCII</div>
+                            <div id="printableBytes" style="font-size: 15px; font-weight: 600">-</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tool-panel" style="margin-top: 16px">
+                    <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px">Entropy by chunk (0–8 bits/byte) - dashed line = overall average</div>
+                    <canvas id="entropyChart" width="600" height="120" style="width: 100%; height: 120px; display: block"></canvas>
+                </div>
+
+                <div class="tool-panel" style="margin-top: 16px">
+                    <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px">Byte frequency (0x00–0xFF) - <span style="color: #4ade80">green</span> = printable ASCII, <span style="color: #60a5fa">blue</span> = non-printable</div>
+                    <canvas id="freqCanvas" width="512" height="80" style="width: 100%; height: 80px; display: block"></canvas>
+                </div>
+            </div>
+
+            <details class="tool-docs">
+                <summary>How it works</summary>
+                <div class="tool-docs-content">
+                    <p>
+                        Shannon entropy measures the average information content per byte: <code>H = -Î£ p(x) × log₂(p(x))</code>. Maximum is 8 bits/byte (perfectly random). Reference values: plain text ~3–5, source code ~4–6, compressed or
+                        encrypted data ~7.5–8.
+                    </p>
+                    <p>Packers and obfuscators often raise entropy in executable sections. Low entropy in a ciphertext indicates a weak or repeating key. Per-chunk analysis helps identify packed sections within larger files.</p>
+                </div>
+            </details>
+
+            <div class="tool-panel" style="margin-top: 16px; border-left: 3px solid var(--warning); background: color-mix(in srgb, var(--warning) 6%, var(--surface))">
+                <div style="font-size: 12px; font-weight: 700; color: var(--warning); margin-bottom: 4px">Security note</div>
+                <div style="font-size: 13px; color: var(--text-muted)">
+                    Entropy &gt; 7.5 strongly suggests encryption or compression. Malware commonly uses entropy analysis as a packing detection signal. This tool helps identify encrypted payloads, key material, or compressed sections in binary files
+                    during forensic analysis.
+                </div>
+            </div>
+
+            <div class="tool-meta-links">
+                <a href="https://github.com/ctlib/CyberTools/blob/main/tools/file-entropy/script.js" target="_blank" rel="noopener noreferrer"
+                    ><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                        />
+                    </svg>
+                    View source</a
+                >
+                <a href="https://github.com/ctlib/CyberTools/issues/new" target="_blank" rel="noopener noreferrer">Report issue</a>
+            </div>
+        </main>
+        <script src="../../js/app.js" defer></script>
+        <script src="../../js/history.js" defer></script>
+        <script src="../../js/share.js" defer></script>
+        <script src="../../js/smart-detect.js" defer></script>
+        <script src="../../js/components.js" defer></script>
+        <script src="../../js/shortcuts.js" defer></script>
+        <script src="../../js/pwa.js" defer></script>
+        <script src="script.js" defer></script>
+        <script src="../../js/page-init.js" defer></script>
+    </body>
+</html>

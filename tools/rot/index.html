@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ROT Cipher - Free Client-Side Tool | CyberTools</title>
+        <meta name="description" content="Free online ROT Cipher tool. ROT1/5/13/18/47/48 encode and decode with auto-detect. Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta name="author" content="CTLib" />
+        <link rel="canonical" href="https://ctlib.github.io/CyberTools/tools/rot/" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+        />
+
+        <!-- Search metadata -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta name="keywords" content="ROT Cipher, ROT Cipher online, ROT Cipher tool, ROT Cipher CyberTools, rot13, caesar, cipher, encode, decode, cybersecurity tools, ctf tools, client-side tools" />
+        <meta property="og:site_name" content="CyberTools" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="ROT Cipher - Free Client-Side Tool | CyberTools" />
+        <meta property="og:description" content="Free online ROT Cipher tool. ROT1/5/13/18/47/48 encode and decode with auto-detect. Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ctlib.github.io/CyberTools/tools/rot/" />
+        <meta property="og:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="ROT Cipher - Free Client-Side Tool | CyberTools" />
+        <meta name="twitter:description" content="Free online ROT Cipher tool. ROT1/5/13/18/47/48 encode and decode with auto-detect. Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta name="twitter:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <link rel="alternate" hreflang="en" href="https://ctlib.github.io/CyberTools/tools/rot/" />
+        <link rel="alternate" hreflang="x-default" href="https://ctlib.github.io/CyberTools/tools/rot/" />
+        <link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "SoftwareApplication",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/rot/#app",
+                        "name": "ROT Cipher",
+                        "alternateName": ["rot", "rot13", "caesar", "cipher", "encode", "decode"],
+                        "applicationCategory": "SecurityApplication",
+                        "applicationSubCategory": "Encoding and Decoding",
+                        "operatingSystem": "Any",
+                        "url": "https://ctlib.github.io/CyberTools/tools/rot/",
+                        "image": "https://ctlib.github.io/CyberTools/assets/logowb.png",
+                        "description": "Free online ROT Cipher tool. ROT1/5/13/18/47/48 encode and decode with auto-detect. Runs locally in your browser with no tracking, signup, or uploads.",
+                        "keywords": "rot13, caesar, cipher, encode, decode",
+                        "isAccessibleForFree": true,
+                        "browserRequirements": "Requires JavaScript. Runs locally in the browser without server uploads.",
+                        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                        "author": { "@type": "Organization", "name": "CTLib", "url": "https://github.com/ctlib" },
+                        "publisher": { "@id": "https://ctlib.github.io/CyberTools/#organization" },
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#app" },
+                        "license": "https://opensource.org/licenses/MIT"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/rot/#webpage",
+                        "name": "ROT Cipher - Free Client-Side Tool | CyberTools",
+                        "url": "https://ctlib.github.io/CyberTools/tools/rot/",
+                        "description": "Free online ROT Cipher tool. ROT1/5/13/18/47/48 encode and decode with auto-detect. Runs locally in your browser with no tracking, signup, or uploads.",
+                        "inLanguage": "en",
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#website" }
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            { "@type": "ListItem", "position": 1, "name": "CyberTools", "item": "https://ctlib.github.io/CyberTools/" },
+                            { "@type": "ListItem", "position": 2, "name": "ROT Cipher", "item": "https://ctlib.github.io/CyberTools/tools/rot/" }
+                        ]
+                    }
+                ]
+            }
+        </script>
+        <!-- /Search metadata -->
+        <link rel="icon" href="../../assets/logowb.png" type="image/png" />
+        <link rel="preload" href="../../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="../../assets/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="stylesheet" href="../../css/design-system.css" />
+        <link rel="stylesheet" href="../../css/global.css" />
+        <link rel="stylesheet" href="../../css/tailwind.css" />
+        <link rel="stylesheet" href="../../css/tool.css" />
+        <script src="../../js/theme.js"></script>
+    </head>
+    <body data-ct-active-tool="rot" data-ct-tool-source="tools/rot/script.js">
+        <main id="ct-main">
+            <div class="tool-header">
+                <h1 class="tool-title">ROT Cipher</h1>
+                <p class="tool-description">ROT1, ROT5, ROT13, ROT18, ROT47, ROT48 - decode with auto-detect or encode all variants at once.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+                <!-- Decode / Execute -->
+                <div class="tool-panel">
+                    <label class="tool-panel-label" for="input">Decode / Execute</label>
+                    <textarea id="input" data-ct-input class="textarea" rows="5" placeholder="Enter text to decode…" aria-label="Text to decode"></textarea>
+                    <div style="display: flex; align-items: center; gap: 8px; margin-top: 12px; flex-wrap: wrap">
+                        <select id="mode" class="input" style="width: auto; flex: 1" aria-label="ROT mode">
+                            <option value="auto">AUTO DETECT</option>
+                            <option value="rot1">ROT1</option>
+                            <option value="rot5">ROT5</option>
+                            <option value="rot13">ROT13</option>
+                            <option value="rot18">ROT18</option>
+                            <option value="rot47">ROT47</option>
+                            <option value="rot48">ROT48</option>
+                        </select>
+                        <button onclick="run()" data-ct-run class="btn-primary">Execute</button>
+                        <button
+                            onclick="
+                                document.getElementById('input').value = '';
+                                document.getElementById('output').textContent = '';
+                            "
+                            class="btn-ghost"
+                        >
+                            Clear
+                        </button>
+                    </div>
+                    <details class="examples-section" style="margin-top: 12px">
+                        <summary>Examples</summary>
+                        <div class="example-label" style="margin-top: 8px">Click to auto-detect</div>
+                        <div
+                            class="example-item"
+                            onclick="
+                                document.getElementById('input').value = this.dataset.v;
+                                document.getElementById('mode').value = 'auto';
+                                run();
+                            "
+                            data-v="Uryyb, Jbeyq!"
+                        >
+                            Uryyb, Jbeyq! (ROT13)
+                        </div>
+                        <div
+                            class="example-item"
+                            onclick="
+                                document.getElementById('input').value = this.dataset.v;
+                                document.getElementById('mode').value = 'auto';
+                                run();
+                            "
+                            data-v="w6==0 (FC=:5P"
+                        >
+                            w6==0 (FC=:5P (ROT47)
+                        </div>
+                    </details>
+                    <div style="margin-top: 12px">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px">
+                            <label class="tool-panel-label" style="margin: 0" for="output">Output</label>
+                            <button class="output-copy-btn" style="position: static" onclick="CyberTools.copyText(document.getElementById('output').textContent, this)">Copy</button>
+                        </div>
+                        <pre id="output" data-ct-output class="code-block" style="min-height: 80px; white-space: pre-wrap; word-break: break-word" aria-live="polite"></pre>
+                    </div>
+                </div>
+
+                <!-- Encode -->
+                <div class="tool-panel">
+                    <label class="tool-panel-label" for="encInput">Encode</label>
+                    <textarea id="encInput" class="textarea" rows="5" placeholder="Enter text to encode…" aria-label="Text to encode"></textarea>
+                    <div style="display: flex; align-items: center; gap: 8px; margin-top: 12px; flex-wrap: wrap">
+                        <select id="encMode" class="input" style="width: auto; flex: 1" aria-label="Encode ROT mode">
+                            <option value="all">ALL VARIANTS</option>
+                            <option value="rot1">ROT1</option>
+                            <option value="rot5">ROT5</option>
+                            <option value="rot13">ROT13</option>
+                            <option value="rot18">ROT18</option>
+                            <option value="rot47">ROT47</option>
+                            <option value="rot48">ROT48</option>
+                        </select>
+                        <button onclick="encrypt()" class="btn-primary">Encode</button>
+                        <button
+                            onclick="
+                                document.getElementById('encInput').value = '';
+                                document.getElementById('encOutput').textContent = '';
+                            "
+                            class="btn-ghost"
+                        >
+                            Clear
+                        </button>
+                    </div>
+                    <details class="examples-section" style="margin-top: 12px">
+                        <summary>Example</summary>
+                        <div
+                            class="example-item"
+                            style="margin-top: 8px"
+                            onclick="
+                                document.getElementById('encInput').value = 'Hello, World!';
+                                document.getElementById('encMode').value = 'all';
+                                encrypt();
+                            "
+                        >
+                            "Hello, World!" → all ROT variants
+                        </div>
+                    </details>
+                    <div style="margin-top: 12px">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px">
+                            <label class="tool-panel-label" style="margin: 0" for="encOutput">Output</label>
+                            <button class="output-copy-btn" style="position: static" onclick="CyberTools.copyText(document.getElementById('encOutput').textContent, this)">Copy</button>
+                        </div>
+                        <pre id="encOutput" class="code-block" style="min-height: 80px; white-space: pre-wrap; word-break: break-word" aria-live="polite"></pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How it works -->
+            <details class="tool-docs">
+                <summary>How it works</summary>
+                <div class="tool-docs-content">
+                    <p>
+                        <strong>ROT13</strong> rotates letters by 13 positions (A↔N, B↔O, …). It's its own inverse. <strong>ROT5</strong> rotates digits (0–9) by 5. <strong>ROT18</strong> = ROT13 + ROT5 (letters and digits).
+                        <strong>ROT47</strong> rotates all printable ASCII (33–126) by 47. <strong>ROT48</strong> is a variant of ROT47.
+                    </p>
+                    <p><strong>AUTO DETECT</strong> tries all variants and shows results - useful for CTF challenges where you don't know which ROT was used.</p>
+                </div>
+            </details>
+
+            <div class="tool-meta-links">
+                <a href="https://github.com/ctlib/CyberTools/blob/main/tools/rot/script.js" target="_blank" rel="noopener noreferrer">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                        />
+                    </svg>
+                    View source of this tool
+                </a>
+                <a href="https://github.com/ctlib/CyberTools/issues/new" target="_blank" rel="noopener noreferrer">Report issue</a>
+            </div>
+        </main>
+
+        <script src="../../js/app.js" defer></script>
+        <script src="../../js/history.js" defer></script>
+        <script src="../../js/share.js" defer></script>
+        <script src="../../js/smart-detect.js" defer></script>
+        <script src="../../js/components.js" defer></script>
+        <script src="../../js/shortcuts.js" defer></script>
+        <script src="../../js/pwa.js" defer></script>
+        <script src="script.js" defer></script>
+        <script src="../../js/page-init.js" defer></script>
+    </body>
+</html>

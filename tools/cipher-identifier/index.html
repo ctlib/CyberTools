@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cipher Identifier - Free Client-Side Tool | CyberTools</title>
+        <meta name="description" content="Free online Cipher Identifier tool. Paste ciphertext and get the top-3 most likely cipher type guesses. Runs locally in your browser with no tracking,…" />
+        <link rel="canonical" href="https://ctlib.github.io/CyberTools/tools/cipher-identifier/" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+        />
+
+        <!-- Search metadata -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta name="keywords" content="Cipher Identifier, Cipher Identifier online, Cipher Identifier tool, Cipher Identifier CyberTools, cipher, identifier, detect, ctf, crypto analysis, auto, cybersecurity tools, ctf tools, client-side tools" />
+        <meta property="og:site_name" content="CyberTools" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="Cipher Identifier - Free Client-Side Tool | CyberTools" />
+        <meta property="og:description" content="Free online Cipher Identifier tool. Paste ciphertext and get the top-3 most likely cipher type guesses. Runs locally in your browser with no tracking,…" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ctlib.github.io/CyberTools/tools/cipher-identifier/" />
+        <meta property="og:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Cipher Identifier - Free Client-Side Tool | CyberTools" />
+        <meta name="twitter:description" content="Free online Cipher Identifier tool. Paste ciphertext and get the top-3 most likely cipher type guesses. Runs locally in your browser with no tracking,…" />
+        <meta name="twitter:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <link rel="alternate" hreflang="en" href="https://ctlib.github.io/CyberTools/tools/cipher-identifier/" />
+        <link rel="alternate" hreflang="x-default" href="https://ctlib.github.io/CyberTools/tools/cipher-identifier/" />
+        <link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "SoftwareApplication",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/cipher-identifier/#app",
+                        "name": "Cipher Identifier",
+                        "alternateName": ["cipher-identifier", "cipher", "identifier", "detect", "ctf", "crypto analysis", "auto"],
+                        "applicationCategory": "SecurityApplication",
+                        "applicationSubCategory": "Classical Ciphers",
+                        "operatingSystem": "Any",
+                        "url": "https://ctlib.github.io/CyberTools/tools/cipher-identifier/",
+                        "image": "https://ctlib.github.io/CyberTools/assets/logowb.png",
+                        "description": "Free online Cipher Identifier tool. Paste ciphertext and get the top-3 most likely cipher type guesses. Runs locally in your browser with no tracking,…",
+                        "keywords": "cipher, identifier, detect, ctf, crypto analysis, auto",
+                        "isAccessibleForFree": true,
+                        "browserRequirements": "Requires JavaScript. Runs locally in the browser without server uploads.",
+                        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                        "author": { "@type": "Organization", "name": "CTLib", "url": "https://github.com/ctlib" },
+                        "publisher": { "@id": "https://ctlib.github.io/CyberTools/#organization" },
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#app" },
+                        "license": "https://opensource.org/licenses/MIT"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/cipher-identifier/#webpage",
+                        "name": "Cipher Identifier - Free Client-Side Tool | CyberTools",
+                        "url": "https://ctlib.github.io/CyberTools/tools/cipher-identifier/",
+                        "description": "Free online Cipher Identifier tool. Paste ciphertext and get the top-3 most likely cipher type guesses. Runs locally in your browser with no tracking,…",
+                        "inLanguage": "en",
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#website" }
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            { "@type": "ListItem", "position": 1, "name": "CyberTools", "item": "https://ctlib.github.io/CyberTools/" },
+                            { "@type": "ListItem", "position": 2, "name": "Cipher Identifier", "item": "https://ctlib.github.io/CyberTools/tools/cipher-identifier/" }
+                        ]
+                    }
+                ]
+            }
+        </script>
+        <!-- /Search metadata -->
+        <link rel="icon" href="../../assets/logowb.png" type="image/png" />
+        <link rel="preload" href="../../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="stylesheet" href="../../css/design-system.css" />
+        <link rel="stylesheet" href="../../css/global.css" />
+        <link rel="stylesheet" href="../../css/tailwind.css" />
+        <link rel="stylesheet" href="../../css/tool.css" />
+        <script src="../../js/theme.js"></script>
+    </head>
+    <body data-ct-active-tool="cipher-identifier" data-ct-tool-source="tools/cipher-identifier/script.js">
+        <div style="max-width: 860px; margin: 0 auto; padding: 32px 24px">
+            <div class="tool-header">
+                <h1 class="tool-title">Cipher Identifier</h1>
+                <p class="tool-description">Paste ciphertext - get the top-3 most likely cipher type guesses based on structural analysis.</p>
+            </div>
+
+            <div class="tool-panel" style="margin-bottom: 20px">
+                <textarea
+                    id="input"
+                    rows="8"
+                    placeholder="Paste your ciphertext here…&#10;&#10;Examples:&#10;• Base64: SGVsbG8gV29ybGQ=&#10;• Hex: 48656c6c6f&#10;• ROT13: Uryyb Jbeyq&#10;• JWT: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIn0.abc123"
+                    style="
+                        width: 100%;
+                        background: var(--surface-2);
+                        border: 1px solid var(--border);
+                        border-radius: 8px;
+                        padding: 12px 14px;
+                        font-size: 14px;
+                        color: var(--text);
+                        font-family: 'JetBrains Mono', monospace;
+                        resize: vertical;
+                        box-sizing: border-box;
+                    "
+                    oninput="debounceIdentify()"
+                ></textarea>
+                <div style="display: flex; gap: 10px; margin-top: 12px">
+                    <button onclick="identify()" style="background: var(--accent); color: var(--bg); border: none; border-radius: 6px; padding: 10px 20px; font-size: 14px; font-weight: 600; cursor: pointer">Identify</button>
+                    <button
+                        onclick="
+                            document.getElementById('input').value = '';
+                            document.getElementById('results').innerHTML = '';
+                            document.getElementById('results').style.display = 'none';
+                        "
+                        style="background: var(--surface-2); border: 1px solid var(--border); color: var(--text-muted); border-radius: 6px; padding: 10px 16px; font-size: 14px; cursor: pointer"
+                    >
+                        Clear
+                    </button>
+                </div>
+                <details class="examples-section" style="margin-top: 12px">
+                    <summary>Examples</summary>
+                    <div class="example-label" style="margin-top: 8px">Click to load and identify</div>
+                    <div
+                        class="example-item"
+                        onclick="
+                            document.getElementById('input').value = 'SGVsbG8gV29ybGQh';
+                            identify();
+                        "
+                        data-v="Base64"
+                    >
+                        Base64: SGVsbG8gV29ybGQh
+                    </div>
+                    <div
+                        class="example-item"
+                        onclick="
+                            document.getElementById('input').value = '48656c6c6f20576f726c6421';
+                            identify();
+                        "
+                        data-v="Hex"
+                    >
+                        Hex: 48656c6c6f20576f726c6421
+                    </div>
+                    <div
+                        class="example-item"
+                        onclick="
+                            document.getElementById('input').value = 'Uryyb Jbeyq';
+                            identify();
+                        "
+                        data-v="ROT13"
+                    >
+                        ROT13: Uryyb Jbeyq
+                    </div>
+                    <div
+                        class="example-item"
+                        onclick="
+                            document.getElementById('input').value = 'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huIiwiaWF0IjoxNzE0MDAwMDAwfQ.5K2L3kGCvN8mZ1aJpQqW7nA9YxCzD4eFgH6sR0tU2Vw';
+                            identify();
+                        "
+                        data-v="JWT"
+                    >
+                        JWT token
+                    </div>
+                    <div
+                        class="example-item"
+                        onclick="
+                            document.getElementById('input').value = 'Wkh txlfn eurzq ira mxpsv ryhu wkh odcb grj';
+                            identify();
+                        "
+                        data-v="Caesar"
+                    >
+                        Caesar shift 3: Wkh txlfn eurzq…
+                    </div>
+                    <div
+                        class="example-item"
+                        onclick="
+                            document.getElementById('input').value = 'LXFOPVEFRNHRLXFOPVEFRNHRLXFOPVEFRNHR';
+                            identify();
+                        "
+                        data-v="Vigenere"
+                    >
+                        Vigenère ciphertext
+                    </div>
+                    <div
+                        class="example-item"
+                        onclick="
+                            document.getElementById('input').value = 'LS0tLS1CRUdJTiBQR1AgTUVTU0FHRS0tLS0tCnZlcnNpb246IDEuMA==';
+                            identify();
+                        "
+                        data-v="PGP-ish"
+                    >
+                        Base64 of PGP header
+                    </div>
+                </details>
+            </div>
+
+            <div id="results" style="display: none"></div>
+        </div>
+
+        <script src="../../js/app.js" defer></script>
+        <script src="../../js/history.js" defer></script>
+        <script src="../../js/share.js" defer></script>
+        <script src="../../js/smart-detect.js" defer></script>
+        <script src="../../js/components.js" defer></script>
+        <script src="../../js/shortcuts.js" defer></script>
+        <script src="../../js/pwa.js" defer></script>
+        <script src="script.js" defer></script>
+        <script src="../../js/page-init.js" defer></script>
+    </body>
+</html>

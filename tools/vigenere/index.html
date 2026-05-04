@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vigenère Cipher - Free Client-Side Tool | CyberTools</title>
+    <meta name="description" content="Free online Vigenère Cipher tool. Polyalphabetic substitution cipher with Kasiski key-length analysis. Runs locally in your browser with no tracking,…" />
+    <link rel="canonical" href="https://ctlib.github.io/CyberTools/tools/vigenere/" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
+
+        <!-- Search metadata -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta name="keywords" content="Vigenère Cipher, Vigenère Cipher online, Vigenère Cipher tool, Vigenère Cipher CyberTools, vigenere, cipher, polyalphabetic, kasiski, key recovery, ctf, cybersecurity tools, ctf tools, client-side tools" />
+        <meta property="og:site_name" content="CyberTools" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="Vigenère Cipher - Free Client-Side Tool | CyberTools" />
+        <meta property="og:description" content="Free online Vigenère Cipher tool. Polyalphabetic substitution cipher with Kasiski key-length analysis. Runs locally in your browser with no tracking,…" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ctlib.github.io/CyberTools/tools/vigenere/" />
+        <meta property="og:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Vigenère Cipher - Free Client-Side Tool | CyberTools" />
+        <meta name="twitter:description" content="Free online Vigenère Cipher tool. Polyalphabetic substitution cipher with Kasiski key-length analysis. Runs locally in your browser with no tracking,…" />
+        <meta name="twitter:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <link rel="alternate" hreflang="en" href="https://ctlib.github.io/CyberTools/tools/vigenere/" />
+        <link rel="alternate" hreflang="x-default" href="https://ctlib.github.io/CyberTools/tools/vigenere/" />
+        <link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+        <script type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","@id":"https://ctlib.github.io/CyberTools/tools/vigenere/#app","name":"Vigenère Cipher","alternateName":["vigenere","cipher","polyalphabetic","kasiski","key recovery","ctf"],"applicationCategory":"SecurityApplication","applicationSubCategory":"Classical Ciphers","operatingSystem":"Any","url":"https://ctlib.github.io/CyberTools/tools/vigenere/","image":"https://ctlib.github.io/CyberTools/assets/logowb.png","description":"Free online Vigenère Cipher tool. Polyalphabetic substitution cipher with Kasiski key-length analysis. Runs locally in your browser with no tracking,…","keywords":"vigenere, cipher, polyalphabetic, kasiski, key recovery, ctf","isAccessibleForFree":true,"browserRequirements":"Requires JavaScript. Runs locally in the browser without server uploads.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"CTLib","url":"https://github.com/ctlib"},"publisher":{"@id":"https://ctlib.github.io/CyberTools/#organization"},"isPartOf":{"@id":"https://ctlib.github.io/CyberTools/#app"},"license":"https://opensource.org/licenses/MIT"},{"@type":"WebPage","@id":"https://ctlib.github.io/CyberTools/tools/vigenere/#webpage","name":"Vigenère Cipher - Free Client-Side Tool | CyberTools","url":"https://ctlib.github.io/CyberTools/tools/vigenere/","description":"Free online Vigenère Cipher tool. Polyalphabetic substitution cipher with Kasiski key-length analysis. Runs locally in your browser with no tracking,…","inLanguage":"en","isPartOf":{"@id":"https://ctlib.github.io/CyberTools/#website"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CyberTools","item":"https://ctlib.github.io/CyberTools/"},{"@type":"ListItem","position":2,"name":"Vigenère Cipher","item":"https://ctlib.github.io/CyberTools/tools/vigenere/"}]}]}
+        </script>
+        <!-- /Search metadata -->
+        <link rel="icon" href="../../assets/logowb.png" type="image/png" />
+    <link rel="preload" href="../../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../../assets/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../../css/design-system.css" />
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/tailwind.css" />
+    <link rel="stylesheet" href="../../css/tool.css" />
+    <style>
+        .vig-tabs { display: flex; gap: 0; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+        .vig-tab { padding: 8px 20px; font-size: 14px; font-weight: 500; cursor: pointer; border: none; background: transparent; color: var(--text-muted); border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all .15s; }
+        .vig-tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+        .vig-tab:hover:not(.active) { color: var(--text); }
+        .vig-panel { display: none; }
+        .vig-panel.active { display: block; }
+        .ioc-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .ioc-table th { text-align: left; padding: 6px 10px; color: var(--text-muted); font-weight: 500; border-bottom: 1px solid var(--border); font-size: 12px; }
+        .ioc-table td { padding: 6px 10px; border-bottom: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; }
+        .ioc-table tr.top-guess { background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
+        .ioc-table tr.top-guess td { color: var(--accent); }
+        .key-letter-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+        .key-letter-card { background: var(--surface-2); border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; text-align: center; min-width: 56px; }
+        .key-letter-card .pos { font-size: 10px; color: var(--text-muted); margin-bottom: 2px; }
+        .key-letter-card .letter { font-size: 22px; font-weight: 700; color: var(--accent); font-family: 'JetBrains Mono', monospace; }
+        .key-letter-card .shift { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
+    </style>
+        <script src="../../js/theme.js"></script>
+</head>
+<body data-ct-active-tool="vigenere" data-ct-tool-source="tools/vigenere/script.js">
+<main id="ct-main">
+    <div class="tool-header">
+        <h1 class="tool-title">Vigenère Cipher</h1>
+        <p class="tool-description">Polyalphabetic substitution with Kasiski key-length analysis and frequency-based key recovery.</p>
+    </div>
+
+    <div class="vig-tabs">
+        <button class="vig-tab active" onclick="switchTab('cipher')">Cipher</button>
+        <button class="vig-tab" onclick="switchTab('kasiski')">Kasiski Analysis</button>
+    </div>
+
+    <!-- Cipher Panel -->
+    <div id="panel-cipher" class="vig-panel active">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+            <div class="tool-panel">
+                <div class="tool-panel-label">Plaintext / Ciphertext</div>
+                <textarea id="vigInput" class="textarea" rows="7" placeholder="Enter text to encrypt or decrypt…" spellcheck="false"></textarea>
+                <div style="margin-top:12px;">
+                    <label class="tool-panel-label" style="margin-bottom:6px;display:block;">Key <span style="font-weight:400;color:var(--text-muted);font-size:12px;">(letters only)</span></label>
+                    <input id="vigKey" class="input" type="text" placeholder="e.g. SECRET" style="font-family:'JetBrains Mono',monospace;text-transform:uppercase;" spellcheck="false" />
+                    <div id="vigKeyError" style="color:var(--danger);font-size:12px;margin-top:4px;"></div>
+                </div>
+                <div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;">
+                    <button id="vigEncryptBtn" class="btn-primary" data-ct-run>Encrypt</button>
+                    <button id="vigDecryptBtn" class="btn-secondary">Decrypt</button>
+                </div>
+                <div id="vigError" style="color:var(--danger);font-size:13px;margin-top:8px;"></div>
+                <details class="examples-section" style="margin-top:12px;">
+                    <summary>Examples</summary>
+                    <div class="example-label" style="margin-top:8px;">Click to load (input + key)</div>
+                    <div class="example-item" onclick="document.getElementById('vigInput').value='ATTACKATDAWN';document.getElementById('vigKey').value='LEMON';document.getElementById('vigEncryptBtn').click();" data-v="ATTACKATDAWN / LEMON">Classic: ATTACKATDAWN / LEMON → encrypt</div>
+                    <div class="example-item" onclick="document.getElementById('vigInput').value='LXFOPVEFRNHR';document.getElementById('vigKey').value='LEMON';document.getElementById('vigDecryptBtn').click();" data-v="LXFOPVEFRNHR / LEMON">Reverse: LXFOPVEFRNHR / LEMON → decrypt</div>
+                    <div class="example-item" onclick="document.getElementById('vigInput').value='THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG';document.getElementById('vigKey').value='SECRET';document.getElementById('vigEncryptBtn').click();" data-v="Pangram / SECRET">Pangram with spaces / SECRET</div>
+                </details>
+            </div>
+            <div class="tool-panel">
+                <div class="tool-panel-label">Output</div>
+                <div class="output-wrapper">
+                    <textarea id="vigOutput" class="output-area" rows="7" readonly placeholder="Result appears here…"></textarea>
+                    <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('vigOutput').value,this)">Copy</button>
+                </div>
+                <div id="vigStats" style="margin-top:12px;font-size:12px;color:var(--text-muted);"></div>
+            </div>
+        </div>
+
+        <details class="tool-docs" style="margin-top:16px;">
+            <summary>How Vigenère works</summary>
+            <div class="tool-docs-content">
+                <p>The Vigenère cipher is a polyalphabetic substitution cipher. Each letter of the plaintext is shifted by the corresponding letter of the repeating key (A=0, B=1, … Z=25). Non-alphabetic characters are passed through unchanged.</p>
+                <p><strong>Encrypt:</strong> C = (P + K) mod 26 &nbsp;|&nbsp; <strong>Decrypt:</strong> P = (C − K + 26) mod 26</p>
+                <p>Unlike Caesar, different key letters produce different shifts, making frequency analysis harder. However, the Kasiski test and Index of Coincidence can reveal the key length, after which each column reduces to a Caesar cipher.</p>
+            </div>
+        </details>
+    </div>
+
+    <!-- Kasiski Panel -->
+    <div id="panel-kasiski" class="vig-panel">
+        <div class="tool-panel">
+            <div class="tool-panel-label">Ciphertext for Analysis</div>
+            <textarea id="kasiskiInput" class="textarea" rows="6" placeholder="Paste Vigenère ciphertext here (letters only)…" spellcheck="false"></textarea>
+            <div style="display:flex;gap:10px;margin-top:12px;align-items:center;">
+                <button id="kasiskiBtn" class="btn-primary" data-ct-run>Analyze</button>
+                <span id="kasiskiStatus" style="font-size:13px;color:var(--text-muted);"></span>
+            </div>
+            <details class="examples-section" style="margin-top:12px;">
+                <summary>Examples</summary>
+                <div class="example-label" style="margin-top:8px;">Click to load a sample ciphertext</div>
+                <div class="example-item" onclick="document.getElementById('kasiskiInput').value='LXFOPVEFRNHRLXFOPVEFRNHRLXFOPVEFRNHRLXFOPVEFRNHRLXFOPVEFRNHRLXFOPVEFRNHR';document.getElementById('kasiskiBtn').click();" data-v="repeating LEMON-encrypted block">Repeating block (key length 5 should win)</div>
+                <div class="example-item" onclick="document.getElementById('kasiskiInput').value='VVHQWVVRHMUSGJGTHKIHTSSEJCHLSFCBGVWCRLRYQTFSVGAHWKCUHWAUGLQHNSLRLJSHBLTSPISPRDXLJSVEEGHLQWKASSKUWEPWQTWVSPGOELKCQYFNSVWLJSNIQKGNRGYBWLWGOVIOKHKAZKQKXZGYHCECMEIUJOQKWFWVEFQHKIJRCLRLKBIENQFRJLJSDHGRHLSFQTWLAUQRHWDMWLGUSGIKKFLRYVCWVSPGPMLKASSJVOQXEGGVEYGGZMLJCXXLJSVPAIVWIKVRDRYGFRJLJSLVEGGVEYGG';document.getElementById('kasiskiBtn').click();" data-v="long ciphertext">Longer Kasiski demo (~250 chars)</div>
+            </details>
+        </div>
+
+        <div id="kasiskiResults" style="display:none;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;">
+                <div class="tool-panel">
+                    <div class="tool-panel-label">Overall Index of Coincidence</div>
+                    <div id="overallIoC" style="font-size:28px;font-weight:700;font-family:'JetBrains Mono',monospace;color:var(--accent);"></div>
+                    <div id="iocLabel" style="font-size:12px;color:var(--text-muted);margin-top:4px;"></div>
+                </div>
+                <div class="tool-panel">
+                    <div class="tool-panel-label">Most Likely Key Length</div>
+                    <div id="topKeyLen" style="font-size:28px;font-weight:700;font-family:'JetBrains Mono',monospace;color:var(--accent);"></div>
+                    <div id="topKeyLenLabel" style="font-size:12px;color:var(--text-muted);margin-top:4px;"></div>
+                </div>
+            </div>
+
+            <div class="tool-panel" style="margin-top:16px;">
+                <div class="tool-panel-label">Key Length IoC Table <span style="font-weight:400;font-size:12px;color:var(--text-muted);">(highlighted = top 3 candidates)</span></div>
+                <div style="overflow-x:auto;">
+                    <table class="ioc-table">
+                        <thead><tr><th>Key Length</th><th>Avg IoC</th><th>Distance to English (0.065)</th><th>Score</th></tr></thead>
+                        <tbody id="iocTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="tool-panel" style="margin-top:16px;">
+                <div class="tool-panel-label">Likely Key Letters <span id="keyLenUsed" style="font-weight:400;font-size:12px;color:var(--text-muted);"></span></div>
+                <div id="keyLetterGrid" class="key-letter-grid"></div>
+                <div style="margin-top:14px;">
+                    <div style="font-size:12px;color:var(--text-muted);margin-bottom:6px;">Recovered key (most likely):</div>
+                    <div id="recoveredKey" style="font-family:'JetBrains Mono',monospace;font-size:20px;color:var(--accent);font-weight:700;letter-spacing:2px;"></div>
+                    <button id="useKeyBtn" class="btn-ghost" style="margin-top:10px;font-size:12px;">Use this key in Cipher tab →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tool-meta-links">
+        <a href="https://github.com/ctlib/CyberTools/blob/main/tools/vigenere/script.js" target="_blank" rel="noopener noreferrer"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg> View source</a>
+        <a href="https://github.com/ctlib/CyberTools/issues/new" target="_blank" rel="noopener noreferrer">Report issue</a>
+    </div>
+</main>
+<script src="../../js/app.js" defer></script><script src="../../js/history.js" defer></script><script src="../../js/share.js" defer></script><script src="../../js/smart-detect.js" defer></script><script src="../../js/components.js" defer></script><script src="../../js/shortcuts.js" defer></script><script src="../../js/pwa.js" defer></script><script src="script.js" defer></script>
+        <script src="../../js/page-init.js" defer></script>
+</body></html>

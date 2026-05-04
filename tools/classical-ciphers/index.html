@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Classical Ciphers - Free Client-Side Tool | CyberTools</title>
+        <meta name="description" content="Free online Classical Ciphers tool. Atbash, Affine, A1Z26, Polybius, Rail Fence, Beaufort in one tool. Runs locally in your browser with no tracking,…" />
+        <link rel="canonical" href="https://ctlib.github.io/CyberTools/tools/classical-ciphers/" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+        />
+
+        <!-- Search metadata -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta
+            name="keywords"
+            content="Classical Ciphers, Classical Ciphers online, Classical Ciphers tool, Classical Ciphers CyberTools, atbash, affine, a1z26, polybius, rail fence, beaufort, cipher, ctf, cybersecurity tools, ctf tools, client-side tools"
+        />
+        <meta property="og:site_name" content="CyberTools" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="Classical Ciphers - Free Client-Side Tool | CyberTools" />
+        <meta property="og:description" content="Free online Classical Ciphers tool. Atbash, Affine, A1Z26, Polybius, Rail Fence, Beaufort in one tool. Runs locally in your browser with no tracking,…" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ctlib.github.io/CyberTools/tools/classical-ciphers/" />
+        <meta property="og:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Classical Ciphers - Free Client-Side Tool | CyberTools" />
+        <meta name="twitter:description" content="Free online Classical Ciphers tool. Atbash, Affine, A1Z26, Polybius, Rail Fence, Beaufort in one tool. Runs locally in your browser with no tracking,…" />
+        <meta name="twitter:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <link rel="alternate" hreflang="en" href="https://ctlib.github.io/CyberTools/tools/classical-ciphers/" />
+        <link rel="alternate" hreflang="x-default" href="https://ctlib.github.io/CyberTools/tools/classical-ciphers/" />
+        <link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "SoftwareApplication",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/classical-ciphers/#app",
+                        "name": "Classical Ciphers",
+                        "alternateName": ["classical-ciphers", "atbash", "affine", "a1z26", "polybius", "rail fence", "beaufort", "cipher", "ctf"],
+                        "applicationCategory": "SecurityApplication",
+                        "applicationSubCategory": "Classical Ciphers",
+                        "operatingSystem": "Any",
+                        "url": "https://ctlib.github.io/CyberTools/tools/classical-ciphers/",
+                        "image": "https://ctlib.github.io/CyberTools/assets/logowb.png",
+                        "description": "Free online Classical Ciphers tool. Atbash, Affine, A1Z26, Polybius, Rail Fence, Beaufort in one tool. Runs locally in your browser with no tracking,…",
+                        "keywords": "atbash, affine, a1z26, polybius, rail fence, beaufort, cipher, ctf",
+                        "isAccessibleForFree": true,
+                        "browserRequirements": "Requires JavaScript. Runs locally in the browser without server uploads.",
+                        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                        "author": { "@type": "Organization", "name": "CTLib", "url": "https://github.com/ctlib" },
+                        "publisher": { "@id": "https://ctlib.github.io/CyberTools/#organization" },
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#app" },
+                        "license": "https://opensource.org/licenses/MIT"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/classical-ciphers/#webpage",
+                        "name": "Classical Ciphers - Free Client-Side Tool | CyberTools",
+                        "url": "https://ctlib.github.io/CyberTools/tools/classical-ciphers/",
+                        "description": "Free online Classical Ciphers tool. Atbash, Affine, A1Z26, Polybius, Rail Fence, Beaufort in one tool. Runs locally in your browser with no tracking,…",
+                        "inLanguage": "en",
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#website" }
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            { "@type": "ListItem", "position": 1, "name": "CyberTools", "item": "https://ctlib.github.io/CyberTools/" },
+                            { "@type": "ListItem", "position": 2, "name": "Classical Ciphers", "item": "https://ctlib.github.io/CyberTools/tools/classical-ciphers/" }
+                        ]
+                    }
+                ]
+            }
+        </script>
+        <!-- /Search metadata -->
+        <link rel="icon" href="../../assets/logowb.png" type="image/png" />
+        <link rel="preload" href="../../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="../../assets/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="stylesheet" href="../../css/design-system.css" />
+        <link rel="stylesheet" href="../../css/global.css" />
+        <link rel="stylesheet" href="../../css/tailwind.css" />
+        <link rel="stylesheet" href="../../css/tool.css" />
+        <style>
+            .cc-tabs {
+                display: flex;
+                gap: 0;
+                border-bottom: 1px solid var(--border);
+                margin-bottom: 20px;
+                flex-wrap: wrap;
+            }
+            .cc-tab {
+                padding: 8px 18px;
+                font-size: 13px;
+                font-weight: 500;
+                cursor: pointer;
+                border: none;
+                background: transparent;
+                color: var(--text-muted);
+                border-bottom: 2px solid transparent;
+                margin-bottom: -1px;
+                transition: all 0.15s;
+                white-space: nowrap;
+            }
+            .cc-tab.active {
+                color: var(--accent);
+                border-bottom-color: var(--accent);
+            }
+            .cc-tab:hover:not(.active) {
+                color: var(--text);
+            }
+            .cc-panel {
+                display: none;
+            }
+            .cc-panel.active {
+                display: block;
+            }
+            .polybius-grid {
+                display: inline-grid;
+                grid-template-columns: repeat(6, 36px);
+                gap: 2px;
+                font-family: 'JetBrains Mono', monospace;
+                font-size: 13px;
+                margin-top: 10px;
+            }
+            .polybius-grid .cell {
+                width: 36px;
+                height: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 4px;
+            }
+            .polybius-grid .header {
+                background: var(--surface-2);
+                color: var(--text-muted);
+                font-weight: 700;
+                font-size: 11px;
+            }
+            .polybius-grid .letter-cell {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                font-weight: 600;
+            }
+            .option-row {
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+                align-items: center;
+                margin-bottom: 12px;
+            }
+            .option-label {
+                font-size: 13px;
+                color: var(--text-muted);
+                min-width: 60px;
+            }
+            .small-input {
+                background: var(--surface);
+                border: 1px solid var(--border);
+                border-radius: 6px;
+                padding: 6px 10px;
+                font-size: 13px;
+                color: var(--text);
+                font-family: 'JetBrains Mono', monospace;
+                width: 80px;
+            }
+            select.small-input {
+                width: auto;
+                cursor: pointer;
+            }
+        </style>
+        <script src="../../js/theme.js"></script>
+    </head>
+    <body data-ct-active-tool="classical-ciphers" data-ct-tool-source="tools/classical-ciphers/script.js">
+        <main id="ct-main">
+            <div class="tool-header">
+                <h1 class="tool-title">Classical Ciphers</h1>
+                <p class="tool-description">Atbash, Affine, A1Z26, Polybius, Rail Fence, and Beaufort cipher - encode and decode instantly.</p>
+            </div>
+
+            <div class="cc-tabs">
+                <button class="cc-tab active" onclick="switchCCTab('atbash')">Atbash</button>
+                <button class="cc-tab" onclick="switchCCTab('affine')">Affine</button>
+                <button class="cc-tab" onclick="switchCCTab('a1z26')">A1Z26</button>
+                <button class="cc-tab" onclick="switchCCTab('polybius')">Polybius</button>
+                <button class="cc-tab" onclick="switchCCTab('railfence')">Rail Fence</button>
+                <button class="cc-tab" onclick="switchCCTab('beaufort')">Beaufort</button>
+            </div>
+
+            <!-- ATBASH -->
+            <div id="panel-atbash" class="cc-panel active">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+                    <div class="tool-panel">
+                        <div class="tool-panel-label">Input</div>
+                        <textarea id="atbashInput" class="textarea" rows="6" placeholder="Enter text… (A↔Z, B↔Y, non-letters preserved)" spellcheck="false"></textarea>
+                        <div style="margin-top: 10px; display: flex; gap: 10px">
+                            <button class="btn-primary" onclick="runAtbash('encode')" data-ct-run>Encode</button>
+                            <button class="btn-secondary" onclick="runAtbash('decode')">Decode</button>
+                        </div>
+                        <div id="atbashError" style="color: var(--danger); font-size: 12px; margin-top: 6px"></div>
+                        <details class="examples-section" style="margin-top: 12px">
+                            <summary>Examples</summary>
+                            <div class="example-label" style="margin-top: 8px">Click to load</div>
+                            <div
+                                class="example-item"
+                                onclick="
+                                    document.getElementById('atbashInput').value = 'HELLO WORLD';
+                                    runAtbash('encode');
+                                "
+                                data-v="HELLO WORLD"
+                            >
+                                Plaintext: HELLO WORLD
+                            </div>
+                            <div
+                                class="example-item"
+                                onclick="
+                                    document.getElementById('atbashInput').value = 'SVOOL DLIOW';
+                                    runAtbash('decode');
+                                "
+                                data-v="SVOOL DLIOW"
+                            >
+                                Ciphertext: SVOOL DLIOW (Atbash of HELLO WORLD)
+                            </div>
+                        </details>
+                    </div>
+                    <div class="tool-panel">
+                        <div class="tool-panel-label">Output <span style="font-size: 11px; font-weight: 400; color: var(--text-muted)">(Atbash is reciprocal - same operation)</span></div>
+                        <div class="output-wrapper">
+                            <textarea id="atbashOutput" class="output-area" rows="6" readonly placeholder="Result appears here…"></textarea>
+                            <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('atbashOutput').value, this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+                <details class="tool-docs" style="margin-top: 12px">
+                    <summary>About Atbash</summary>
+                    <div class="tool-docs-content">
+                        <p>
+                            Atbash is a monoalphabetic substitution cipher that maps each letter to its mirror: A↔Z, B↔Y, C↔X, … It is its own inverse (reciprocal), so encoding and decoding are the same operation. Originally used for the
+                            Hebrew alphabet.
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- AFFINE -->
+            <div id="panel-affine" class="cc-panel">
+                <div class="tool-panel" style="margin-bottom: 16px">
+                    <div class="tool-panel-label">Options</div>
+                    <div class="option-row">
+                        <span class="option-label">a (slope):</span>
+                        <select id="affineA" class="small-input">
+                            <option value="1">1</option>
+                            <option value="3">3</option>
+                            <option value="5">5</option>
+                            <option value="7">7</option>
+                            <option value="9">9</option>
+                            <option value="11">11</option>
+                            <option value="15">15</option>
+                            <option value="17">17</option>
+                            <option value="19">19</option>
+                            <option value="21">21</option>
+                            <option value="23">23</option>
+                            <option value="25">25</option>
+                        </select>
+                        <span class="option-label" style="margin-left: 16px">b (offset):</span>
+                        <input id="affineB" class="small-input" type="number" min="0" max="25" value="0" />
+                        <span style="font-size: 12px; color: var(--text-muted); margin-left: 8px">E(x) = (a·x + b) mod 26</span>
+                    </div>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+                    <div class="tool-panel">
+                        <div class="tool-panel-label">Input</div>
+                        <textarea id="affineInput" class="textarea" rows="6" placeholder="Enter text…" spellcheck="false"></textarea>
+                        <div style="margin-top: 10px; display: flex; gap: 10px">
+                            <button class="btn-primary" onclick="runAffine('encode')" data-ct-run>Encode</button>
+                            <button class="btn-secondary" onclick="runAffine('decode')">Decode</button>
+                        </div>
+                        <div id="affineError" style="color: var(--danger); font-size: 12px; margin-top: 6px"></div>
+                    </div>
+                    <div class="tool-panel">
+                        <div class="tool-panel-label">Output</div>
+                        <div class="output-wrapper">
+                            <textarea id="affineOutput" class="output-area" rows="6" readonly placeholder="Result appears here…"></textarea>
+                            <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('affineOutput').value, this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+                <details class="tool-docs" style="margin-top: 12px">
+                    <summary>About Affine cipher</summary>
+                    <div class="tool-docs-content">
+                        <p>The Affine cipher maps each letter x to (a·x + b) mod 26. The key is the pair (a, b). For decryption: D(y) = a⁻¹·(y − b) mod 26. Only values of a coprime to 26 are valid (1,3,5,7,9,11,15,17,19,21,23,25).</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- A1Z26 -->
+            <div id="panel-a1z26" class="cc-panel">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+                    <div class="tool-panel">
+                        <div class="tool-panel-label">Input</div>
+                        <textarea id="a1z26Input" class="textarea" rows="6" placeholder="Encode: enter text (A=1, B=2…)&#10;Decode: enter numbers separated by hyphens (e.g. 8-5-12-12-15)" spellcheck="false"></textarea>
+                        <div style="margin-top: 10px; display: flex; gap: 10px">
+                            <button class="btn-primary" onclick="runA1Z26('encode')" data-ct-run>Encode</button>
+                            <button class="btn-secondary" onclick="runA1Z26('decode')">Decode</button>
+                        </div>
+                        <div id="a1z26Error" style="color: var(--danger); font-size: 12px; margin-top: 6px"></div>
+                        <details class="examples-section" style="margin-top: 12px">
+                            <summary>Examples</summary>
+                            <div class="example-label" style="margin-top: 8px">Click to load</div>
+                            <div
+                                class="example-item"
+                                onclick="
+                                    document.getElementById('a1z26Input').value = 'HELLO';
+                                    runA1Z26('encode');
+                                "
+                                data-v="HELLO"
+                            >
+                                Encode plaintext: HELLO
+                            </div>
+                            <div
+                                class="example-item"
+                                onclick="
+                                    document.getElementById('a1z26Input').value = '3-20-6';
+                                    runA1Z26('decode');
+                                "
+                                data-v="3-20-6"
+                            >
+                                Decode CTF{ish}: 3-20-6 → CTF
+                            </div>
+                            <div
+                                class="example-item"
+                                onclick="
+                                    document.getElementById('a1z26Input').value = '6-12-1-7';
+                                    runA1Z26('decode');
+                                "
+                                data-v="6-12-1-7"
+                            >
+                                Decode 6-12-1-7 → FLAG
+                            </div>
+                        </details>
+                    </div>
+                    <div class="tool-panel">
+                        <div class="tool-panel-label">Output</div>
+                        <div class="output-wrapper">
+                            <textarea id="a1z26Output" class="output-area" rows="6" readonly placeholder="Result appears here…"></textarea>
+                            <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('a1z26Output').value, this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+                <details class="tool-docs" style="margin-top: 12px">
+                    <summary>About A1Z26</summary>
+                    <div class="tool-docs-content"><p>A1Z26 substitutes each letter with its ordinal: A=1, B=2, …, Z=26. Numbers are separated by hyphens. Spaces between words are preserved as "/" in output.</p></div>
+                </details>
+            </div>
+
+            <!-- POLYBIUS -->
+            <div id="panel-polybius" class="cc-panel">
+                <div style="display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: start">
+                    <div class="tool-panel" style="min-width: 240px">
+                        <div class="tool-panel-label">Polybius Square <span style="font-size: 11px; font-weight: 400; color: var(--text-muted)">(I/J combined)</span></div>
+                        <div class="polybius-grid" id="polybiusGrid"></div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 16px">
+                        <div class="tool-panel">
+                            <div class="tool-panel-label">Input</div>
+                            <textarea id="polybiusInput" class="textarea" rows="4" placeholder="Encode: enter text&#10;Decode: enter pairs like 11 23 31 (row col, space-separated)" spellcheck="false"></textarea>
+                            <div style="margin-top: 10px; display: flex; gap: 10px">
+                                <button class="btn-primary" onclick="runPolybius('encode')" data-ct-run>Encode</button>
+                                <button class="btn-secondary" onclick="runPolybius('decode')">Decode</button>
+                            </div>
+                            <div id="polybiusError" style="color: var(--danger); font-size: 12px; margin-top: 6px"></div>
+                        </div>
+                        <div class="tool-panel">
+                            <div class="tool-panel-label">Output</div>
+                            <div class="output-wrapper">
+                                <textarea id="polybiusOutput" class="output-area" rows="4" readonly placeholder="Result appears here…"></textarea>
+                                <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('polybiusOutput').value, this)">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RAIL FENCE -->
+            <div id="panel-railfence" class="cc-panel">
+                <div class="tool-panel" style="margin-bottom: 16px">
+                    <div class="option-row">
+                        <span class="option-label">Rails:</span>
+                        <input id="railCount" class="small-input" type="number" min="2" max="10" value="3" />
+                        <span style="font-size: 12px; color: var(--text-muted)">(2–10)</span>
+                    </div>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+                    <div class="tool-panel">
+                        <div class="tool-panel-label">Input</div>
+                        <textarea id="railInput" class="textarea" rows="6" placeholder="Enter text…" spellcheck="false"></textarea>
+                        <div style="margin-top: 10px; display: flex; gap: 10px">
+                            <button class="btn-primary" onclick="runRailFence('encode')" data-ct-run>Encode</button>
+                            <button class="btn-secondary" onclick="runRailFence('decode')">Decode</button>
+                        </div>
+                        <div id="railError" style="color: var(--danger); font-size: 12px; margin-top: 6px"></div>
+                    </div>
+                    <div class="tool-panel">
+                        <div class="tool-panel-label">Output</div>
+                        <div class="output-wrapper">
+                            <textarea id="railOutput" class="output-area" rows="6" readonly placeholder="Result appears here…"></textarea>
+                            <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('railOutput').value, this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+                <details class="tool-docs" style="margin-top: 12px">
+                    <summary>About Rail Fence</summary>
+                    <div class="tool-docs-content">
+                        <p>
+                            Rail Fence is a transposition cipher. The plaintext is written in a zigzag pattern across n rails, then read off row by row. For example, "HELLO WORLD" on 3 rails:<br /><code
+                                >H . . . O . . . L .<br />. E . L . W . R . D<br />. . L . . . O . . .</code
+                            ><br />Read off: "HOOL ELWRDLO"
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- BEAUFORT -->
+            <div id="panel-beaufort" class="cc-panel">
+                <div class="tool-panel" style="margin-bottom: 16px">
+                    <div class="option-row">
+                        <span class="option-label">Key:</span>
+                        <input id="beaufortKey" class="input" type="text" placeholder="e.g. FORTIFICATION" style="max-width: 260px; font-family: 'JetBrains Mono', monospace; text-transform: uppercase" spellcheck="false" />
+                        <span style="font-size: 12px; color: var(--text-muted)">letters only - Beaufort is reciprocal</span>
+                    </div>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+                    <div class="tool-panel">
+                        <div class="tool-panel-label">Input</div>
+                        <textarea id="beaufortInput" class="textarea" rows="6" placeholder="Enter plaintext or ciphertext (same operation)…" spellcheck="false"></textarea>
+                        <div style="margin-top: 10px; display: flex; gap: 10px">
+                            <button class="btn-primary" onclick="runBeaufort()" data-ct-run>Encrypt / Decrypt</button>
+                        </div>
+                        <div id="beaufortError" style="color: var(--danger); font-size: 12px; margin-top: 6px"></div>
+                    </div>
+                    <div class="tool-panel">
+                        <div class="tool-panel-label">Output <span style="font-size: 11px; font-weight: 400; color: var(--text-muted)">(same operation either direction)</span></div>
+                        <div class="output-wrapper">
+                            <textarea id="beaufortOutput" class="output-area" rows="6" readonly placeholder="Result appears here…"></textarea>
+                            <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('beaufortOutput').value, this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+                <details class="tool-docs" style="margin-top: 12px">
+                    <summary>About Beaufort cipher</summary>
+                    <div class="tool-docs-content">
+                        <p>
+                            The Beaufort cipher is similar to Vigenère but uses the formula C = (K − P) mod 26, where K is the key letter index and P is the plaintext letter index. It is reciprocal (the same operation encrypts and decrypts). It
+                            was used in rotor machines and is related to the Variant Beaufort / Vigenère family.
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="tool-meta-links">
+                <a href="https://github.com/ctlib/CyberTools/blob/main/tools/classical-ciphers/script.js" target="_blank" rel="noopener noreferrer"
+                    ><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                        />
+                    </svg>
+                    View source</a
+                >
+                <a href="https://github.com/ctlib/CyberTools/issues/new" target="_blank" rel="noopener noreferrer">Report issue</a>
+            </div>
+        </main>
+        <script src="../../js/app.js" defer></script>
+        <script src="../../js/history.js" defer></script>
+        <script src="../../js/share.js" defer></script>
+        <script src="../../js/smart-detect.js" defer></script>
+        <script src="../../js/components.js" defer></script>
+        <script src="../../js/shortcuts.js" defer></script>
+        <script src="../../js/pwa.js" defer></script>
+        <script src="script.js" defer></script>
+        <script src="../../js/page-init.js" defer></script>
+    </body>
+</html>

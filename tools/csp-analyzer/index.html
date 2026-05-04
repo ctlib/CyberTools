@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSP Analyzer - Free Client-Side Tool | CyberTools</title>
+        <meta name="description" content="Free online CSP Analyzer tool. Parse and audit Content-Security-Policy headers — detects unsafe-inline, wildcards, missing directives. Runs locally in your…" />
+        <link rel="canonical" href="https://ctlib.github.io/CyberTools/tools/csp-analyzer/" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+        />
+
+        <!-- Search metadata -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta
+            name="keywords"
+            content="CSP Analyzer, CSP Analyzer online, CSP Analyzer tool, CSP Analyzer CyberTools, csp, content security policy, unsafe-inline, unsafe-eval, xss, clickjacking, web security, cybersecurity tools, ctf tools, client-side tools"
+        />
+        <meta property="og:site_name" content="CyberTools" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="CSP Analyzer - Free Client-Side Tool | CyberTools" />
+        <meta property="og:description" content="Free online CSP Analyzer tool. Parse and audit Content-Security-Policy headers — detects unsafe-inline, wildcards, missing directives. Runs locally in your…" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ctlib.github.io/CyberTools/tools/csp-analyzer/" />
+        <meta property="og:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="CSP Analyzer - Free Client-Side Tool | CyberTools" />
+        <meta name="twitter:description" content="Free online CSP Analyzer tool. Parse and audit Content-Security-Policy headers — detects unsafe-inline, wildcards, missing directives. Runs locally in your…" />
+        <meta name="twitter:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <link rel="alternate" hreflang="en" href="https://ctlib.github.io/CyberTools/tools/csp-analyzer/" />
+        <link rel="alternate" hreflang="x-default" href="https://ctlib.github.io/CyberTools/tools/csp-analyzer/" />
+        <link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "SoftwareApplication",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/csp-analyzer/#app",
+                        "name": "CSP Analyzer",
+                        "alternateName": ["csp-analyzer", "csp", "content security policy", "unsafe-inline", "unsafe-eval", "xss", "clickjacking", "web security"],
+                        "applicationCategory": "SecurityApplication",
+                        "applicationSubCategory": "Web Security",
+                        "operatingSystem": "Any",
+                        "url": "https://ctlib.github.io/CyberTools/tools/csp-analyzer/",
+                        "image": "https://ctlib.github.io/CyberTools/assets/logowb.png",
+                        "description": "Free online CSP Analyzer tool. Parse and audit Content-Security-Policy headers — detects unsafe-inline, wildcards, missing directives. Runs locally in your…",
+                        "keywords": "csp, content security policy, unsafe-inline, unsafe-eval, xss, clickjacking, web security",
+                        "isAccessibleForFree": true,
+                        "browserRequirements": "Requires JavaScript. Runs locally in the browser without server uploads.",
+                        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                        "author": { "@type": "Organization", "name": "CTLib", "url": "https://github.com/ctlib" },
+                        "publisher": { "@id": "https://ctlib.github.io/CyberTools/#organization" },
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#app" },
+                        "license": "https://opensource.org/licenses/MIT"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/csp-analyzer/#webpage",
+                        "name": "CSP Analyzer - Free Client-Side Tool | CyberTools",
+                        "url": "https://ctlib.github.io/CyberTools/tools/csp-analyzer/",
+                        "description": "Free online CSP Analyzer tool. Parse and audit Content-Security-Policy headers — detects unsafe-inline, wildcards, missing directives. Runs locally in your…",
+                        "inLanguage": "en",
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#website" }
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            { "@type": "ListItem", "position": 1, "name": "CyberTools", "item": "https://ctlib.github.io/CyberTools/" },
+                            { "@type": "ListItem", "position": 2, "name": "CSP Analyzer", "item": "https://ctlib.github.io/CyberTools/tools/csp-analyzer/" }
+                        ]
+                    }
+                ]
+            }
+        </script>
+        <!-- /Search metadata -->
+        <link rel="icon" href="../../assets/logowb.png" type="image/png" />
+        <link rel="preload" href="../../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="stylesheet" href="../../css/design-system.css" />
+        <link rel="stylesheet" href="../../css/global.css" />
+        <link rel="stylesheet" href="../../css/tailwind.css" />
+        <link rel="stylesheet" href="../../css/tool.css" />
+        <script src="../../js/theme.js"></script>
+    </head>
+    <body data-ct-active-tool="csp-analyzer" data-ct-tool-source="tools/csp-analyzer/script.js">
+        <div style="max-width: 960px; margin: 0 auto; padding: 32px 24px">
+            <div class="tool-header">
+                <h1 class="tool-title">CSP Analyzer</h1>
+                <p class="tool-description">Parse and audit a Content-Security-Policy header - detect unsafe-inline, unsafe-eval, wildcards, missing directives, and known bypass patterns.</p>
+            </div>
+
+            <div class="tool-panel">
+                <label class="tool-panel-label" for="cspInput">Content-Security-Policy header value</label>
+                <textarea
+                    id="cspInput"
+                    class="textarea"
+                    rows="6"
+                    placeholder="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; ..."
+                    spellcheck="false"
+                    style="font-family: 'JetBrains Mono', monospace; font-size: 13px"
+                ></textarea>
+                <div style="display: flex; gap: 10px; margin-top: 12px; align-items: center; flex-wrap: wrap">
+                    <button id="analyzeBtn" class="btn-primary">Analyze</button>
+                    <button
+                        onclick="
+                            document.getElementById('cspInput').value = '';
+                            document.getElementById('result').style.display = 'none';
+                        "
+                        class="btn-ghost"
+                    >
+                        Clear
+                    </button>
+                    <span id="cspScore" style="margin-left: auto; font-size: 13px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace"></span>
+                </div>
+                <details class="examples-section" style="margin-top: 12px">
+                    <summary>Examples</summary>
+                    <div class="example-label" style="margin-top: 8px">Click to load and analyze</div>
+                    <div
+                        class="example-item"
+                        onclick="
+                            document.getElementById('cspInput').value =
+                                'default-src \'self\'; script-src \'self\'; style-src \'self\'; img-src \'self\' data:; font-src \'self\'; connect-src \'self\'; frame-ancestors \'none\'; base-uri \'self\'; form-action \'self\';';
+                            document.getElementById('analyzeBtn').click();
+                        "
+                        data-v="strict"
+                    >
+                        Strict policy (CyberTools' own CSP)
+                    </div>
+                    <div
+                        class="example-item"
+                        onclick="
+                            document.getElementById('cspInput').value = 'default-src \'self\'; script-src \'self\' \'unsafe-inline\' \'unsafe-eval\'; style-src \'self\' \'unsafe-inline\'; img-src *;';
+                            document.getElementById('analyzeBtn').click();
+                        "
+                        data-v="weak"
+                    >
+                        Weak policy (unsafe-inline + unsafe-eval + img wildcard)
+                    </div>
+                    <div
+                        class="example-item"
+                        onclick="
+                            document.getElementById('cspInput').value = 'default-src \'self\' https: data: \'unsafe-inline\' \'unsafe-eval\';';
+                            document.getElementById('analyzeBtn').click();
+                        "
+                        data-v="permissive"
+                    >
+                        Permissive (basically allows anything)
+                    </div>
+                    <div
+                        class="example-item"
+                        onclick="
+                            document.getElementById('cspInput').value = 'script-src \'self\' https://cdn.example.com \'nonce-abc123\' \'strict-dynamic\';';
+                            document.getElementById('analyzeBtn').click();
+                        "
+                        data-v="strict-dynamic"
+                    >
+                        Modern with strict-dynamic + nonce
+                    </div>
+                    <div
+                        class="example-item"
+                        onclick="
+                            document.getElementById('cspInput').value =
+                                'default-src \'self\'; script-src \'self\' https://www.googletagmanager.com \'nonce-xyz\'; style-src \'self\' \'unsafe-inline\'; img-src \'self\' data: https:; connect-src \'self\' https://api.example.com; frame-ancestors \'self\'; report-uri /csp-report;';
+                            document.getElementById('analyzeBtn').click();
+                        "
+                        data-v="real-world"
+                    >
+                        Real-world: SaaS app with GTM
+                    </div>
+                </details>
+            </div>
+
+            <div id="result" style="display: none; margin-top: 20px"></div>
+
+            <details class="tool-docs" style="margin-top: 20px">
+                <summary>About CSP</summary>
+                <div class="tool-docs-content">
+                    <p>
+                        <strong>Content-Security-Policy</strong> is a defense-in-depth header that tells the browser which sources are allowed for scripts, styles, images, fonts, frames, and other resource types. A well-crafted CSP can mitigate
+                        <strong>XSS</strong>, <strong>clickjacking</strong>, <strong>data exfiltration</strong>, and <strong>mixed content</strong> attacks.
+                    </p>
+                    <p>
+                        Specs: <a href="https://www.w3.org/TR/CSP3/" target="_blank" rel="noopener noreferrer">CSP Level 3 (W3C)</a> · <a href="https://content-security-policy.com/" target="_blank" rel="noopener noreferrer">CSP cheat sheet</a> ·
+                        <a href="https://csp-evaluator.withgoogle.com/" target="_blank" rel="noopener noreferrer">Google CSP Evaluator</a>
+                    </p>
+                    <p>
+                        <strong>Common pitfalls</strong>: <code>'unsafe-inline'</code> defeats the main purpose of CSP for XSS prevention; <code>'unsafe-eval'</code> permits <code>eval()</code> and <code>new Function()</code>; wildcard hosts
+                        (<code>*</code>, <code>*.googleapis.com</code>) widen the attack surface; missing <code>frame-ancestors</code> leaves the page exploitable to clickjacking even with X-Frame-Options.
+                    </p>
+                </div>
+            </details>
+        </div>
+
+        <script src="../../js/app.js" defer></script>
+        <script src="../../js/history.js" defer></script>
+        <script src="../../js/share.js" defer></script>
+        <script src="../../js/smart-detect.js" defer></script>
+        <script src="../../js/components.js" defer></script>
+        <script src="../../js/shortcuts.js" defer></script>
+        <script src="../../js/pwa.js" defer></script>
+        <script src="script.js" defer></script>
+        <script src="../../js/page-init.js" defer></script>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequency Analyzer - Free Client-Side Tool | CyberTools</title>
+    <meta name="description" content="Free online Frequency Analyzer tool. Character frequency analysis with n-gram charts and Caesar brute force. Runs locally in your browser with no tracking,…" />
+        <link rel="canonical" href="https://ctlib.github.io/CyberTools/tools/frequency-analyzer/" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
+
+        <!-- Search metadata -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta name="keywords" content="Frequency Analyzer, Frequency Analyzer online, Frequency Analyzer tool, Frequency Analyzer CyberTools, frequency, monogram, bigram, trigram, ioc, chi-squared, caesar, ctf, crypto, cybersecurity tools, ctf tools, client-side tools" />
+        <meta property="og:site_name" content="CyberTools" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="Frequency Analyzer - Free Client-Side Tool | CyberTools" />
+        <meta property="og:description" content="Free online Frequency Analyzer tool. Character frequency analysis with n-gram charts and Caesar brute force. Runs locally in your browser with no tracking,…" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ctlib.github.io/CyberTools/tools/frequency-analyzer/" />
+        <meta property="og:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Frequency Analyzer - Free Client-Side Tool | CyberTools" />
+        <meta name="twitter:description" content="Free online Frequency Analyzer tool. Character frequency analysis with n-gram charts and Caesar brute force. Runs locally in your browser with no tracking,…" />
+        <meta name="twitter:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <link rel="alternate" hreflang="en" href="https://ctlib.github.io/CyberTools/tools/frequency-analyzer/" />
+        <link rel="alternate" hreflang="x-default" href="https://ctlib.github.io/CyberTools/tools/frequency-analyzer/" />
+        <link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+        <script type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","@id":"https://ctlib.github.io/CyberTools/tools/frequency-analyzer/#app","name":"Frequency Analyzer","alternateName":["frequency-analyzer","frequency","monogram","bigram","trigram","ioc","chi-squared","caesar","ctf","crypto"],"applicationCategory":"SecurityApplication","applicationSubCategory":"Classical Ciphers","operatingSystem":"Any","url":"https://ctlib.github.io/CyberTools/tools/frequency-analyzer/","image":"https://ctlib.github.io/CyberTools/assets/logowb.png","description":"Free online Frequency Analyzer tool. Character frequency analysis with n-gram charts and Caesar brute force. Runs locally in your browser with no tracking,…","keywords":"frequency, monogram, bigram, trigram, ioc, chi-squared, caesar, ctf, crypto","isAccessibleForFree":true,"browserRequirements":"Requires JavaScript. Runs locally in the browser without server uploads.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"CTLib","url":"https://github.com/ctlib"},"publisher":{"@id":"https://ctlib.github.io/CyberTools/#organization"},"isPartOf":{"@id":"https://ctlib.github.io/CyberTools/#app"},"license":"https://opensource.org/licenses/MIT"},{"@type":"WebPage","@id":"https://ctlib.github.io/CyberTools/tools/frequency-analyzer/#webpage","name":"Frequency Analyzer - Free Client-Side Tool | CyberTools","url":"https://ctlib.github.io/CyberTools/tools/frequency-analyzer/","description":"Free online Frequency Analyzer tool. Character frequency analysis with n-gram charts and Caesar brute force. Runs locally in your browser with no tracking,…","inLanguage":"en","isPartOf":{"@id":"https://ctlib.github.io/CyberTools/#website"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CyberTools","item":"https://ctlib.github.io/CyberTools/"},{"@type":"ListItem","position":2,"name":"Frequency Analyzer","item":"https://ctlib.github.io/CyberTools/tools/frequency-analyzer/"}]}]}
+        </script>
+        <!-- /Search metadata -->
+        <link rel="icon" href="../../assets/logowb.png" type="image/png" />
+    <link rel="preload" href="../../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../../css/design-system.css" />
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/tailwind.css" />
+    <link rel="stylesheet" href="../../css/tool.css" />
+        <script src="../../js/theme.js"></script>
+</head>
+<body data-ct-active-tool="frequency-analyzer" data-ct-tool-source="tools/frequency-analyzer/script.js">
+<div style="max-width:960px;margin:0 auto;padding:32px 24px;">
+    <div class="tool-header">
+        <h1 class="tool-title">Frequency Analyzer</h1>
+        <p class="tool-description">Character frequency analysis with n-gram charts and Caesar brute force.</p>
+    </div>
+
+    <div class="tool-panel" style="margin-bottom:20px;">
+        <label style="display:block;font-size:13px;font-weight:600;color:var(--text-muted);margin-bottom:8px;">CIPHERTEXT INPUT</label>
+        <textarea id="input" rows="6" placeholder="Paste your ciphertext here…" style="width:100%;background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:12px 14px;font-size:14px;color:var(--text);font-family:'JetBrains Mono',monospace;resize:vertical;box-sizing:border-box;" oninput="autoAnalyze()"></textarea>
+        <div style="display:flex;gap:10px;margin-top:12px;align-items:center;">
+            <button onclick="analyze()" style="background:var(--accent);color:var(--bg);border:none;border-radius:6px;padding:10px 20px;font-size:14px;font-weight:600;cursor:pointer;">Analyze</button>
+            <button onclick="document.getElementById('input').value='';clearResults();" style="background:var(--surface-2);border:1px solid var(--border);color:var(--text-muted);border-radius:6px;padding:10px 16px;font-size:14px;cursor:pointer;">Clear</button>
+            <span id="stats-bar" style="font-size:13px;color:var(--text-muted);margin-left:auto;"></span>
+        </div>
+        <details class="examples-section" style="margin-top:12px;">
+            <summary>Examples</summary>
+            <div class="example-label" style="margin-top:8px;">Click to load a sample</div>
+            <div class="example-item" onclick="document.getElementById('input').value='WKLV LV D VHFUHW PHVVDJH HQFUBSWHG ZLWK FDHVDU FLSKHU XVLQJ D VKLIW RI WKUHH';analyze();" data-v="Caesar shift 3">Caesar (shift 3): WKLV LV D VHFUHW PHVVDJH…</div>
+            <div class="example-item" onclick="document.getElementById('input').value='IFMMP XPSME UIJT JT B WFSZ TJNQMF DBFTBS DJQIFS XJUI TIJGU PG POF UP EFNPOTUSBUF GSFRVFODZ BOBMZTJT';analyze();" data-v="Caesar shift 1">Caesar (shift 1): IFMMP XPSME…</div>
+            <div class="example-item" onclick="document.getElementById('input').value='LXFOPVEFRNHRLXFOPVEFRNHRLXFOPVEFRNHRLXFOPVEFRNHRLXFOPVEFRNHR';analyze();" data-v="Vigenere repeating">Vigenère repeating block (notice flat distribution)</div>
+            <div class="example-item" onclick="document.getElementById('input').value='THEQUICKBROWNFOXJUMPSOVERTHELAZYDOG';analyze();" data-v="English plaintext">English plaintext (baseline reference)</div>
+        </details>
+    </div>
+
+    <div id="results" style="display:none;">
+        <!-- Frequency Chart -->
+        <div class="tool-panel" style="margin-bottom:20px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+                <h2 style="font-size:15px;font-weight:700;color:var(--text);margin:0;">Character Frequency</h2>
+                <span style="font-size:12px;color:var(--text-muted);">Green = observed · Grey = expected English</span>
+            </div>
+            <div id="freq-chart" style="display:flex;flex-direction:column;gap:4px;"></div>
+        </div>
+
+        <!-- Stats -->
+        <div class="tool-panel" style="margin-bottom:20px;">
+            <h2 style="font-size:15px;font-weight:700;color:var(--text);margin:0 0 14px;">Statistics</h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;" id="stats-grid"></div>
+        </div>
+
+        <!-- Caesar Brute Force -->
+        <div class="tool-panel">
+            <h2 style="font-size:15px;font-weight:700;color:var(--text);margin:0 0 6px;">Caesar / ROT Brute Force</h2>
+            <p style="font-size:13px;color:var(--text-muted);margin:0 0 14px;">All 25 shifts sorted by chi-squared score (lower = closer to English). Click any row to copy.</p>
+            <div id="caesar-table"></div>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/app.js" defer></script>
+<script src="../../js/history.js" defer></script>
+<script src="../../js/share.js" defer></script>
+<script src="../../js/smart-detect.js" defer></script>
+<script src="../../js/components.js" defer></script>
+<script src="../../js/shortcuts.js" defer></script>
+<script src="../../js/pwa.js" defer></script>
+<script src="script.js" defer></script>
+        <script src="../../js/page-init.js" defer></script>
+</body>
+</html>

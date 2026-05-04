@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Password Generator - Free Client-Side Tool | CyberTools</title>
+        <meta name="description" content="Free online Password Generator tool. Cryptographically random passwords and passphrases with entropy meter. Runs locally in your browser with no tracking,…" />
+        <meta name="author" content="CTLib" />
+        <link rel="canonical" href="https://ctlib.github.io/CyberTools/tools/password-generator/" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+        />
+
+        <!-- Search metadata -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta
+            name="keywords"
+            content="Password Generator, Password Generator online, Password Generator tool, Password Generator CyberTools, password, generator, random, entropy, passphrase, diceware, secure, cybersecurity tools, ctf tools, client-side tools"
+        />
+        <meta property="og:site_name" content="CyberTools" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="Password Generator - Free Client-Side Tool | CyberTools" />
+        <meta property="og:description" content="Free online Password Generator tool. Cryptographically random passwords and passphrases with entropy meter. Runs locally in your browser with no tracking,…" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ctlib.github.io/CyberTools/tools/password-generator/" />
+        <meta property="og:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Password Generator - Free Client-Side Tool | CyberTools" />
+        <meta name="twitter:description" content="Free online Password Generator tool. Cryptographically random passwords and passphrases with entropy meter. Runs locally in your browser with no tracking,…" />
+        <meta name="twitter:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <link rel="alternate" hreflang="en" href="https://ctlib.github.io/CyberTools/tools/password-generator/" />
+        <link rel="alternate" hreflang="x-default" href="https://ctlib.github.io/CyberTools/tools/password-generator/" />
+        <link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "SoftwareApplication",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/password-generator/#app",
+                        "name": "Password Generator",
+                        "alternateName": ["password-generator", "password", "generator", "random", "entropy", "passphrase", "diceware", "secure"],
+                        "applicationCategory": "SecurityApplication",
+                        "applicationSubCategory": "Utilities",
+                        "operatingSystem": "Any",
+                        "url": "https://ctlib.github.io/CyberTools/tools/password-generator/",
+                        "image": "https://ctlib.github.io/CyberTools/assets/logowb.png",
+                        "description": "Free online Password Generator tool. Cryptographically random passwords and passphrases with entropy meter. Runs locally in your browser with no tracking,…",
+                        "keywords": "password, generator, random, entropy, passphrase, diceware, secure",
+                        "isAccessibleForFree": true,
+                        "browserRequirements": "Requires JavaScript. Runs locally in the browser without server uploads.",
+                        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                        "author": { "@type": "Organization", "name": "CTLib", "url": "https://github.com/ctlib" },
+                        "publisher": { "@id": "https://ctlib.github.io/CyberTools/#organization" },
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#app" },
+                        "license": "https://opensource.org/licenses/MIT"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/password-generator/#webpage",
+                        "name": "Password Generator - Free Client-Side Tool | CyberTools",
+                        "url": "https://ctlib.github.io/CyberTools/tools/password-generator/",
+                        "description": "Free online Password Generator tool. Cryptographically random passwords and passphrases with entropy meter. Runs locally in your browser with no tracking,…",
+                        "inLanguage": "en",
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#website" }
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            { "@type": "ListItem", "position": 1, "name": "CyberTools", "item": "https://ctlib.github.io/CyberTools/" },
+                            { "@type": "ListItem", "position": 2, "name": "Password Generator", "item": "https://ctlib.github.io/CyberTools/tools/password-generator/" }
+                        ]
+                    }
+                ]
+            }
+        </script>
+        <!-- /Search metadata -->
+        <link rel="icon" href="../../assets/logowb.png" type="image/png" />
+        <link rel="preload" href="../../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="../../assets/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="stylesheet" href="../../css/design-system.css" />
+        <link rel="stylesheet" href="../../css/global.css" />
+        <link rel="stylesheet" href="../../css/tailwind.css" />
+        <link rel="stylesheet" href="../../css/tool.css" />
+        <style>
+            .pw-row {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 8px 12px;
+                border-radius: 6px;
+                background: var(--surface-2);
+                margin-bottom: 6px;
+                gap: 12px;
+            }
+            .pw-text {
+                font-family: 'JetBrains Mono', monospace;
+                font-size: 14px;
+                color: var(--text);
+                word-break: break-all;
+                flex: 1;
+            }
+            .check-group {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+            .check-label {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                cursor: pointer;
+                font-size: 13px;
+                color: var(--text-muted);
+                padding: 6px 0;
+            }
+            .check-label input {
+                accent-color: var(--accent);
+                cursor: pointer;
+            }
+            .check-label:has(input:checked) {
+                color: var(--text);
+            }
+            .strength-bar-bg {
+                height: 6px;
+                background: var(--surface-2);
+                border-radius: 3px;
+                overflow: hidden;
+                margin: 8px 0 4px;
+            }
+            .strength-bar-fill {
+                height: 100%;
+                border-radius: 3px;
+                transition:
+                    width 0.3s,
+                    background 0.3s;
+                width: 0;
+            }
+            .range-row {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
+            .range-row input[type='range'] {
+                flex: 1;
+                accent-color: var(--accent);
+            }
+            .range-val {
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--text);
+                min-width: 28px;
+                text-align: center;
+            }
+        </style>
+        <script src="../../js/theme.js"></script>
+    </head>
+    <body data-ct-active-tool="password-generator" data-ct-tool-source="tools/password-generator/script.js">
+        <main id="ct-main">
+            <div class="tool-header">
+                <h1 class="tool-title">Password Generator</h1>
+                <p class="tool-description">Generate cryptographically random passwords and passphrases with an entropy meter. All generation happens in your browser using <code>crypto.getRandomValues()</code>.</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+                <!-- Left: config -->
+                <div>
+                    <div class="tool-panel">
+                        <div class="tool-panel-label">Random Password</div>
+
+                        <div class="range-row" style="margin-bottom: 16px">
+                            <label style="font-size: 12px; color: var(--text-muted); white-space: nowrap" for="pwLength">Length</label>
+                            <input id="pwLength" type="range" min="8" max="128" value="20" />
+                            <span id="pwLengthDisplay" class="range-val">20</span>
+                        </div>
+
+                        <div class="tool-panel-label" style="margin-bottom: 8px">Character types</div>
+                        <div class="check-group" style="margin-bottom: 12px">
+                            <label class="check-label"><input type="checkbox" id="optUpper" class="pw-option" checked /> A–Z uppercase</label>
+                            <label class="check-label"><input type="checkbox" id="optLower" class="pw-option" checked /> a–z lowercase</label>
+                            <label class="check-label"><input type="checkbox" id="optDigits" class="pw-option" checked /> 0–9 digits</label>
+                            <label class="check-label"><input type="checkbox" id="optSymbols" class="pw-option" checked /> !@#$… symbols</label>
+                        </div>
+
+                        <label class="check-label" style="margin-bottom: 12px">
+                            <input type="checkbox" id="optExcludeSimilar" class="pw-option" />
+                            Exclude similar characters (i, l, 1, L, o, 0, O)
+                        </label>
+
+                        <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 12px">
+                            <label style="font-size: 12px; color: var(--text-muted)" for="pwCount">Count</label>
+                            <select id="pwCount" class="input" style="width: auto">
+                                <option value="1">1</option>
+                                <option value="5" selected>5</option>
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                            </select>
+                        </div>
+
+                        <button id="generateBtn" class="btn-primary" data-ct-run style="width: 100%">Generate</button>
+                    </div>
+
+                    <div class="tool-panel" style="margin-top: 16px">
+                        <div class="tool-panel-label">Passphrase</div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px">
+                            <div>
+                                <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px" for="phraseWordCount">Words</label>
+                                <select id="phraseWordCount" class="input">
+                                    <option value="3">3</option>
+                                    <option value="4" selected>4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px" for="phraseSep">Separator</label>
+                                <select id="phraseSep" class="input">
+                                    <option value="-" selected>- hyphen</option>
+                                    <option value=".">. period</option>
+                                    <option value="_">_ underscore</option>
+                                    <option value=" ">space</option>
+                                </select>
+                            </div>
+                        </div>
+                        <label class="check-label" style="margin-bottom: 8px"><input type="checkbox" id="phraseCapitalize" checked /> Capitalize first letter of each word</label>
+                        <label class="check-label" style="margin-bottom: 12px"><input type="checkbox" id="phraseNumber" /> Append a random number</label>
+                        <button id="generatePhraseBtn" class="btn-ghost" style="width: 100%">Generate Passphrase</button>
+                    </div>
+                </div>
+
+                <!-- Right: output -->
+                <div>
+                    <div class="tool-panel">
+                        <div class="tool-panel-label">Entropy</div>
+                        <div class="strength-bar-bg"><div id="strengthBar" class="strength-bar-fill"></div></div>
+                        <div id="strengthLabel" style="font-size: 12px; font-weight: 600"></div>
+                        <div id="entropyNote" style="font-size: 11px; color: var(--text-muted); margin-top: 2px"></div>
+                    </div>
+
+                    <div class="tool-panel" style="margin-top: 16px">
+                        <div class="tool-panel-label">Generated</div>
+                        <div id="pwOutput"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How it works -->
+            <details class="tool-docs">
+                <summary>How it works</summary>
+                <div class="tool-docs-content">
+                    <p>
+                        All randomness comes from <code>crypto.getRandomValues()</code> - the browser's cryptographically secure random number generator backed by the OS entropy source (e.g., <code>/dev/urandom</code> on Linux). This is the same
+                        source used by TLS and other cryptographic operations.
+                    </p>
+                    <p><strong>Entropy</strong> is calculated as <em>log₂(charset_size ^ password_length)</em> bits. For reference: 60 bits is reasonable for most uses, 80+ bits is strong, 100+ is excellent for master passwords.</p>
+                    <p>
+                        <strong>Passphrases</strong> use a built-in wordlist of common words. Entropy is calculated as <em>log₂(wordlist_size ^ word_count)</em>. 4 words from a 100-word list gives ~26 bits - use 6+ words for good security, or use a
+                        much larger wordlist (Diceware uses 7776 words).
+                    </p>
+                    <p>Passwords are never transmitted, stored, logged, or sent to any server.</p>
+                </div>
+            </details>
+
+            <div class="security-note">
+                <strong style="color: var(--text)">Note:</strong> Use a password manager (Bitwarden, KeePass) to store generated passwords. Do not reuse passwords across sites. For master passwords, passphrases with 6+ words are easier to remember
+                and just as strong.
+            </div>
+
+            <div class="tool-meta-links">
+                <a href="https://github.com/ctlib/CyberTools/blob/main/tools/password-generator/script.js" target="_blank" rel="noopener noreferrer">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                        />
+                    </svg>
+                    View source of this tool
+                </a>
+                <a href="https://github.com/ctlib/CyberTools/issues/new" target="_blank" rel="noopener noreferrer">Report issue</a>
+            </div>
+        </main>
+
+        <script src="../../js/app.js" defer></script>
+        <script src="../../js/history.js" defer></script>
+        <script src="../../js/share.js" defer></script>
+        <script src="../../js/smart-detect.js" defer></script>
+        <script src="../../js/components.js" defer></script>
+        <script src="../../js/shortcuts.js" defer></script>
+        <script src="../../js/pwa.js" defer></script>
+        <script src="script.js" defer></script>
+        <script src="../../js/page-init.js" defer></script>
+    </body>
+</html>

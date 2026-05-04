@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Header Analyzer - Free Client-Side Tool | CyberTools</title>
+    <meta name="description" content="Free online Email Header Analyzer tool. Parse email headers, trace relay hops, check SPF/DKIM/DMARC results. Runs locally in your browser with no tracking,…" />
+        <link rel="canonical" href="https://ctlib.github.io/CyberTools/tools/email-header/" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
+
+        <!-- Search metadata -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta name="keywords" content="Email Header Analyzer, Email Header Analyzer online, Email Header Analyzer tool, Email Header Analyzer CyberTools, email, header, spf, dkim, dmarc, phishing, forensics, smtp, received, cybersecurity tools, ctf tools, client-side tools" />
+        <meta property="og:site_name" content="CyberTools" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="Email Header Analyzer - Free Client-Side Tool | CyberTools" />
+        <meta property="og:description" content="Free online Email Header Analyzer tool. Parse email headers, trace relay hops, check SPF/DKIM/DMARC results. Runs locally in your browser with no tracking,…" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ctlib.github.io/CyberTools/tools/email-header/" />
+        <meta property="og:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Email Header Analyzer - Free Client-Side Tool | CyberTools" />
+        <meta name="twitter:description" content="Free online Email Header Analyzer tool. Parse email headers, trace relay hops, check SPF/DKIM/DMARC results. Runs locally in your browser with no tracking,…" />
+        <meta name="twitter:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <link rel="alternate" hreflang="en" href="https://ctlib.github.io/CyberTools/tools/email-header/" />
+        <link rel="alternate" hreflang="x-default" href="https://ctlib.github.io/CyberTools/tools/email-header/" />
+        <link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+        <script type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","@id":"https://ctlib.github.io/CyberTools/tools/email-header/#app","name":"Email Header Analyzer","alternateName":["email-header","email","header","spf","dkim","dmarc","phishing","forensics","smtp","received"],"applicationCategory":"SecurityApplication","applicationSubCategory":"Forensics","operatingSystem":"Any","url":"https://ctlib.github.io/CyberTools/tools/email-header/","image":"https://ctlib.github.io/CyberTools/assets/logowb.png","description":"Free online Email Header Analyzer tool. Parse email headers, trace relay hops, check SPF/DKIM/DMARC results. Runs locally in your browser with no tracking,…","keywords":"email, header, spf, dkim, dmarc, phishing, forensics, smtp, received","isAccessibleForFree":true,"browserRequirements":"Requires JavaScript. Runs locally in the browser without server uploads.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"CTLib","url":"https://github.com/ctlib"},"publisher":{"@id":"https://ctlib.github.io/CyberTools/#organization"},"isPartOf":{"@id":"https://ctlib.github.io/CyberTools/#app"},"license":"https://opensource.org/licenses/MIT"},{"@type":"WebPage","@id":"https://ctlib.github.io/CyberTools/tools/email-header/#webpage","name":"Email Header Analyzer - Free Client-Side Tool | CyberTools","url":"https://ctlib.github.io/CyberTools/tools/email-header/","description":"Free online Email Header Analyzer tool. Parse email headers, trace relay hops, check SPF/DKIM/DMARC results. Runs locally in your browser with no tracking,…","inLanguage":"en","isPartOf":{"@id":"https://ctlib.github.io/CyberTools/#website"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CyberTools","item":"https://ctlib.github.io/CyberTools/"},{"@type":"ListItem","position":2,"name":"Email Header Analyzer","item":"https://ctlib.github.io/CyberTools/tools/email-header/"}]}]}
+        </script>
+        <!-- /Search metadata -->
+        <link rel="icon" href="../../assets/logowb.png" type="image/png" />
+    <link rel="preload" href="../../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../../css/design-system.css" />
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/tailwind.css" />
+    <link rel="stylesheet" href="../../css/tool.css" />
+        <script src="../../js/theme.js"></script>
+</head>
+<body data-ct-active-tool="email-header" data-ct-tool-source="tools/email-header/script.js">
+<main id="ct-main">
+    <div class="tool-header">
+        <h1 class="tool-title">Email Header Analyzer</h1>
+        <p class="tool-description">Parse email headers, trace relay hops, and check SPF/DKIM/DMARC authentication results.</p>
+    </div>
+
+    <div class="tool-panel">
+        <label style="display:block;font-size:13px;font-weight:600;color:var(--text-muted);margin-bottom:8px;">Paste raw email headers</label>
+        <textarea id="headerInput" rows="12" placeholder="Received: from mail.example.com (mail.example.com [203.0.113.5])
+        by mx.google.com with ESMTPS id ...
+        for <user@gmail.com>; Mon, 1 Jan 2024 12:00:00 +0000
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@example.com;
+       spf=pass (google.com: domain of sender@example.com ...);
+       dmarc=pass (p=REJECT sp=REJECT) header.from=example.com
+From: Sender Name <sender@example.com>
+To: user@gmail.com
+Subject: Hello World
+Date: Mon, 1 Jan 2024 12:00:00 +0000
+Message-ID: <abc123@example.com>
+MIME-Version: 1.0" style="background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:13px;color:var(--text);font-family:'JetBrains Mono',monospace;width:100%;box-sizing:border-box;resize:vertical;line-height:1.5;"></textarea>
+        <div style="display:flex;gap:8px;margin-top:10px;">
+            <button id="analyzeBtn" style="background:var(--accent);color:var(--bg);border:none;border-radius:6px;padding:10px 24px;font-size:14px;font-weight:600;cursor:pointer;">Analyze</button>
+            <button id="clearBtn" style="background:var(--surface-2);color:var(--text);border:1px solid var(--border);border-radius:6px;padding:10px 20px;font-size:14px;font-weight:600;cursor:pointer;">Clear</button>
+        </div>
+        <details class="examples-section" style="margin-top:12px;">
+            <summary>Examples</summary>
+            <div class="example-label" style="margin-top:8px;">Click to load a sample header set</div>
+            <div class="example-item" onclick="document.getElementById('headerInput').value='Received: from mail-relay.example.com (mail-relay.example.com [203.0.113.5])\n\tby mx.google.com with ESMTPS id abc123 for <user@gmail.com>;\n\tMon, 01 Jan 2024 12:00:00 +0000 (UTC)\nReceived: from sender.legitcorp.com (sender.legitcorp.com [198.51.100.10])\n\tby mail-relay.example.com with ESMTPS id xyz789;\n\tMon, 01 Jan 2024 11:59:50 +0000\nAuthentication-Results: mx.google.com;\n\tdkim=pass header.i=@legitcorp.com;\n\tspf=pass smtp.mailfrom=sender@legitcorp.com;\n\tdmarc=pass (p=REJECT) header.from=legitcorp.com\nFrom: Real Sender <sender@legitcorp.com>\nTo: user@gmail.com\nSubject: Quarterly Report\nDate: Mon, 01 Jan 2024 12:00:00 +0000\nMessage-ID: <abc123@legitcorp.com>';document.getElementById('analyzeBtn').click();" data-v="legitimate">Legitimate email (SPF/DKIM/DMARC all pass)</div>
+            <div class="example-item" onclick="document.getElementById('headerInput').value='Received: from suspicious.tk ([45.33.32.156])\n\tby mx.victim.com; Mon, 01 Jan 2024 12:00:00 +0000\nAuthentication-Results: mx.victim.com;\n\tdkim=fail (signature did not verify) header.i=@paypal.com;\n\tspf=softfail (sender IP is 45.33.32.156) smtp.mailfrom=service@paypal.com;\n\tdmarc=fail (p=REJECT) header.from=paypal.com\nFrom: PayPal <service@paypal.com>\nReply-To: attacker@evil.tk\nTo: victim@victim.com\nSubject: URGENT: Verify your account immediately\nDate: Mon, 01 Jan 2024 12:00:00 +0000';document.getElementById('analyzeBtn').click();" data-v="phishing">Phishing email (DKIM fail, SPF softfail, Reply-To mismatch)</div>
+        </details>
+    </div>
+
+    <div id="resultWrapper" style="display:none;margin-top:16px;">
+
+        <!-- Section 1: Key Fields -->
+        <div class="tool-panel" style="margin-bottom:16px;">
+            <div style="font-size:13px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;">Key Fields</div>
+            <div id="keyFieldsTable"></div>
+        </div>
+
+        <!-- Section 2: Authentication -->
+        <div class="tool-panel" style="margin-bottom:16px;">
+            <div style="font-size:13px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;">Authentication Results</div>
+            <div id="authResults"></div>
+        </div>
+
+        <!-- Section 3: Relay Hops -->
+        <div class="tool-panel" style="margin-bottom:16px;">
+            <div style="font-size:13px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;">Relay Hops</div>
+            <div id="relayHops"></div>
+        </div>
+
+        <!-- Section 4: Raw Headers -->
+        <div class="tool-panel">
+            <div style="font-size:13px;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px;">All Headers <span id="rawHeaderCount" style="font-weight:400;text-transform:none;"></span></div>
+            <div id="rawHeaderTable" style="max-height:360px;overflow-y:auto;border:1px solid var(--border);border-radius:6px;"></div>
+        </div>
+    </div>
+
+    <details class="tool-docs">
+        <summary>How it works</summary>
+        <div class="tool-docs-content">
+            <p>Email headers are parsed by unfolding continuation lines (lines beginning with whitespace), then splitting each header into name and value at the first colon.</p>
+            <p><strong>Relay hops</strong> are extracted from all <code>Received:</code> headers. The bottom-most header represents the earliest hop (sender's server); the topmost is the final delivery server.</p>
+            <p><strong>SPF</strong> (Sender Policy Framework) verifies that the sending IP is authorised to send mail for the domain. <strong>DKIM</strong> validates a cryptographic signature on the message. <strong>DMARC</strong> ties SPF and DKIM together with a policy for handling failures.</p>
+        </div>
+    </details>
+
+    <div class="tool-meta-links">
+        <a href="https://github.com/ctlib/CyberTools/blob/main/tools/email-header/script.js" target="_blank" rel="noopener noreferrer"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg> View source</a>
+        <a href="https://github.com/ctlib/CyberTools/issues/new" target="_blank" rel="noopener noreferrer">Report issue</a>
+    </div>
+</main>
+<script src="../../js/app.js" defer></script>
+<script src="../../js/history.js" defer></script>
+<script src="../../js/share.js" defer></script>
+<script src="../../js/smart-detect.js" defer></script>
+<script src="../../js/components.js" defer></script>
+<script src="../../js/shortcuts.js" defer></script>
+<script src="../../js/pwa.js" defer></script>
+<script src="script.js" defer></script>
+        <script src="../../js/page-init.js" defer></script>
+</body>
+</html>

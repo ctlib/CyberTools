@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AES Encryption - Free Client-Side Tool | CyberTools</title>
+        <meta name="description" content="Free online AES Encryption tool. AES-GCM / CBC / CTR with 128/192/256-bit keys (WebCrypto). Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta name="author" content="CTLib" />
+        <link rel="canonical" href="https://ctlib.github.io/CyberTools/tools/aes/" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+        />
+
+        <!-- Search metadata -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta name="keywords" content="AES Encryption, AES Encryption online, AES Encryption tool, AES Encryption CyberTools, aes, aes-gcm, aes-cbc, encrypt, decrypt, symmetric, webcrypto, pbkdf2, cybersecurity tools, ctf tools, client-side tools" />
+        <meta property="og:site_name" content="CyberTools" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="AES Encryption - Free Client-Side Tool | CyberTools" />
+        <meta property="og:description" content="Free online AES Encryption tool. AES-GCM / CBC / CTR with 128/192/256-bit keys (WebCrypto). Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ctlib.github.io/CyberTools/tools/aes/" />
+        <meta property="og:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AES Encryption - Free Client-Side Tool | CyberTools" />
+        <meta name="twitter:description" content="Free online AES Encryption tool. AES-GCM / CBC / CTR with 128/192/256-bit keys (WebCrypto). Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta name="twitter:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <link rel="alternate" hreflang="en" href="https://ctlib.github.io/CyberTools/tools/aes/" />
+        <link rel="alternate" hreflang="x-default" href="https://ctlib.github.io/CyberTools/tools/aes/" />
+        <link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "SoftwareApplication",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/aes/#app",
+                        "name": "AES Encryption",
+                        "alternateName": ["aes", "aes-gcm", "aes-cbc", "encrypt", "decrypt", "symmetric", "webcrypto", "pbkdf2"],
+                        "applicationCategory": "SecurityApplication",
+                        "applicationSubCategory": "Cryptography",
+                        "operatingSystem": "Any",
+                        "url": "https://ctlib.github.io/CyberTools/tools/aes/",
+                        "image": "https://ctlib.github.io/CyberTools/assets/logowb.png",
+                        "description": "Free online AES Encryption tool. AES-GCM / CBC / CTR with 128/192/256-bit keys (WebCrypto). Runs locally in your browser with no tracking, signup, or uploads.",
+                        "keywords": "aes, aes-gcm, aes-cbc, encrypt, decrypt, symmetric, webcrypto, pbkdf2",
+                        "isAccessibleForFree": true,
+                        "browserRequirements": "Requires JavaScript. Runs locally in the browser without server uploads.",
+                        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                        "author": { "@type": "Organization", "name": "CTLib", "url": "https://github.com/ctlib" },
+                        "publisher": { "@id": "https://ctlib.github.io/CyberTools/#organization" },
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#app" },
+                        "license": "https://opensource.org/licenses/MIT"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/aes/#webpage",
+                        "name": "AES Encryption - Free Client-Side Tool | CyberTools",
+                        "url": "https://ctlib.github.io/CyberTools/tools/aes/",
+                        "description": "Free online AES Encryption tool. AES-GCM / CBC / CTR with 128/192/256-bit keys (WebCrypto). Runs locally in your browser with no tracking, signup, or uploads.",
+                        "inLanguage": "en",
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#website" }
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            { "@type": "ListItem", "position": 1, "name": "CyberTools", "item": "https://ctlib.github.io/CyberTools/" },
+                            { "@type": "ListItem", "position": 2, "name": "AES Encryption", "item": "https://ctlib.github.io/CyberTools/tools/aes/" }
+                        ]
+                    }
+                ]
+            }
+        </script>
+        <!-- /Search metadata -->
+        <link rel="icon" href="../../assets/logowb.png" type="image/png" />
+        <link rel="preload" href="../../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="../../assets/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="stylesheet" href="../../css/design-system.css" />
+        <link rel="stylesheet" href="../../css/global.css" />
+        <link rel="stylesheet" href="../../css/tailwind.css" />
+        <link rel="stylesheet" href="../../css/tool.css" />
+        <style>
+            .radio-group {
+                display: flex;
+                gap: 16px;
+            }
+            .radio-label {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                cursor: pointer;
+                font-size: 13px;
+                color: var(--text-muted);
+            }
+            .radio-label input {
+                accent-color: var(--accent);
+                cursor: pointer;
+            }
+            .radio-label:has(input:checked) {
+                color: var(--text);
+            }
+            .field-group {
+                margin-bottom: 12px;
+            }
+            .field-label {
+                font-size: 12px;
+                color: var(--text-muted);
+                display: block;
+                margin-bottom: 4px;
+            }
+            .output-row {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                gap: 8px;
+                align-items: center;
+                margin-bottom: 8px;
+            }
+            .output-row-label {
+                font-size: 12px;
+                color: var(--text-muted);
+                white-space: nowrap;
+                min-width: 60px;
+            }
+        </style>
+        <script src="../../js/theme.js"></script>
+    </head>
+    <body data-ct-active-tool="aes" data-ct-tool-source="tools/aes/script.js">
+        <main id="ct-main">
+            <div class="tool-header">
+                <h1 class="tool-title">AES Encryption</h1>
+                <p class="tool-description">Encrypt and decrypt with AES-GCM, AES-CBC, or AES-CTR using 128, 192, or 256-bit keys - via the browser's WebCrypto API.</p>
+            </div>
+
+            <!-- Global options -->
+            <div class="tool-panel" style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap">
+                <div>
+                    <span class="field-label" style="display: inline">Mode</span>
+                    <select id="encMode" class="input" style="width: auto; margin-left: 8px">
+                        <option value="AES-GCM" selected>AES-GCM (recommended)</option>
+                        <option value="AES-CBC">AES-CBC</option>
+                        <option value="AES-CTR">AES-CTR</option>
+                    </select>
+                </div>
+                <div>
+                    <span class="field-label" style="display: inline">Output format</span>
+                    <span class="radio-group" style="margin-left: 8px">
+                        <label class="radio-label"><input type="radio" name="outputFmt" value="hex" checked /> Hex</label>
+                        <label class="radio-label"><input type="radio" name="outputFmt" value="base64" /> Base64</label>
+                    </span>
+                </div>
+            </div>
+
+            <div id="gcmNote" class="security-note" style="margin-top: 12px">
+                <strong style="color: var(--text)">AES-GCM recommended:</strong> GCM mode provides authenticated encryption - it detects tampering. CBC and CTR do not authenticate. Use GCM unless you have a specific compatibility requirement.
+            </div>
+
+            <hr style="border: none; border-top: 1px solid var(--border); margin: 24px 0" />
+
+            <!-- Key generator -->
+            <div class="tool-panel">
+                <div class="tool-panel-label">Key Generator</div>
+                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap">
+                    <select id="genKeySize" class="input" style="width: auto">
+                        <option value="128">128-bit</option>
+                        <option value="192">192-bit</option>
+                        <option value="256" selected>256-bit</option>
+                    </select>
+                    <button id="genKeyBtn" class="btn-ghost">Generate random key</button>
+                </div>
+                <div class="output-wrapper" style="margin-top: 10px">
+                    <input id="generatedKey" class="input" type="text" readonly placeholder="Generated key will appear here (hex)…" style="font-family: 'JetBrains Mono', monospace; font-size: 12px" />
+                    <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('generatedKey').value, this)" aria-label="Copy">Copy</button>
+                </div>
+            </div>
+
+            <hr style="border: none; border-top: 1px solid var(--border); margin: 24px 0" />
+
+            <!-- Encrypt panel -->
+            <div class="tool-panel">
+                <div class="tool-panel-label">Encrypt</div>
+
+                <div class="field-group">
+                    <label class="field-label" for="encInput">Plaintext</label>
+                    <textarea id="encInput" class="textarea" rows="4" placeholder="Enter text to encrypt…"></textarea>
+                </div>
+
+                <div class="field-group">
+                    <div class="field-label">Key source</div>
+                    <div class="radio-group" style="margin-bottom: 10px">
+                        <label class="radio-label"><input type="radio" name="encKeyMode" value="password" checked /> Password (PBKDF2)</label>
+                        <label class="radio-label"><input type="radio" name="encKeyMode" value="hex" /> Raw hex key</label>
+                    </div>
+                    <div id="encPasswordGroup">
+                        <label class="field-label" for="encPassword">Password</label>
+                        <input id="encPassword" class="input" type="password" placeholder="Encryption password…" autocomplete="new-password" />
+                    </div>
+                    <div id="encHexKeyGroup" style="display: none">
+                        <label class="field-label" for="encHexKey">Hex key (32/48/64 hex chars for 128/192/256-bit)</label>
+                        <input id="encHexKey" class="input" type="text" placeholder="Paste hex key from generator above…" style="font-family: 'JetBrains Mono', monospace; font-size: 12px" />
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label class="field-label" for="encKeySize">Key size</label>
+                    <select id="encKeySize" class="input" style="width: auto">
+                        <option value="128">128-bit</option>
+                        <option value="192">192-bit</option>
+                        <option value="256" selected>256-bit</option>
+                    </select>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px; flex-wrap: wrap">
+                    <button id="encBtn" class="btn-primary" data-ct-run>Encrypt</button>
+                    <button
+                        onclick="
+                            document.getElementById('encInput').value = '';
+                            document.getElementById('encOutput').value = '';
+                            document.getElementById('encIVOut').value = '';
+                            document.getElementById('encSaltOut').value = '';
+                        "
+                        class="btn-ghost"
+                    >
+                        Clear
+                    </button>
+                </div>
+
+                <details class="examples-section">
+                    <summary>Examples</summary>
+                    <div class="example-label" style="margin-top: 8px">Click to load plaintext into the input above</div>
+                    <div class="example-item" onclick="document.getElementById('encInput').value = this.dataset.v" data-v="Hello, World!">Hello, World!</div>
+                    <div class="example-item" onclick="document.getElementById('encInput').value = this.dataset.v" data-v='{"user":"admin","role":"superuser","exp":9999999999}'>{"user":"admin","role":"superuser","exp":9999999999}</div>
+                    <div class="example-item" onclick="document.getElementById('encInput').value = this.dataset.v" data-v="FLAG{aes_gcm_is_authenticated_encryption}">FLAG{aes_gcm_is_authenticated_encryption}</div>
+                </details>
+
+                <div style="margin-top: 14px">
+                    <div class="output-row">
+                        <span class="output-row-label">Ciphertext</span>
+                        <div class="output-wrapper" style="width: 100%">
+                            <textarea id="encOutput" class="output-area" rows="3" readonly placeholder="Ciphertext will appear here…"></textarea>
+                            <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('encOutput').value, this)">Copy</button>
+                        </div>
+                    </div>
+                    <div class="output-row">
+                        <span class="output-row-label">IV / Nonce</span>
+                        <div class="output-wrapper" style="width: 100%">
+                            <input id="encIVOut" class="input" type="text" readonly placeholder="IV will appear here…" style="font-family: 'JetBrains Mono', monospace; font-size: 12px" />
+                            <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('encIVOut').value, this)">Copy</button>
+                        </div>
+                    </div>
+                    <div id="encSaltRow" class="output-row">
+                        <span class="output-row-label">Salt</span>
+                        <div class="output-wrapper" style="width: 100%">
+                            <input id="encSaltOut" class="input" type="text" readonly placeholder="Salt will appear here…" style="font-family: 'JetBrains Mono', monospace; font-size: 12px" />
+                            <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('encSaltOut').value, this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr style="border: none; border-top: 1px solid var(--border); margin: 24px 0" />
+
+            <!-- Decrypt panel -->
+            <div class="tool-panel">
+                <div class="tool-panel-label">Decrypt</div>
+
+                <div class="field-group">
+                    <label class="field-label" for="decInput">Ciphertext</label>
+                    <textarea id="decInput" class="textarea" rows="3" placeholder="Paste ciphertext (hex or base64)…"></textarea>
+                </div>
+
+                <div class="field-group">
+                    <label class="field-label" for="decIV">IV / Nonce</label>
+                    <input id="decIV" class="input" type="text" placeholder="Paste IV from encryption output…" style="font-family: 'JetBrains Mono', monospace; font-size: 12px" />
+                </div>
+
+                <div class="field-group">
+                    <div class="field-label">Key source</div>
+                    <div class="radio-group" style="margin-bottom: 10px">
+                        <label class="radio-label"><input type="radio" name="decKeyMode" value="password" checked /> Password (PBKDF2)</label>
+                        <label class="radio-label"><input type="radio" name="decKeyMode" value="hex" /> Raw hex key</label>
+                    </div>
+                    <div id="decPasswordGroup">
+                        <label class="field-label" for="decPassword">Password</label>
+                        <input id="decPassword" class="input" type="password" placeholder="Decryption password…" autocomplete="current-password" />
+                        <label class="field-label" for="decSalt" style="margin-top: 8px">Salt (from encryption output)</label>
+                        <input id="decSalt" class="input" type="text" placeholder="Paste salt…" style="font-family: 'JetBrains Mono', monospace; font-size: 12px" />
+                    </div>
+                    <div id="decHexKeyGroup" style="display: none">
+                        <label class="field-label" for="decHexKey">Hex key</label>
+                        <input id="decHexKey" class="input" type="text" placeholder="Paste the same hex key used during encryption…" style="font-family: 'JetBrains Mono', monospace; font-size: 12px" />
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label class="field-label" for="decMode">Mode</label>
+                    <select id="decMode" class="input" style="width: auto">
+                        <option value="AES-GCM" selected>AES-GCM</option>
+                        <option value="AES-CBC">AES-CBC</option>
+                        <option value="AES-CTR">AES-CTR</option>
+                    </select>
+                </div>
+
+                <div class="field-group">
+                    <label class="field-label" for="decKeySize">Key size</label>
+                    <select id="decKeySize" class="input" style="width: auto">
+                        <option value="128">128-bit</option>
+                        <option value="192">192-bit</option>
+                        <option value="256" selected>256-bit</option>
+                    </select>
+                </div>
+
+                <button id="decBtn" class="btn-primary">Decrypt</button>
+
+                <div class="output-wrapper" style="margin-top: 14px">
+                    <textarea id="decOutput" class="output-area" rows="4" readonly data-ct-output placeholder="Decrypted plaintext will appear here…"></textarea>
+                    <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('decOutput').value, this)">Copy</button>
+                </div>
+            </div>
+
+            <!-- How it works -->
+            <details class="tool-docs">
+                <summary>How it works</summary>
+                <div class="tool-docs-content">
+                    <p><strong>AES-GCM</strong> (Galois/Counter Mode) - Authenticated Encryption with Associated Data (AEAD). Provides both confidentiality and integrity. Recommended for all new applications. Uses a 12-byte nonce.</p>
+                    <p>
+                        <strong>AES-CBC</strong> (Cipher Block Chaining) - Classic block cipher mode. Requires padding. Does not provide authentication - ciphertext can be silently tampered without detection (use with HMAC if needed). Uses a 16-byte
+                        IV.
+                    </p>
+                    <p><strong>AES-CTR</strong> (Counter Mode) - Turns AES into a stream cipher. Fast and parallelizable. Does not provide authentication. Uses a 16-byte counter.</p>
+                    <p><strong>Password mode</strong> - Derives a key from your password using PBKDF2 (100,000 iterations, SHA-256). A random 16-byte salt is generated each time - you must save it alongside the ciphertext to decrypt.</p>
+                    <p><strong>Raw hex key mode</strong> - Use a key directly (32/48/64 hex chars = 128/192/256 bits). Use the key generator above to create a cryptographically random key.</p>
+                    <p>All operations use the browser's native <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto" target="_blank" rel="noopener noreferrer">WebCrypto SubtleCrypto API</a>. The key is never exported or stored.</p>
+                </div>
+            </details>
+
+            <div class="security-note">
+                <strong style="color: var(--text)">Security note:</strong> The IV/Nonce must be unique for every encryption operation with the same key. Never reuse an IV - especially with GCM, where IV reuse catastrophically breaks security. Store
+                the ciphertext, IV, and (if password mode) salt together.
+            </div>
+
+            <details class="pipe-section">
+                <summary>Send output to…</summary>
+                <div style="padding-top: 12px; font-size: 13px; color: var(--text-muted)">Tool piping coming in a future phase. Copy the output and paste it into any other tool.</div>
+            </details>
+
+            <div class="tool-meta-links">
+                <a href="https://github.com/ctlib/CyberTools/blob/main/tools/aes/script.js" target="_blank" rel="noopener noreferrer">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                        />
+                    </svg>
+                    View source of this tool
+                </a>
+                <a href="https://github.com/ctlib/CyberTools/issues/new" target="_blank" rel="noopener noreferrer">Report issue</a>
+            </div>
+        </main>
+
+        <script src="../../js/app.js" defer></script>
+        <script src="../../js/history.js" defer></script>
+        <script src="../../js/share.js" defer></script>
+        <script src="../../js/smart-detect.js" defer></script>
+        <script src="../../js/components.js" defer></script>
+        <script src="../../js/examples.js" defer></script>
+        <script src="../../js/shortcuts.js" defer></script>
+        <script src="../../js/pwa.js" defer></script>
+        <script src="script.js" defer></script>
+        <script src="../../js/page-init.js" defer></script>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Common Ports Reference - Free Client-Side Tool | CyberTools</title>
+    <meta name="description" content="Free online Common Ports Reference tool. 70+ common TCP/UDP ports with protocols and security risk labels. Runs locally in your browser with no tracking,…" />
+    <link rel="canonical" href="https://ctlib.github.io/CyberTools/tools/ports/" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
+
+        <!-- Search metadata -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta name="keywords" content="Common Ports Reference, Common Ports Reference online, Common Ports Reference tool, Common Ports Reference CyberTools, ports, tcp, udp, protocol, network, ssh, http, dns, ftp, smb, cybersecurity tools, ctf tools, client-side tools" />
+        <meta property="og:site_name" content="CyberTools" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="Common Ports Reference - Free Client-Side Tool | CyberTools" />
+        <meta property="og:description" content="Free online Common Ports Reference tool. 70+ common TCP/UDP ports with protocols and security risk labels. Runs locally in your browser with no tracking,…" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ctlib.github.io/CyberTools/tools/ports/" />
+        <meta property="og:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Common Ports Reference - Free Client-Side Tool | CyberTools" />
+        <meta name="twitter:description" content="Free online Common Ports Reference tool. 70+ common TCP/UDP ports with protocols and security risk labels. Runs locally in your browser with no tracking,…" />
+        <meta name="twitter:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <link rel="alternate" hreflang="en" href="https://ctlib.github.io/CyberTools/tools/ports/" />
+        <link rel="alternate" hreflang="x-default" href="https://ctlib.github.io/CyberTools/tools/ports/" />
+        <link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+        <script type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","@id":"https://ctlib.github.io/CyberTools/tools/ports/#app","name":"Common Ports Reference","alternateName":["ports","tcp","udp","protocol","network","ssh","http","dns","ftp","smb"],"applicationCategory":"SecurityApplication","applicationSubCategory":"Network and DNS","operatingSystem":"Any","url":"https://ctlib.github.io/CyberTools/tools/ports/","image":"https://ctlib.github.io/CyberTools/assets/logowb.png","description":"Free online Common Ports Reference tool. 70+ common TCP/UDP ports with protocols and security risk labels. Runs locally in your browser with no tracking,…","keywords":"ports, tcp, udp, protocol, network, ssh, http, dns, ftp, smb","isAccessibleForFree":true,"browserRequirements":"Requires JavaScript. Runs locally in the browser without server uploads.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"CTLib","url":"https://github.com/ctlib"},"publisher":{"@id":"https://ctlib.github.io/CyberTools/#organization"},"isPartOf":{"@id":"https://ctlib.github.io/CyberTools/#app"},"license":"https://opensource.org/licenses/MIT"},{"@type":"WebPage","@id":"https://ctlib.github.io/CyberTools/tools/ports/#webpage","name":"Common Ports Reference - Free Client-Side Tool | CyberTools","url":"https://ctlib.github.io/CyberTools/tools/ports/","description":"Free online Common Ports Reference tool. 70+ common TCP/UDP ports with protocols and security risk labels. Runs locally in your browser with no tracking,…","inLanguage":"en","isPartOf":{"@id":"https://ctlib.github.io/CyberTools/#website"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CyberTools","item":"https://ctlib.github.io/CyberTools/"},{"@type":"ListItem","position":2,"name":"Common Ports Reference","item":"https://ctlib.github.io/CyberTools/tools/ports/"}]}]}
+        </script>
+        <!-- /Search metadata -->
+        <link rel="icon" href="../../assets/logowb.png" type="image/png" />
+    <link rel="preload" href="../../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="../../assets/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../../css/design-system.css" />
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/tailwind.css" />
+    <link rel="stylesheet" href="../../css/tool.css" />
+        <script src="../../js/theme.js"></script>
+</head>
+<body data-ct-active-tool="ports" data-ct-tool-source="tools/ports/script.js">
+<main id="ct-main">
+    <div class="tool-header">
+        <h1 class="tool-title">Common Ports Reference</h1>
+        <p class="tool-description">Searchable reference of 70+ common TCP/UDP ports with security risk indicators.</p>
+    </div>
+
+    <div class="tool-panel">
+        <input id="portSearch" class="input" type="text" placeholder="Search port, protocol, or keyword…" style="width:100%;" />
+        <span id="portCount" style="font-size:12px;color:var(--text-muted);display:block;margin-top:6px;"></span>
+    </div>
+
+    <div class="tool-panel" style="margin-top:16px;overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;">
+            <thead>
+                <tr style="font-size:12px;color:var(--text-muted);text-align:left;border-bottom:1px solid var(--border);">
+                    <th style="padding:8px 10px;">Port</th>
+                    <th style="padding:8px 10px;">Protocol</th>
+                    <th style="padding:8px 10px;">Name</th>
+                    <th style="padding:8px 10px;">Description</th>
+                    <th style="padding:8px 10px;">Risk</th>
+                </tr>
+            </thead>
+            <tbody id="portsTable"></tbody>
+        </table>
+    </div>
+
+    <div class="tool-panel" style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+        <div style="font-size:12px;font-weight:700;color:var(--text-muted);">Legend:</div>
+        <span style="background:var(--danger);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;">RISKY</span>
+        <span style="font-size:12px;color:var(--text-muted);">exposed → immediate attack surface</span>
+        <span style="background:var(--warning);color:#000;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;">COMMON TARGET</span>
+        <span style="font-size:12px;color:var(--text-muted);">frequently targeted by attackers</span>
+    </div>
+
+    <div class="tool-meta-links">
+        <a href="https://github.com/ctlib/CyberTools/blob/main/tools/ports/script.js" target="_blank" rel="noopener noreferrer"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg> View source</a>
+        <a href="https://github.com/ctlib/CyberTools/issues/new" target="_blank" rel="noopener noreferrer">Report issue</a>
+    </div>
+</main>
+<script src="../../js/app.js" defer></script><script src="../../js/history.js" defer></script><script src="../../js/share.js" defer></script><script src="../../js/smart-detect.js" defer></script><script src="../../js/components.js" defer></script><script src="../../js/shortcuts.js" defer></script><script src="../../js/pwa.js" defer></script><script src="script.js" defer></script>
+        <script src="../../js/page-init.js" defer></script>
+</body></html>

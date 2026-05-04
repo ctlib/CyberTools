@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hash Calculator - Free Client-Side Tool | CyberTools</title>
+        <meta name="description" content="Free online Hash Calculator tool. MD5, SHA-1, SHA-256, SHA-384, SHA-512, HMAC, file hash. Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta name="author" content="CTLib" />
+        <link rel="canonical" href="https://ctlib.github.io/CyberTools/tools/hash/" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+        />
+
+        <!-- Search metadata -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta name="keywords" content="Hash Calculator, Hash Calculator online, Hash Calculator tool, Hash Calculator CyberTools, md5, sha256, sha512, sha1, hash, hmac, digest, checksum, cybersecurity tools, ctf tools, client-side tools" />
+        <meta property="og:site_name" content="CyberTools" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="Hash Calculator - Free Client-Side Tool | CyberTools" />
+        <meta property="og:description" content="Free online Hash Calculator tool. MD5, SHA-1, SHA-256, SHA-384, SHA-512, HMAC, file hash. Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ctlib.github.io/CyberTools/tools/hash/" />
+        <meta property="og:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Hash Calculator - Free Client-Side Tool | CyberTools" />
+        <meta name="twitter:description" content="Free online Hash Calculator tool. MD5, SHA-1, SHA-256, SHA-384, SHA-512, HMAC, file hash. Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta name="twitter:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <link rel="alternate" hreflang="en" href="https://ctlib.github.io/CyberTools/tools/hash/" />
+        <link rel="alternate" hreflang="x-default" href="https://ctlib.github.io/CyberTools/tools/hash/" />
+        <link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "SoftwareApplication",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/hash/#app",
+                        "name": "Hash Calculator",
+                        "alternateName": ["hash", "md5", "sha256", "sha512", "sha1", "hmac", "digest", "checksum"],
+                        "applicationCategory": "SecurityApplication",
+                        "applicationSubCategory": "Hashing",
+                        "operatingSystem": "Any",
+                        "url": "https://ctlib.github.io/CyberTools/tools/hash/",
+                        "image": "https://ctlib.github.io/CyberTools/assets/logowb.png",
+                        "description": "Free online Hash Calculator tool. MD5, SHA-1, SHA-256, SHA-384, SHA-512, HMAC, file hash. Runs locally in your browser with no tracking, signup, or uploads.",
+                        "keywords": "md5, sha256, sha512, sha1, hash, hmac, digest, checksum",
+                        "isAccessibleForFree": true,
+                        "browserRequirements": "Requires JavaScript. Runs locally in the browser without server uploads.",
+                        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                        "author": { "@type": "Organization", "name": "CTLib", "url": "https://github.com/ctlib" },
+                        "publisher": { "@id": "https://ctlib.github.io/CyberTools/#organization" },
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#app" },
+                        "license": "https://opensource.org/licenses/MIT"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/hash/#webpage",
+                        "name": "Hash Calculator - Free Client-Side Tool | CyberTools",
+                        "url": "https://ctlib.github.io/CyberTools/tools/hash/",
+                        "description": "Free online Hash Calculator tool. MD5, SHA-1, SHA-256, SHA-384, SHA-512, HMAC, file hash. Runs locally in your browser with no tracking, signup, or uploads.",
+                        "inLanguage": "en",
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#website" }
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            { "@type": "ListItem", "position": 1, "name": "CyberTools", "item": "https://ctlib.github.io/CyberTools/" },
+                            { "@type": "ListItem", "position": 2, "name": "Hash Calculator", "item": "https://ctlib.github.io/CyberTools/tools/hash/" }
+                        ]
+                    }
+                ]
+            }
+        </script>
+        <!-- /Search metadata -->
+        <link rel="icon" href="../../assets/logowb.png" type="image/png" />
+        <link rel="preload" href="../../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="../../assets/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="stylesheet" href="../../css/design-system.css" />
+        <link rel="stylesheet" href="../../css/global.css" />
+        <link rel="stylesheet" href="../../css/tailwind.css" />
+        <link rel="stylesheet" href="../../css/tool.css" />
+        <style>
+            .hash-table {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 13px;
+                margin-top: 12px;
+            }
+            .hash-table thead th {
+                text-align: left;
+                padding: 8px 12px;
+                color: var(--text-muted);
+                font-size: 11px;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                border-bottom: 1px solid var(--border);
+            }
+            .hash-table tbody tr {
+                border-bottom: 1px solid var(--border);
+            }
+            .hash-table tbody tr:last-child {
+                border-bottom: none;
+            }
+            .hash-algo-cell {
+                padding: 10px 12px;
+                white-space: nowrap;
+                color: var(--text-muted);
+                font-size: 12px;
+                font-weight: 600;
+                width: 80px;
+            }
+            .hash-value-cell {
+                padding: 10px 12px;
+                font-family: 'JetBrains Mono', monospace;
+                font-size: 12px;
+                color: var(--text);
+                word-break: break-all;
+            }
+            .hash-copy-cell {
+                padding: 10px 12px;
+                white-space: nowrap;
+                text-align: right;
+                width: 60px;
+            }
+            .hash-copy-cell .output-copy-btn {
+                position: static;
+                font-size: 11px;
+                padding: 3px 8px;
+            }
+            .file-drop-zone {
+                border: 2px dashed var(--border);
+                border-radius: 8px;
+                padding: 32px;
+                text-align: center;
+                cursor: pointer;
+                color: var(--text-muted);
+                transition:
+                    border-color 0.2s,
+                    background 0.2s;
+            }
+            .file-drop-zone:hover,
+            .file-drop-zone.drag-over {
+                border-color: var(--accent);
+                background: color-mix(in srgb, var(--accent) 6%, transparent);
+                color: var(--text);
+            }
+            .file-drop-zone svg {
+                display: block;
+                margin: 0 auto 12px;
+                opacity: 0.5;
+            }
+        </style>
+        <script src="../../js/theme.js"></script>
+    </head>
+    <body data-ct-active-tool="hash" data-ct-tool-source="tools/hash/script.js">
+        <main id="ct-main">
+            <div class="tool-header">
+                <h1 class="tool-title">Hash Calculator</h1>
+                <p class="tool-description">Compute MD5, SHA-1, SHA-256, SHA-384, SHA-512, HMAC, and file hashes - entirely in your browser.</p>
+            </div>
+
+            <!-- Text hash -->
+            <div class="tool-panel">
+                <label class="tool-panel-label" for="hashInput">Input - text to hash</label>
+                <textarea id="hashInput" class="textarea" rows="5" placeholder="Type or paste text… (Ctrl+Enter to hash)" aria-label="Text to hash"></textarea>
+                <div style="display: flex; align-items: center; gap: 8px; margin-top: 12px; flex-wrap: wrap">
+                    <button id="hashBtn" data-ct-run class="btn-primary">Hash</button>
+                    <button
+                        onclick="
+                            document.getElementById('hashInput').value = '';
+                            document.getElementById('hashTableBody').innerHTML = '';
+                            document.getElementById('hashResultWrapper').style.display = 'none';
+                        "
+                        class="btn-ghost"
+                    >
+                        Clear
+                    </button>
+                </div>
+                <details class="examples-section" style="margin-top: 12px">
+                    <summary>Examples</summary>
+                    <div class="example-label" style="margin-top: 8px">Click to load</div>
+                    <div
+                        class="example-item"
+                        onclick="
+                            document.getElementById('hashInput').value = this.dataset.v;
+                            document.getElementById('hashBtn').click();
+                        "
+                        data-v="Hello, World!"
+                    >
+                        Hello, World!
+                    </div>
+                    <div
+                        class="example-item"
+                        onclick="
+                            document.getElementById('hashInput').value = this.dataset.v;
+                            document.getElementById('hashBtn').click();
+                        "
+                        data-v="password"
+                    >
+                        password (common hash reference)
+                    </div>
+                    <div
+                        class="example-item"
+                        onclick="
+                            document.getElementById('hashInput').value = this.dataset.v;
+                            document.getElementById('hashBtn').click();
+                        "
+                        data-v='{"user":"admin","token":"secret"}'
+                    >
+                        JSON payload
+                    </div>
+                </details>
+            </div>
+
+            <div id="hashResultWrapper">
+                <div class="tool-panel" style="margin-top: 16px">
+                    <div class="tool-panel-label">Results</div>
+                    <table class="hash-table" aria-label="Hash results">
+                        <thead>
+                            <tr>
+                                <th>Algorithm</th>
+                                <th>Hash (hex)</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="hashTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <hr style="border: none; border-top: 1px solid var(--border); margin: 24px 0" />
+
+            <!-- HMAC -->
+            <div class="tool-panel">
+                <div class="tool-panel-label">HMAC</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px">
+                    <div>
+                        <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px" for="hmacMsg">Message</label>
+                        <textarea id="hmacMsg" class="textarea" rows="3" placeholder="Message to authenticate…"></textarea>
+                    </div>
+                    <div>
+                        <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px" for="hmacKey">Secret key</label>
+                        <textarea id="hmacKey" class="textarea" rows="3" placeholder="HMAC secret key…"></textarea>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap">
+                    <select id="hmacAlgo" class="input" style="width: auto">
+                        <option value="SHA-1">HMAC-SHA-1</option>
+                        <option value="SHA-256" selected>HMAC-SHA-256</option>
+                        <option value="SHA-384">HMAC-SHA-384</option>
+                        <option value="SHA-512">HMAC-SHA-512</option>
+                    </select>
+                    <button id="hmacBtn" class="btn-primary">Compute HMAC</button>
+                </div>
+                <div class="output-wrapper" style="margin-top: 12px">
+                    <textarea id="hmacOutput" class="output-area" rows="2" readonly aria-label="HMAC output" aria-live="polite" placeholder="HMAC hex digest will appear here…"></textarea>
+                    <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('hmacOutput').value, this)" aria-label="Copy">Copy</button>
+                </div>
+            </div>
+
+            <hr style="border: none; border-top: 1px solid var(--border); margin: 24px 0" />
+
+            <!-- File hash -->
+            <div class="tool-panel">
+                <div class="tool-panel-label">File Hash</div>
+                <div id="fileDropZone" class="file-drop-zone" role="button" tabindex="0" aria-label="Drop a file or click to select">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 16V4m0 0L8 8m4-4 4 4" />
+                        <path d="M20 16v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3" />
+                    </svg>
+                    <div style="font-size: 14px; font-weight: 500">Drop a file here or click to select</div>
+                    <div style="font-size: 12px; margin-top: 4px">All processing happens locally - file never leaves your browser</div>
+                </div>
+                <input id="fileHashInput" type="file" style="display: none" aria-label="Select file to hash" />
+                <div id="fileInfo" style="font-size: 12px; color: var(--text-muted); margin-top: 8px"></div>
+            </div>
+
+            <div id="fileHashWrapper">
+                <div class="tool-panel" style="margin-top: 12px">
+                    <div class="tool-panel-label">File hash results</div>
+                    <table class="hash-table" aria-label="File hash results">
+                        <thead>
+                            <tr>
+                                <th>Algorithm</th>
+                                <th>Hash (hex)</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="fileHashTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <hr style="border: none; border-top: 1px solid var(--border); margin: 24px 0" />
+
+            <!-- Compare -->
+            <div class="tool-panel">
+                <div class="tool-panel-label">Hash Compare</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px">
+                    <div>
+                        <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px" for="compareA">Hash A</label>
+                        <input id="compareA" class="input" type="text" placeholder="Paste first hash…" style="font-family: 'JetBrains Mono', monospace; font-size: 12px" />
+                    </div>
+                    <div>
+                        <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px" for="compareB">Hash B</label>
+                        <input id="compareB" class="input" type="text" placeholder="Paste second hash…" style="font-family: 'JetBrains Mono', monospace; font-size: 12px" />
+                    </div>
+                </div>
+                <div id="compareResult" style="font-size: 13px; font-weight: 600; min-height: 20px"></div>
+            </div>
+
+            <!-- How it works -->
+            <details class="tool-docs">
+                <summary>How it works</summary>
+                <div class="tool-docs-content">
+                    <p><strong>MD5</strong> (128-bit) - Fast and widely used, but cryptographically broken since 2004. Still useful for checksums and non-security identifiers. Implemented entirely in JavaScript.</p>
+                    <p><strong>SHA-1</strong> (160-bit) - Deprecated for new applications; collision attacks demonstrated in 2017 (SHAttered). Only use for compatibility with legacy systems.</p>
+                    <p>
+                        <strong>SHA-256 / SHA-384 / SHA-512</strong> - Part of the SHA-2 family. SHA-256 and SHA-512 are the current standard for security applications. Computed via the browser's native
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest" target="_blank" rel="noopener noreferrer">WebCrypto API</a>.
+                    </p>
+                    <p>
+                        <strong>HMAC</strong> - Hash-based Message Authentication Code. Combines a secret key with your message using a hash function to produce an authentication tag. Used in JWT signing, API authentication, and data integrity
+                        verification.
+                    </p>
+                    <p><strong>File hashing</strong> - The file is read into a binary buffer using the FileReader API. The buffer is passed directly to <code>crypto.subtle.digest()</code>. The file never leaves your device.</p>
+                </div>
+            </details>
+
+            <div class="security-note">
+                <strong style="color: var(--text)">Security note:</strong> MD5 and SHA-1 are broken for collision resistance. Use SHA-256 or SHA-512 for any security-sensitive application. HMAC output is only as secure as your secret key - use a
+                long, random key.
+            </div>
+
+            <details class="pipe-section">
+                <summary>Send output to…</summary>
+                <div style="padding-top: 12px; font-size: 13px; color: var(--text-muted)">Tool piping coming in a future phase. Copy the output and paste it into any other tool.</div>
+            </details>
+
+            <div class="tool-meta-links">
+                <a href="https://github.com/ctlib/CyberTools/blob/main/tools/hash/script.js" target="_blank" rel="noopener noreferrer">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                        />
+                    </svg>
+                    View source of this tool
+                </a>
+                <a href="https://github.com/ctlib/CyberTools/issues/new" target="_blank" rel="noopener noreferrer">Report issue</a>
+            </div>
+        </main>
+
+        <script src="../../js/app.js" defer></script>
+        <script src="../../js/history.js" defer></script>
+        <script src="../../js/share.js" defer></script>
+        <script src="../../js/smart-detect.js" defer></script>
+        <script src="../../js/components.js" defer></script>
+        <script src="../../js/shortcuts.js" defer></script>
+        <script src="../../js/pwa.js" defer></script>
+        <script src="script.js" defer></script>
+        <script src="../../js/page-init.js" defer></script>
+    </body>
+</html>

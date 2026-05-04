@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>RSA Encryption - Free Client-Side Tool | CyberTools</title>
+        <meta name="description" content="Free online RSA Encryption tool. RSA-OAEP encrypt/decrypt and RSA-PSS sign/verify with PEM export. Runs locally in your browser with no tracking, signup, or…" />
+        <link rel="canonical" href="https://ctlib.github.io/CyberTools/tools/rsa/" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+        />
+
+        <!-- Search metadata -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta
+            name="keywords"
+            content="RSA Encryption, RSA Encryption online, RSA Encryption tool, RSA Encryption CyberTools, rsa, rsa-oaep, rsa-pss, asymmetric, public key, private key, encrypt, decrypt, sign, verify, pem, cybersecurity tools, ctf tools, client-side tools"
+        />
+        <meta property="og:site_name" content="CyberTools" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="RSA Encryption - Free Client-Side Tool | CyberTools" />
+        <meta property="og:description" content="Free online RSA Encryption tool. RSA-OAEP encrypt/decrypt and RSA-PSS sign/verify with PEM export. Runs locally in your browser with no tracking, signup, or…" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ctlib.github.io/CyberTools/tools/rsa/" />
+        <meta property="og:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="RSA Encryption - Free Client-Side Tool | CyberTools" />
+        <meta name="twitter:description" content="Free online RSA Encryption tool. RSA-OAEP encrypt/decrypt and RSA-PSS sign/verify with PEM export. Runs locally in your browser with no tracking, signup, or…" />
+        <meta name="twitter:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <link rel="alternate" hreflang="en" href="https://ctlib.github.io/CyberTools/tools/rsa/" />
+        <link rel="alternate" hreflang="x-default" href="https://ctlib.github.io/CyberTools/tools/rsa/" />
+        <link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "SoftwareApplication",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/rsa/#app",
+                        "name": "RSA Encryption",
+                        "alternateName": ["rsa", "rsa-oaep", "rsa-pss", "asymmetric", "public key", "private key", "encrypt", "decrypt", "sign", "verify", "pem"],
+                        "applicationCategory": "SecurityApplication",
+                        "applicationSubCategory": "Cryptography",
+                        "operatingSystem": "Any",
+                        "url": "https://ctlib.github.io/CyberTools/tools/rsa/",
+                        "image": "https://ctlib.github.io/CyberTools/assets/logowb.png",
+                        "description": "Free online RSA Encryption tool. RSA-OAEP encrypt/decrypt and RSA-PSS sign/verify with PEM export. Runs locally in your browser with no tracking, signup, or…",
+                        "keywords": "rsa, rsa-oaep, rsa-pss, asymmetric, public key, private key, encrypt, decrypt, sign, verify, pem",
+                        "isAccessibleForFree": true,
+                        "browserRequirements": "Requires JavaScript. Runs locally in the browser without server uploads.",
+                        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                        "author": { "@type": "Organization", "name": "CTLib", "url": "https://github.com/ctlib" },
+                        "publisher": { "@id": "https://ctlib.github.io/CyberTools/#organization" },
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#app" },
+                        "license": "https://opensource.org/licenses/MIT"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/rsa/#webpage",
+                        "name": "RSA Encryption - Free Client-Side Tool | CyberTools",
+                        "url": "https://ctlib.github.io/CyberTools/tools/rsa/",
+                        "description": "Free online RSA Encryption tool. RSA-OAEP encrypt/decrypt and RSA-PSS sign/verify with PEM export. Runs locally in your browser with no tracking, signup, or…",
+                        "inLanguage": "en",
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#website" }
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            { "@type": "ListItem", "position": 1, "name": "CyberTools", "item": "https://ctlib.github.io/CyberTools/" },
+                            { "@type": "ListItem", "position": 2, "name": "RSA Encryption", "item": "https://ctlib.github.io/CyberTools/tools/rsa/" }
+                        ]
+                    }
+                ]
+            }
+        </script>
+        <!-- /Search metadata -->
+        <link rel="icon" href="../../assets/logowb.png" type="image/png" />
+        <link rel="preload" href="../../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="../../assets/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="stylesheet" href="../../css/design-system.css" />
+        <link rel="stylesheet" href="../../css/global.css" />
+        <link rel="stylesheet" href="../../css/tailwind.css" />
+        <link rel="stylesheet" href="../../css/tool.css" />
+        <script src="../../js/theme.js"></script>
+    </head>
+    <body data-ct-active-tool="rsa" data-ct-tool-source="tools/rsa/script.js">
+        <main id="ct-main">
+            <div class="tool-header">
+                <h1 class="tool-title">RSA Encryption</h1>
+                <p class="tool-description">Generate RSA key pairs, encrypt/decrypt with RSA-OAEP, and sign/verify with RSA-PSS - via WebCrypto API. PEM format supported.</p>
+            </div>
+
+            <div class="tool-panel" style="border-left: 3px solid var(--warning); background: color-mix(in srgb, var(--warning) 10%, var(--surface)); margin-bottom: 16px">
+                <div style="font-size: 12px; font-weight: 700; color: var(--warning); margin-bottom: 4px">Key size warning</div>
+                <div style="font-size: 13px; color: var(--text-muted)">RSA key sizes below 2048 bits are deprecated. Use 2048 minimum; 4096 for long-term security.</div>
+            </div>
+
+            <div class="tool-panel">
+                <div class="tool-panel-label">Key Generation</div>
+                <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end; margin-bottom: 12px">
+                    <div>
+                        <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px">Key size</label>
+                        <select id="keySize" class="input" style="width: auto">
+                            <option value="1024">1024 (deprecated)</option>
+                            <option value="2048" selected>2048</option>
+                            <option value="4096">4096</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px">Hash algorithm</label>
+                        <select id="hashAlgo" class="input" style="width: auto">
+                            <option value="SHA-256" selected>SHA-256</option>
+                            <option value="SHA-384">SHA-384</option>
+                            <option value="SHA-512">SHA-512</option>
+                        </select>
+                    </div>
+                    <button id="genKeyBtn" class="btn-primary">Generate Key Pair</button>
+                </div>
+                <div id="keyPairResult">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+                        <div>
+                            <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 6px">Public key (SPKI/PEM)</label>
+                            <div class="output-wrapper">
+                                <textarea id="pubKeyOut" class="output-area" rows="8" readonly placeholder="Public key will appear here…" style="font-family: 'JetBrains Mono', monospace; font-size: 11px"></textarea>
+                                <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('pubKeyOut').value, this)">Copy</button>
+                            </div>
+                        </div>
+                        <div>
+                            <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 6px">Private key (PKCS8/PEM) - keep secret</label>
+                            <div class="output-wrapper">
+                                <textarea id="privKeyOut" class="output-area" rows="8" readonly placeholder="Private key will appear here…" style="font-family: 'JetBrains Mono', monospace; font-size: 11px"></textarea>
+                                <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('privKeyOut').value, this)">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr style="border: none; border-top: 1px solid var(--border); margin: 16px 0" />
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+                <div class="tool-panel">
+                    <div class="tool-panel-label">Encrypt</div>
+                    <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px">Public key (PEM)</label>
+                    <textarea id="encPubKey" class="textarea" rows="5" placeholder="Paste public key PEM…" style="font-family: 'JetBrains Mono', monospace; font-size: 11px" spellcheck="false"></textarea>
+                    <label style="font-size: 12px; color: var(--text-muted); display: block; margin: 8px 0 4px">Message</label>
+                    <textarea id="encMessage" class="textarea" rows="3" placeholder="Message to encrypt…" spellcheck="false"></textarea>
+                    <div style="display: flex; gap: 8px; align-items: center; margin-top: 8px">
+                        <select id="encHash" class="input" style="width: auto">
+                            <option value="SHA-256" selected>SHA-256</option>
+                            <option value="SHA-384">SHA-384</option>
+                            <option value="SHA-512">SHA-512</option>
+                        </select>
+                        <button id="encBtn" class="btn-primary">Encrypt</button>
+                    </div>
+                </div>
+                <div class="tool-panel">
+                    <div class="tool-panel-label">Ciphertext (Base64)</div>
+                    <div class="output-wrapper">
+                        <textarea id="encOutput" class="output-area" rows="5" readonly placeholder="Encrypted output (Base64)…" style="font-family: 'JetBrains Mono', monospace; font-size: 11px"></textarea>
+                        <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('encOutput').value, this)">Copy</button>
+                    </div>
+                </div>
+            </div>
+
+            <hr style="border: none; border-top: 1px solid var(--border); margin: 16px 0" />
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+                <div class="tool-panel">
+                    <div class="tool-panel-label">Decrypt</div>
+                    <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px">Private key (PEM)</label>
+                    <textarea id="decPrivKey" class="textarea" rows="5" placeholder="Paste private key PEM…" style="font-family: 'JetBrains Mono', monospace; font-size: 11px" spellcheck="false"></textarea>
+                    <label style="font-size: 12px; color: var(--text-muted); display: block; margin: 8px 0 4px">Ciphertext (Base64)</label>
+                    <textarea id="decCipher" class="textarea" rows="3" placeholder="Paste Base64 ciphertext…" style="font-family: 'JetBrains Mono', monospace; font-size: 12px" spellcheck="false"></textarea>
+                    <div style="display: flex; gap: 8px; align-items: center; margin-top: 8px">
+                        <select id="decHash" class="input" style="width: auto">
+                            <option value="SHA-256" selected>SHA-256</option>
+                            <option value="SHA-384">SHA-384</option>
+                            <option value="SHA-512">SHA-512</option>
+                        </select>
+                        <button id="decBtn" class="btn-primary">Decrypt</button>
+                    </div>
+                </div>
+                <div class="tool-panel">
+                    <div class="tool-panel-label">Plaintext</div>
+                    <div class="output-wrapper">
+                        <textarea id="decOutput" class="output-area" rows="5" readonly placeholder="Decrypted plaintext…"></textarea>
+                        <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('decOutput').value, this)">Copy</button>
+                    </div>
+                </div>
+            </div>
+
+            <hr style="border: none; border-top: 1px solid var(--border); margin: 16px 0" />
+
+            <div class="tool-panel">
+                <div class="tool-panel-label">Sign</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+                    <div>
+                        <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px">Private key (PEM)</label>
+                        <textarea id="signPrivKey" class="textarea" rows="5" placeholder="Paste private key PEM…" style="font-family: 'JetBrains Mono', monospace; font-size: 11px" spellcheck="false"></textarea>
+                        <label style="font-size: 12px; color: var(--text-muted); display: block; margin: 8px 0 4px">Message</label>
+                        <textarea id="signMessage" class="textarea" rows="3" placeholder="Message to sign…" spellcheck="false"></textarea>
+                        <div style="display: flex; gap: 8px; align-items: center; margin-top: 8px">
+                            <select id="signHash" class="input" style="width: auto">
+                                <option value="SHA-256" selected>SHA-256</option>
+                                <option value="SHA-384">SHA-384</option>
+                                <option value="SHA-512">SHA-512</option>
+                            </select>
+                            <button id="signBtn" class="btn-ghost">Sign</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="tool-panel-label">Signature (Base64)</div>
+                        <div class="output-wrapper">
+                            <textarea id="signOutput" class="output-area" rows="3" readonly placeholder="Signature (Base64)…" style="font-family: 'JetBrains Mono', monospace; font-size: 11px"></textarea>
+                            <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('signOutput').value, this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tool-panel" style="margin-top: 16px">
+                <div class="tool-panel-label">Verify</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+                    <div>
+                        <label style="font-size: 12px; color: var(--text-muted); display: block; margin-bottom: 4px">Public key (PEM)</label>
+                        <textarea id="signPubKey" class="textarea" rows="5" placeholder="Paste public key PEM (auto-filled after keygen)…" style="font-family: 'JetBrains Mono', monospace; font-size: 11px" spellcheck="false"></textarea>
+                        <label style="font-size: 12px; color: var(--text-muted); display: block; margin: 8px 0 4px">Message</label>
+                        <textarea id="verifyMessage" class="textarea" rows="3" placeholder="Original message…" spellcheck="false"></textarea>
+                        <label style="font-size: 12px; color: var(--text-muted); display: block; margin: 8px 0 4px">Signature (Base64)</label>
+                        <textarea id="verifySig" class="textarea" rows="3" placeholder="Paste Base64 signature…" style="font-family: 'JetBrains Mono', monospace; font-size: 11px" spellcheck="false"></textarea>
+                        <button id="verifyBtn" class="btn-ghost" style="margin-top: 8px">Verify</button>
+                    </div>
+                    <div style="display: flex; align-items: center; justify-content: center">
+                        <div id="verifyResult" style="font-size: 14px; font-weight: 600"></div>
+                    </div>
+                </div>
+            </div>
+
+            <details class="tool-docs">
+                <summary>How it works</summary>
+                <div class="tool-docs-content">
+                    <p><strong>RSA-OAEP</strong> uses RSA with Optimal Asymmetric Encryption Padding - secure against chosen-ciphertext attacks. Encryption uses the public key; decryption uses the private key.</p>
+                    <p>
+                        <strong>RSA-PSS</strong> uses probabilistic signature padding for signing. Signing uses the private key; verification uses the public key. Both operations run entirely in the browser via the WebCrypto API - keys never leave
+                        the browser.
+                    </p>
+                    <p>Keys are exported in PEM format: SPKI for public keys, PKCS#8 for private keys.</p>
+                </div>
+            </details>
+
+            <div class="tool-panel" style="margin-top: 16px; border-left: 3px solid var(--warning); background: color-mix(in srgb, var(--warning) 6%, var(--surface))">
+                <div style="font-size: 12px; font-weight: 700; color: var(--warning); margin-bottom: 4px">Security note</div>
+                <div style="font-size: 13px; color: var(--text-muted)">
+                    RSA encrypts small messages only (limited to key size minus padding). For large data use hybrid encryption: generate an AES key, encrypt data with AES-GCM, encrypt the AES key with RSA-OAEP. Never use RSA-PKCS1v1.5 for new systems
+                    - use OAEP only.
+                </div>
+            </div>
+
+            <div class="tool-meta-links">
+                <a href="https://github.com/ctlib/CyberTools/blob/main/tools/rsa/script.js" target="_blank" rel="noopener noreferrer"
+                    ><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                        />
+                    </svg>
+                    View source</a
+                >
+                <a href="https://github.com/ctlib/CyberTools/issues/new" target="_blank" rel="noopener noreferrer">Report issue</a>
+            </div>
+        </main>
+        <script src="../../js/app.js" defer></script>
+        <script src="../../js/history.js" defer></script>
+        <script src="../../js/share.js" defer></script>
+        <script src="../../js/smart-detect.js" defer></script>
+        <script src="../../js/components.js" defer></script>
+        <script src="../../js/shortcuts.js" defer></script>
+        <script src="../../js/pwa.js" defer></script>
+        <script src="script.js" defer></script>
+        <script src="../../js/page-init.js" defer></script>
+    </body>
+</html>

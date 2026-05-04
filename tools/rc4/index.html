@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>RC4 - Free Client-Side Tool | CyberTools</title>
+        <meta name="description" content="Free online RC4 tool. RC4 stream cipher — legacy/educational only. Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta name="author" content="CTLib" />
+        <link rel="canonical" href="https://ctlib.github.io/CyberTools/tools/rc4/" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+        />
+
+        <!-- Search metadata -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta name="keywords" content="RC4, RC4 online, RC4 tool, RC4 CyberTools, rc4, cipher, legacy, stream, encrypt, decrypt, cybersecurity tools, ctf tools, client-side tools" />
+        <meta property="og:site_name" content="CyberTools" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="RC4 - Free Client-Side Tool | CyberTools" />
+        <meta property="og:description" content="Free online RC4 tool. RC4 stream cipher — legacy/educational only. Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ctlib.github.io/CyberTools/tools/rc4/" />
+        <meta property="og:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="RC4 - Free Client-Side Tool | CyberTools" />
+        <meta name="twitter:description" content="Free online RC4 tool. RC4 stream cipher — legacy/educational only. Runs locally in your browser with no tracking, signup, or uploads." />
+        <meta name="twitter:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <link rel="alternate" hreflang="en" href="https://ctlib.github.io/CyberTools/tools/rc4/" />
+        <link rel="alternate" hreflang="x-default" href="https://ctlib.github.io/CyberTools/tools/rc4/" />
+        <link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "SoftwareApplication",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/rc4/#app",
+                        "name": "RC4",
+                        "alternateName": ["rc4", "cipher", "legacy", "stream", "encrypt", "decrypt"],
+                        "applicationCategory": "SecurityApplication",
+                        "applicationSubCategory": "Cryptography",
+                        "operatingSystem": "Any",
+                        "url": "https://ctlib.github.io/CyberTools/tools/rc4/",
+                        "image": "https://ctlib.github.io/CyberTools/assets/logowb.png",
+                        "description": "Free online RC4 tool. RC4 stream cipher — legacy/educational only. Runs locally in your browser with no tracking, signup, or uploads.",
+                        "keywords": "rc4, cipher, legacy, stream, encrypt, decrypt",
+                        "isAccessibleForFree": true,
+                        "browserRequirements": "Requires JavaScript. Runs locally in the browser without server uploads.",
+                        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                        "author": { "@type": "Organization", "name": "CTLib", "url": "https://github.com/ctlib" },
+                        "publisher": { "@id": "https://ctlib.github.io/CyberTools/#organization" },
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#app" },
+                        "license": "https://opensource.org/licenses/MIT"
+                    },
+                    {
+                        "@type": "WebPage",
+                        "@id": "https://ctlib.github.io/CyberTools/tools/rc4/#webpage",
+                        "name": "RC4 - Free Client-Side Tool | CyberTools",
+                        "url": "https://ctlib.github.io/CyberTools/tools/rc4/",
+                        "description": "Free online RC4 tool. RC4 stream cipher — legacy/educational only. Runs locally in your browser with no tracking, signup, or uploads.",
+                        "inLanguage": "en",
+                        "isPartOf": { "@id": "https://ctlib.github.io/CyberTools/#website" }
+                    },
+                    {
+                        "@type": "BreadcrumbList",
+                        "itemListElement": [
+                            { "@type": "ListItem", "position": 1, "name": "CyberTools", "item": "https://ctlib.github.io/CyberTools/" },
+                            { "@type": "ListItem", "position": 2, "name": "RC4", "item": "https://ctlib.github.io/CyberTools/tools/rc4/" }
+                        ]
+                    }
+                ]
+            }
+        </script>
+        <!-- /Search metadata -->
+        <link rel="icon" href="../../assets/logowb.png" type="image/png" />
+        <link rel="preload" href="../../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="preload" href="../../assets/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
+        <link rel="stylesheet" href="../../css/design-system.css" />
+        <link rel="stylesheet" href="../../css/global.css" />
+        <link rel="stylesheet" href="../../css/tailwind.css" />
+        <link rel="stylesheet" href="../../css/tool.css" />
+        <script src="../../js/theme.js"></script>
+    </head>
+    <body data-ct-active-tool="rc4" data-ct-tool-source="tools/rc4/script.js">
+        <main id="ct-main">
+            <div class="tool-header">
+                <h1 class="tool-title">RC4</h1>
+                <p class="tool-description">RC4 stream cipher - encrypt and decrypt with a key. Legacy/educational use only.</p>
+            </div>
+
+            <!-- Legacy warning -->
+            <div class="legacy-banner" role="alert">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink: 0; margin-top: 1px" aria-hidden="true">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                    <line x1="12" y1="9" x2="12" y2="13" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg>
+                <div>
+                    <strong>RC4 is cryptographically broken.</strong> Multiple practical attacks exist (BEAST, RC4 NOMORE, WEP exploits). It was deprecated by IETF in
+                    <a href="https://datatracker.ietf.org/doc/html/rfc7465" target="_blank" rel="noopener noreferrer" style="color: #0d1117; text-decoration: underline">RFC 7465</a>. Use <strong>AES-GCM</strong> or
+                    <strong>ChaCha20-Poly1305</strong> for real work. This tool is preserved for CTF and educational purposes only.
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px">
+                <!-- Encrypt -->
+                <div class="tool-panel">
+                    <label class="tool-panel-label" for="rc4EncryptInput">Encrypt</label>
+                    <textarea id="rc4EncryptInput" data-ct-input class="textarea" rows="5" placeholder="Plaintext to encrypt…" aria-label="Text to encrypt"></textarea>
+                    <input type="text" id="rc4EncryptKey" class="input" style="margin-top: 8px" placeholder="Encryption key…" aria-label="Encryption key" />
+                    <div style="margin-top: 12px; display: flex; gap: 8px">
+                        <button id="rc4EncryptBtn" data-ct-run class="btn-primary">Encrypt →</button>
+                        <button
+                            onclick="
+                                document.getElementById('rc4EncryptInput').value = '';
+                                document.getElementById('rc4EncryptKey').value = '';
+                                document.getElementById('rc4EncryptedResult').value = '';
+                            "
+                            class="btn-ghost"
+                        >
+                            Clear
+                        </button>
+                    </div>
+                    <details class="examples-section" style="margin-top: 12px">
+                        <summary>Example</summary>
+                        <div
+                            class="example-item"
+                            style="margin-top: 8px"
+                            onclick="
+                                document.getElementById('rc4EncryptInput').value = 'Hello, World!';
+                                document.getElementById('rc4EncryptKey').value = 'mysecretkey';
+                                document.getElementById('rc4EncryptBtn').click();
+                            "
+                        >
+                            Plaintext: "Hello, World!" · Key: "mysecretkey"
+                        </div>
+                    </details>
+                    <div style="margin-top: 12px">
+                        <label class="tool-panel-label">Output - Base64 ciphertext</label>
+                        <div class="output-wrapper">
+                            <textarea id="rc4EncryptedResult" class="output-area" rows="4" readonly aria-label="Encrypted output" aria-live="polite"></textarea>
+                            <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('rc4EncryptedResult').value, this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Decrypt -->
+                <div class="tool-panel">
+                    <label class="tool-panel-label" for="rc4DecryptInput">Decrypt</label>
+                    <textarea id="rc4DecryptInput" class="textarea" rows="5" placeholder="Base64 ciphertext to decrypt…" aria-label="Ciphertext to decrypt"></textarea>
+                    <input type="text" id="rc4DecryptKey" class="input" style="margin-top: 8px" placeholder="Decryption key…" aria-label="Decryption key" />
+                    <div style="margin-top: 12px; display: flex; gap: 8px">
+                        <button id="rc4DecryptBtn" class="btn-primary">Decrypt →</button>
+                        <button
+                            onclick="
+                                document.getElementById('rc4DecryptInput').value = '';
+                                document.getElementById('rc4DecryptKey').value = '';
+                                document.getElementById('rc4DecryptedResult').value = '';
+                            "
+                            class="btn-ghost"
+                        >
+                            Clear
+                        </button>
+                    </div>
+                    <div style="margin-top: 12px">
+                        <label class="tool-panel-label">Output - plaintext</label>
+                        <div class="output-wrapper">
+                            <textarea id="rc4DecryptedResult" class="output-area" rows="4" readonly data-ct-output aria-label="Decrypted output" aria-live="polite"></textarea>
+                            <button class="output-copy-btn" onclick="CyberTools.copyText(document.getElementById('rc4DecryptedResult').value, this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How it works -->
+            <details class="tool-docs">
+                <summary>How it works</summary>
+                <div class="tool-docs-content">
+                    <p>
+                        RC4 (Rivest Cipher 4) is a stream cipher that generates a pseudorandom keystream using the Key-Scheduling Algorithm (KSA) and Pseudo-Random Generation Algorithm (PRGA). The keystream is XORed with the plaintext to produce
+                        ciphertext.
+                    </p>
+                    <p>RC4 uses a 256-byte state array initialized with the key, then generates one byte of keystream per input byte. Because RC4 is symmetric, the same operation encrypts and decrypts.</p>
+                    <p>Output is encoded as Base64 for transport. Reference: <a href="https://datatracker.ietf.org/doc/html/rfc7465" target="_blank" rel="noopener noreferrer">RFC 7465</a> (prohibition on RC4 in TLS)</p>
+                </div>
+            </details>
+
+            <div class="tool-meta-links">
+                <a href="https://github.com/ctlib/CyberTools/blob/main/tools/rc4/script.js" target="_blank" rel="noopener noreferrer">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                        />
+                    </svg>
+                    View source of this tool
+                </a>
+                <a href="https://github.com/ctlib/CyberTools/issues/new" target="_blank" rel="noopener noreferrer">Report issue</a>
+            </div>
+        </main>
+
+        <script src="../../js/app.js" defer></script>
+        <script src="../../js/history.js" defer></script>
+        <script src="../../js/share.js" defer></script>
+        <script src="../../js/smart-detect.js" defer></script>
+        <script src="../../js/components.js" defer></script>
+        <script src="../../js/shortcuts.js" defer></script>
+        <script src="../../js/pwa.js" defer></script>
+        <script src="script.js" defer></script>
+        <script src="../../js/page-init.js" defer></script>
+    </body>
+</html>

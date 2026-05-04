@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JWT Attacks Toolkit - Free Client-Side Tool | CyberTools</title>
+    <meta name="description" content="Free online JWT Attacks Toolkit tool. alg:none, RS256→HS256 confusion, weak secret crack, kid injection. Runs locally in your browser with no tracking,…" />
+        <link rel="canonical" href="https://ctlib.github.io/CyberTools/tools/jwt-attacks/" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
+
+        <!-- Search metadata -->
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="theme-color" content="#0d1117" />
+        <meta name="keywords" content="JWT Attacks Toolkit, JWT Attacks Toolkit online, JWT Attacks Toolkit tool, JWT Attacks Toolkit CyberTools, jwt, attacks, alg none, rs256 hs256, secret crack, kid injection, ctf, pentest, cybersecurity tools, ctf tools, client-side tools" />
+        <meta property="og:site_name" content="CyberTools" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:title" content="JWT Attacks Toolkit - Free Client-Side Tool | CyberTools" />
+        <meta property="og:description" content="Free online JWT Attacks Toolkit tool. alg:none, RS256→HS256 confusion, weak secret crack, kid injection. Runs locally in your browser with no tracking,…" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ctlib.github.io/CyberTools/tools/jwt-attacks/" />
+        <meta property="og:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="JWT Attacks Toolkit - Free Client-Side Tool | CyberTools" />
+        <meta name="twitter:description" content="Free online JWT Attacks Toolkit tool. alg:none, RS256→HS256 confusion, weak secret crack, kid injection. Runs locally in your browser with no tracking,…" />
+        <meta name="twitter:image" content="https://ctlib.github.io/CyberTools/assets/logowb.png" />
+        <link rel="alternate" hreflang="en" href="https://ctlib.github.io/CyberTools/tools/jwt-attacks/" />
+        <link rel="alternate" hreflang="x-default" href="https://ctlib.github.io/CyberTools/tools/jwt-attacks/" />
+        <link rel="sitemap" type="application/xml" href="../../sitemap.xml" />
+        <script type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","@id":"https://ctlib.github.io/CyberTools/tools/jwt-attacks/#app","name":"JWT Attacks Toolkit","alternateName":["jwt-attacks","jwt","attacks","alg none","rs256 hs256","secret crack","kid injection","ctf","pentest"],"applicationCategory":"SecurityApplication","applicationSubCategory":"Authorized Web App Testing","operatingSystem":"Any","url":"https://ctlib.github.io/CyberTools/tools/jwt-attacks/","image":"https://ctlib.github.io/CyberTools/assets/logowb.png","description":"Free online JWT Attacks Toolkit tool. alg:none, RS256→HS256 confusion, weak secret crack, kid injection. Runs locally in your browser with no tracking,…","keywords":"jwt, attacks, alg none, rs256 hs256, secret crack, kid injection, ctf, pentest","isAccessibleForFree":true,"browserRequirements":"Requires JavaScript. Runs locally in the browser without server uploads.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"CTLib","url":"https://github.com/ctlib"},"publisher":{"@id":"https://ctlib.github.io/CyberTools/#organization"},"isPartOf":{"@id":"https://ctlib.github.io/CyberTools/#app"},"license":"https://opensource.org/licenses/MIT"},{"@type":"WebPage","@id":"https://ctlib.github.io/CyberTools/tools/jwt-attacks/#webpage","name":"JWT Attacks Toolkit - Free Client-Side Tool | CyberTools","url":"https://ctlib.github.io/CyberTools/tools/jwt-attacks/","description":"Free online JWT Attacks Toolkit tool. alg:none, RS256→HS256 confusion, weak secret crack, kid injection. Runs locally in your browser with no tracking,…","inLanguage":"en","isPartOf":{"@id":"https://ctlib.github.io/CyberTools/#website"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CyberTools","item":"https://ctlib.github.io/CyberTools/"},{"@type":"ListItem","position":2,"name":"JWT Attacks Toolkit","item":"https://ctlib.github.io/CyberTools/tools/jwt-attacks/"}]}]}
+        </script>
+        <!-- /Search metadata -->
+        <link rel="icon" href="../../assets/logowb.png" type="image/png" />
+    <link rel="preload" href="../../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="../../css/design-system.css" />
+    <link rel="stylesheet" href="../../css/global.css" />
+    <link rel="stylesheet" href="../../css/tailwind.css" />
+    <link rel="stylesheet" href="../../css/tool.css" />
+        <script src="../../js/theme.js"></script>
+</head>
+<body data-ct-active-tool="jwt-attacks" data-ct-tool-source="tools/jwt-attacks/script.js">
+<div style="max-width:960px;margin:0 auto;padding:32px 24px;">
+    <div class="tool-header">
+        <h1 class="tool-title">JWT Attacks Toolkit</h1>
+        <p class="tool-description">alg:none, RS256→HS256 key confusion, weak secret cracking, kid injection.</p>
+    </div>
+
+    <div style="background:rgba(234,179,8,0.1);border:1px solid rgba(234,179,8,0.4);border-radius:8px;padding:12px 16px;margin-bottom:24px;font-size:13px;color:var(--warning);">
+        <strong>Educational / CTF Use Only</strong> - This toolkit demonstrates known JWT vulnerabilities. Only test tokens you own or have explicit authorization to test.
+    </div>
+
+    <!-- Token Input -->
+    <div class="tool-panel" style="margin-bottom:24px;">
+        <label style="display:block;font-size:12px;font-weight:600;color:var(--text-muted);margin-bottom:8px;">JWT TOKEN</label>
+        <textarea id="jwt-input" rows="4" placeholder="eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIn0.signature" style="width:100%;background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:12px 14px;font-size:13px;color:var(--text);font-family:'JetBrains Mono',monospace;resize:vertical;box-sizing:border-box;"></textarea>
+        <button onclick="loadToken()" style="margin-top:10px;background:var(--accent);color:var(--bg);border:none;border-radius:6px;padding:8px 18px;font-size:14px;font-weight:600;cursor:pointer;">Load Token</button>
+        <details class="examples-section" style="margin-top:12px;">
+            <summary>Examples</summary>
+            <div class="example-label" style="margin-top:8px;">Click to load a vulnerable JWT</div>
+            <div class="example-item" onclick="document.getElementById('jwt-input').value='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MTQwMDAwMDB9.LBp7mLO9ZFZuQuD2bLlxPhVe5PhEsXdcIZW9VYRP3Tk';loadToken();" data-v="HS256 weak">HS256 / weak secret &quot;secret&quot;</div>
+            <div class="example-item" onclick="document.getElementById('jwt-input').value='eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxNDAwMDAwMH0.fake-rsa-signature-bytes-here-for-demo-only';loadToken();" data-v="RS256 admin">RS256 / admin role (try alg:none attack)</div>
+            <div class="example-item" onclick="document.getElementById('jwt-input').value='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ii4uLy4uLy4uL2Rldi9udWxsIn0.eyJzdWIiOiJ1c2VyIn0.signature';loadToken();" data-v="kid traversal">Token with kid traversal injection</div>
+        </details>
+        <div id="token-info" style="margin-top:14px;display:none;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+                <div>
+                    <div style="font-size:11px;font-weight:700;color:var(--text-muted);margin-bottom:6px;">HEADER</div>
+                    <pre id="token-header" style="background:var(--surface-2);border:1px solid var(--border);border-radius:6px;padding:10px;font-size:12px;color:var(--accent);margin:0;white-space:pre-wrap;word-break:break-all;"></pre>
+                </div>
+                <div>
+                    <div style="font-size:11px;font-weight:700;color:var(--text-muted);margin-bottom:6px;">PAYLOAD</div>
+                    <pre id="token-payload" style="background:var(--surface-2);border:1px solid var(--border);border-radius:6px;padding:10px;font-size:12px;color:var(--accent-2);margin:0;white-space:pre-wrap;word-break:break-all;"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Attack 1: alg:none -->
+    <div class="tool-panel" style="margin-bottom:20px;">
+        <h2 style="font-size:15px;font-weight:700;color:var(--text);margin:0 0 8px;">1. alg:none Attack</h2>
+        <p style="font-size:13px;color:var(--text-muted);margin:0 0 14px;">Strips the signature and sets <code style="font-family:'JetBrains Mono',monospace;color:var(--accent);">alg</code> to <code style="font-family:'JetBrains Mono',monospace;color:var(--accent);">none</code>. Some libraries skip signature verification when alg is none.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;">
+            <button onclick="algNone('none')" style="background:var(--danger);color:#fff;border:none;border-radius:6px;padding:8px 16px;font-size:13px;font-weight:600;cursor:pointer;">Generate (alg:none)</button>
+            <button onclick="algNone('None')" style="background:var(--surface-2);border:1px solid var(--border);color:var(--text);border-radius:6px;padding:8px 16px;font-size:13px;cursor:pointer;">Try "None"</button>
+            <button onclick="algNone('NONE')" style="background:var(--surface-2);border:1px solid var(--border);color:var(--text);border-radius:6px;padding:8px 16px;font-size:13px;cursor:pointer;">Try "NONE"</button>
+        </div>
+        <div id="algnone-out" style="display:none;">
+            <pre id="algnone-token" style="background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:14px;font-size:12px;color:var(--text);white-space:pre-wrap;word-break:break-all;margin:0 0 8px;"></pre>
+            <button onclick="copyEl('algnone-token')" style="background:var(--surface-2);border:1px solid var(--border);border-radius:5px;padding:4px 10px;font-size:12px;color:var(--text-muted);cursor:pointer;">Copy</button>
+        </div>
+    </div>
+
+    <!-- Attack 2: RS256 -> HS256 -->
+    <div class="tool-panel" style="margin-bottom:20px;">
+        <h2 style="font-size:15px;font-weight:700;color:var(--text);margin:0 0 8px;">2. RS256 → HS256 Key Confusion</h2>
+        <p style="font-size:13px;color:var(--text-muted);margin:0 0 14px;">If the server uses the RSA public key as the HMAC secret when alg is changed to HS256, a forged token is accepted. Paste the RSA public key PEM below.</p>
+        <textarea id="pem-input" rows="6" placeholder="-----BEGIN PUBLIC KEY-----&#10;MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA...&#10;-----END PUBLIC KEY-----" style="width:100%;background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:12px 14px;font-size:13px;color:var(--text);font-family:'JetBrains Mono',monospace;resize:vertical;box-sizing:border-box;"></textarea>
+        <button onclick="rs256toHs256()" style="margin-top:10px;background:var(--danger);color:#fff;border:none;border-radius:6px;padding:8px 16px;font-size:13px;font-weight:600;cursor:pointer;">Forge HS256 Token</button>
+        <div id="hs256-out" style="margin-top:12px;display:none;">
+            <pre id="hs256-token" style="background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:14px;font-size:12px;color:var(--text);white-space:pre-wrap;word-break:break-all;margin:0 0 8px;"></pre>
+            <button onclick="copyEl('hs256-token')" style="background:var(--surface-2);border:1px solid var(--border);border-radius:5px;padding:4px 10px;font-size:12px;color:var(--text-muted);cursor:pointer;">Copy</button>
+        </div>
+    </div>
+
+    <!-- Attack 3: Weak secret crack -->
+    <div class="tool-panel" style="margin-bottom:20px;">
+        <h2 style="font-size:15px;font-weight:700;color:var(--text);margin:0 0 8px;">3. Weak Secret Cracker</h2>
+        <p style="font-size:13px;color:var(--text-muted);margin:0 0 14px;">Tries common JWT secrets via HMAC-SHA256. Works on HS256 tokens loaded above.</p>
+        <div style="display:flex;gap:8px;margin-bottom:10px;">
+            <button onclick="loadBuiltinWordlist()" style="background:var(--surface-2);border:1px solid var(--border);color:var(--text);border-radius:6px;padding:8px 14px;font-size:13px;cursor:pointer;">Load common secrets</button>
+            <button onclick="crack()" style="background:var(--danger);color:#fff;border:none;border-radius:6px;padding:8px 16px;font-size:13px;font-weight:600;cursor:pointer;">Crack</button>
+        </div>
+        <textarea id="wordlist" rows="6" placeholder="One secret per line&#10;secret&#10;password&#10;your-256-bit-secret" style="width:100%;background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:12px 14px;font-size:13px;color:var(--text);font-family:'JetBrains Mono',monospace;resize:vertical;box-sizing:border-box;"></textarea>
+        <div id="crack-progress" style="margin-top:10px;display:none;">
+            <div style="background:var(--surface-2);border-radius:4px;height:6px;overflow:hidden;margin-bottom:8px;"><div id="crack-bar" style="height:100%;width:0%;background:var(--accent);transition:width 100ms;border-radius:4px;"></div></div>
+            <div id="crack-status" style="font-size:13px;color:var(--text-muted);"></div>
+        </div>
+        <div id="crack-result" style="margin-top:12px;"></div>
+    </div>
+
+    <!-- Attack 4: kid injection -->
+    <div class="tool-panel">
+        <h2 style="font-size:15px;font-weight:700;color:var(--text);margin:0 0 8px;">4. kid Header Injection</h2>
+        <p style="font-size:13px;color:var(--text-muted);margin:0 0 14px;">Modify the <code style="font-family:'JetBrains Mono',monospace;color:var(--accent);">kid</code> (key ID) header claim. Some servers use kid to look up the signing key - injecting a malicious value can make the server use an attacker-controlled key.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+            <button onclick="setKid('/dev/null')" style="background:var(--surface-2);border:1px solid var(--border);color:var(--text);border-radius:6px;padding:8px 14px;font-size:13px;cursor:pointer;">/dev/null (empty key)</button>
+            <button onclick="setKid(\"' UNION SELECT 'secret'--\")" style="background:var(--surface-2);border:1px solid var(--border);color:var(--text);border-radius:6px;padding:8px 14px;font-size:13px;cursor:pointer;">SQL injection kid</button>
+        </div>
+        <div style="display:flex;gap:10px;margin-bottom:12px;">
+            <input id="kid-value" type="text" placeholder="Custom kid value…" style="flex:1;background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:14px;color:var(--text);font-family:'JetBrains Mono',monospace;" />
+            <button onclick="forgeKid()" style="background:var(--danger);color:#fff;border:none;border-radius:6px;padding:10px 18px;font-size:13px;font-weight:600;cursor:pointer;">Forge</button>
+        </div>
+        <div id="kid-out" style="display:none;">
+            <pre id="kid-token" style="background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:14px;font-size:12px;color:var(--text);white-space:pre-wrap;word-break:break-all;margin:0 0 8px;"></pre>
+            <button onclick="copyEl('kid-token')" style="background:var(--surface-2);border:1px solid var(--border);border-radius:5px;padding:4px 10px;font-size:12px;color:var(--text-muted);cursor:pointer;">Copy</button>
+        </div>
+    </div>
+</div>
+
+<script src="../../js/app.js" defer></script>
+<script src="../../js/history.js" defer></script>
+<script src="../../js/share.js" defer></script>
+<script src="../../js/smart-detect.js" defer></script>
+<script src="../../js/components.js" defer></script>
+<script src="../../js/shortcuts.js" defer></script>
+<script src="../../js/pwa.js" defer></script>
+<script src="script.js" defer></script>
+        <script src="../../js/page-init.js" defer></script>
+</body>
+</html>
